@@ -1,8 +1,8 @@
 ---
-title: Tags
+title: 标签
 layout: default
-description: keep hungry keep foolish
-header-img: "img/tag-bg.jpg"
+description: 温故而知新，不亦乐乎！
+header-img: "images/tags.png"
 ---
 
 <!-- Page Header -->
@@ -10,7 +10,7 @@ header-img: "img/tag-bg.jpg"
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading" id="tag-heading">
+                <div class="site-heading">
                     <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
                     <span class="subheading">{{ page.description }}</span>
                 </div>
@@ -23,7 +23,6 @@ header-img: "img/tag-bg.jpg"
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<!-- {{content}} -->
             <!-- 标签云 -->
 			<div id='tag_cloud' class="tags">
 				{% for tag in site.tags %}

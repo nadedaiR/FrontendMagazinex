@@ -1,7 +1,7 @@
 # Site settings
 title: 前端外刊评论
 SEOTitle: 前端外刊评论 翻译 前端 前端开发 JavaScript Angular jQuery
-header-img: img/home-bg.jpg
+header-img: images/great-frontend.png
 email: island205@gmail.com
 description: ""
 keyword: ""
@@ -41,7 +41,7 @@ kramdown:
 #disqus_username: _your_disqus_short_name_
 
 # Duoshuo settings
-duoshuo_username: island205
+duoshuo_username: fronteer
 # Share component is depend on Comment so we can NOT use share only.
 duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
@@ -50,17 +50,17 @@ duoshuo_share: true                     # set to false if you want to use Commen
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+# ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_track_id: 'UA-74788760-1'            # Format: UA-xxxxxx-xx
 ga_domain: qianduan.guru
 
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "欢迎关注「前端外刊评论」——关注前端前沿技术，探寻业界深邃思想。"
-sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "欢迎关注「前端外刊评论」公众号——关注前端前沿技术，探寻业界深邃思想。"
+sidebar-avatar: /img/wechat-qrcode.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
