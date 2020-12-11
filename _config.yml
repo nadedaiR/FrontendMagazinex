@@ -60,7 +60,7 @@ ga_domain: qianduan.guru
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "欢迎关注「前端外刊评论」公众号——关注前端前沿技术，探寻业界深邃思想。"
-sidebar-avatar: /img/wechat-qrcode.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /images/wechat-qrcode.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
