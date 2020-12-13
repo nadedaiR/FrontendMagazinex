@@ -7,7 +7,6 @@ author:     "寸志"
 header-img: "images/why-can-not-find-frontend-developer/web-developer.jpg"
 tags:
     - 前端开发
-    - JavaScript
     - 招聘
 ---
 
@@ -21,7 +20,7 @@ tags:
 
 举个例子，根据 indeed.com 抓取的数千家网站的职位显示：目前前端的热门岗位——**「HTML5」是需求增长最快的开发岗位，在所有开发职位中排名第一**，MongoDB 和 iOS 紧随其后位列第二、第三。
 
-![](images/jobgraph.png)
+![](images/why-can-not-find-frontend-developer/jobgraph.png)
 
 HTML5 可以说是最热门的前端岗位了，在 2010 年和 2014 年底有两次爆发性增长，现在在美国的岗位需求甚至超过了iOS。
 
@@ -31,7 +30,7 @@ HTML5 可以说是最热门的前端岗位了，在 2010 年和 2014 年底有�
 
 可能很多人认为前端开发和 web 开发类似，而 web 开发已经有20多年的历史，所以前端并不是一个新领域。然而，**前端工程师的概念中的「接口技术实现和用户体验作为一个专业的工作领域」**，却无疑是很新的。大概几年前，前端开发的技术增长迅猛，如下图所示：
 
-![](images/google-trend.png)
+![](images/why-can-not-find-frontend-developer/google-trend.png)
 
 *过去几年前端工程师的可视化增长趋势 by Google Trends*
 
@@ -41,13 +40,13 @@ HTML5 可以说是最热门的前端岗位了，在 2010 年和 2014 年底有�
 
 现在，一位合格的前端工程师，必须对视觉设计有兴趣（或者乐于做一个受虐狂▼）。
 
-![](images/css.png)
+![](images/why-can-not-find-frontend-developer/css.png)
 
 很显然，要处理大量的 Web 应用程序需求，技术任务就要进行分类，以便于多人同时处理网站请求。事实上现在已经不可能一个人快速地解决所有的技术细节了。
 
 现在还有一类人是独自处理一个 Web 应用程序的所有问题，即「全栈工程师」，但是优秀的全栈工程师同样如大熊猫一般数量稀少。
 
-![](images/in-a-web-product.png)
+![](images/why-can-not-find-frontend-developer/in-a-web-product.png)
 
 现在，一个创业公司想要成功，几乎要覆盖一个 Web 应用程序的诸多技术方面：前端、后台、DBA、运营等。虽然已经有一些服务可以让企业购买登陆页面的前端模块和组件；但是如果你想要创造一些真正的 Web 应用程序，除了求助前端工程师，别无他法，就像你要创立一个品牌你也绕不开请一位设计师一样。
 

@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Airbnb React 编码规范"
-subtitle:   "用更合理的方式书写React和JSX"
+subtitle:   "用更合理的方式书写 React 和 JSX"
 date:       2016-03-03
 author:     "张轩"
 header-img: "images/airbnb-react-style-guide/airbnb-react-style-guide.jpg"
@@ -9,6 +9,7 @@ tags:
     - 前端开发
     - JavaScript
     - React
+    - 编码规范
 ---
 
 > Airbnb的编码规范是在业界非常流行的一套规范，而且它一直都在进化，推出最新技术的规范，例如第一时间推出了ES6的规范，让人读了感觉受益匪浅，突然发现最近更新了React的编码规范，所以第一时间翻译了过来，而且现在React如日中天，采用这个库的作为解决方案的各位，不妨读一读这个规范，借鉴学习，写出漂亮的代码。原文在此：[javascript/react at master · airbnb/javascript · GitHub](https://link.zhihu.com/?target=https%3A//github.com/airbnb/javascript/tree/master/react) 欢迎各位和原文对比，并提出意见。
