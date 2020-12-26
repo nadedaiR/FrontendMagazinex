@@ -52,10 +52,10 @@ layout: default
                 <!-- Friends Blog -->
                 {% if site.friends %}
                 <hr>
-                <h5>FRIENDS</h5>
+                <h5>友情链接</h5>
                 <ul class="list-inline">
                     {% for friend in site.friends %}
-                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+                        <li><a href="{{friend.href}}" target="_blank">{{friend.title}}</a></li>
                     {% endfor %}
                 </ul>
                 {% endif %}
@@ -130,9 +130,9 @@ layout: default
                                 </a>
                             </li>
                             {% endif %}
-                            {% if site.zhihu_username %}
+                            {% if site.zhihu %}
                             <li>
-                                <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
+                                <a target="_blank" href="{{ site.zhihu }}">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
                                         <i class="fa  fa-stack-1x fa-inverse">知</i>
@@ -179,7 +179,7 @@ layout: default
                 <h5>友情链接</h5>
                 <ul class="list-inline">
                     {% for friend in site.friends %}
-                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+                        <li><a href="{{friend.href}}" target="_blank">{{friend.title}}</a></li>
                     {% endfor %}
                 </ul>
                 {% endif %}
