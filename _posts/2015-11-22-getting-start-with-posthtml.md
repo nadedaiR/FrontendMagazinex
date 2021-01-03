@@ -1,4 +1,15 @@
-# PostHTML 入门教程
+---
+layout:     post
+title:      "HTML 处理利器 PostHTML 入门教程"
+subtitle:   ""
+date:       2015-11-22
+author:     "寸志"
+header-img: "images/getting-start-with-posthtml.png"
+tags:
+    - PostHTML
+    - PostCSS
+    - HTML
+---
 
 看到 [PostHTML](https://github.com/posthtml/posthtml)，自然就会想起 [PostCSS](https://github.com/postcss/postcss)，后者作为新一代的 CSS 处理器，一扫 SASS LESS 的威风，在社区中刮起了一阵旋风。虽然 PostHTML 后起，也不知道能否秀起来，先带着大家揭开 PostHTML 的神秘面纱。
 
@@ -200,13 +211,13 @@ app.engine('jade', function (path, options, callback) {
     var plugins = [
         require('posthtml-bem')(),                  
         require('posthtml-textr')({ locale: 'ru'}, [
-            require('typographic-ellipses'), 
+            require('typographic-ellipses'),
             require('typographic-single-spaces'),
             require('typographic-quotes')
         ])
     ];
 
-    var html = require('jade').renderFile(path, options); 
+    var html = require('jade').renderFile(path, options);
 
     posthtml(plugins)
         .process(html)
@@ -228,11 +239,3 @@ app.set('view engine', 'jade');
 ## 后记
 
 PostHTML 初出茅庐，在 Github star 也才 214，但相信不久的将来PostHTML 也会像 PostCSS 一样横扫整个 HTML 处理的世界。我也着手编写一个 PostHTML 插件 [posthtml-web-component](https://github.com/island205/posthtml-web-component)，用来实现服务器端的动态化组件。欢迎关注。
-
-
-
-
-
-
-
-
