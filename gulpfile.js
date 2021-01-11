@@ -26,25 +26,36 @@ gulp.task('min-style', ['less'], function () {
 
 gulp.task('min-images', function () {
   return gulp.src('src/images/**/*.{jpg,gif,png}')
-    .pipe(imagemin({
-      progressive: true
-    }))
+    // .pipe(imagemin({
+    //   progressive: true
+    // }))
     .pipe(gulp.dest('dist/images/'))
 })
 
 gulp.task('copy', function () {
     return gulp.src([
-      'src/**/*',
-      '!src/js/**/*',
-      '!src/css/**/*',
-      '!src/images/**/*'
+        'src/**',
+        '!src/css/**',
+        '!src/images/**',
+        '!src/js/**',
+        '!src/less/**'
       ])
     .pipe(gulp.dest('dist/'))
 })
 
 gulp.task('clean', function () {
-  return gulp.src(['dist'], {read: false})
+  return gulp.src(['dist', 'build'], {read: false})
     .pipe(clean());
-});
+})
 
-gulp.task('default', ['min-script', 'min-style', 'min-images', 'copy'])
+gulp.task('dist', ['min-script', 'min-style', 'min-images', 'copy'])
+
+gulp.task('build', ['dist'], function () {
+  var revAll = new RevAll({
+    dontRenameFile: ['.html', '.xml', '.md', '.yml', '.ico'],
+    dontUpdateReference: ['.html', '.xml', '.md', '.yml', '.ico']
+  })
+  return gulp.src('dist/**')
+    .pipe(revAll.revision())
+    .pipe(gulp.dest('build/'))
+})

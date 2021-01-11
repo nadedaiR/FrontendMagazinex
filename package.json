@@ -1,5 +1,5 @@
 {
-  "name": "Fronend-Magazine",
+  "name": "Frontend-Magazine",
   "title": "Fronend Magazine",
   "version": "1.0.0",
   "homepage": "http://qianduan.guru",
@@ -24,6 +24,7 @@
   },
   "scripts": {
     "preview": "cd _site; anywhere -p 8020",
-    "watch": "gulp watch & npm run preview & jekyll serve -w;"
+    "watch": "gulp watch & npm run preview & jekyll serve -w;",
+    "build": "gulp clean && gulp build"
   }
 }
