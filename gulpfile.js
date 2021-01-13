@@ -5,6 +5,7 @@ var less = require('gulp-less')
 var clean = require('gulp-clean')
 var RevAll = require('gulp-rev-all')
 var imagemin = require('gulp-imagemin')
+var insert = require('gulp-insert')
 
 gulp.task('less', function () {
   return gulp.src('src/less/Frontend-Magazine.less')
@@ -44,13 +45,13 @@ gulp.task('copy', function () {
 })
 
 gulp.task('clean', function () {
-  return gulp.src(['dist', 'build'], {read: false})
+  return gulp.src(['dist', 'build', '_config.yml'], {read: false})
     .pipe(clean());
 })
 
 gulp.task('dist', ['min-script', 'min-style', 'min-images', 'copy'])
 
-gulp.task('build', ['dist'], function () {
+gulp.task('rev', ['dist'], function () {
   var revAll = new RevAll({
     dontRenameFile: ['.html', '.xml', '.md', '.yml', '.ico'],
     dontUpdateReference: ['.html', '.xml', '.md', '.yml', '.ico']
@@ -59,3 +60,11 @@ gulp.task('build', ['dist'], function () {
     .pipe(revAll.revision())
     .pipe(gulp.dest('build/'))
 })
+
+gulp.task('yml', ['rev'], function () {
+  return gulp.src('build/_config.yml')
+    .pipe(insert.prepend('source: build\n'))
+    .pipe(gulp.dest('.'))
+})
+
+gulp.task('build', ['yml'])
