@@ -20,10 +20,12 @@ There is an explosion of electronic devices nowadays, and with many of them, it�
 
 ## The Web Bluetooth API
 
-So far, the ability to communicate with BLE devices has been possible only for native apps. The Web Bluetooth API aims to change that and brings this to web browsers as well. The [specification for the Web Bluetooth API](https://webbluetoothcg.github.io/web-bluetooth/) is not final yet, and you’re free to[share your feedback](https://github.com/WebBluetoothCG/web-bluetooth/issues) on what you would want in it as well.
+So far, the ability to communicate with BLE devices has been possible only for native apps. The Web Bluetooth API aims to change that and brings this to web browsers as well. The [specification for the Web Bluetooth API](https://webbluetoothcg.github.io/web-bluetooth/) is not final yet, and you’re free to [share your feedback](https://github.com/WebBluetoothCG/web-bluetooth/issues) on what you would want in it as well.
 
-
+到目前为止，要在移动设备上做 BLE 方面的交互都要通过原声 app。Web Bluetooth API 要改变这样的现状。现在 [Web Bluetooth API](https://webbluetoothcg.github.io/web-bluetooth/) 尚未定稿，在使用过程中遇到任何问题，请[不要客气地吐槽](https://github.com/WebBluetoothCG/web-bluetooth/issues)吧。
 
 
 
 Right now, the Web Bluetooth API is in [Opera for Android beta](https://play.google.com/store/apps/details?id=com.opera.browser.beta). You can activate it by going to `opera://flags` and enabling Web Bluetooth in the options provided on that page.
+
+你可以下一个 [Opera for Android beta 版](https://play.google.com/store/apps/details?id=com.opera.browser.beta) 体验 Web Bluetooth API：在 ```opera://flags``` 设置中开启 'Web Bluetooth'。
