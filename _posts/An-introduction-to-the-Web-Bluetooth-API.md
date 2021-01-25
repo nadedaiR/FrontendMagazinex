@@ -2,7 +2,7 @@
 
 # Web Bluetooth API 初探
 
-> 译者注：翻译为 “Web 蓝牙 API” 看着都不顺，所以选择不翻译了。原文链接是:[An introduction to the Web Bluetooth API](https://dev.opera.com/articles/web-bluetooth-intro/)
+> 译者注：翻译为 “Web 蓝牙 API” 看着都不顺，所以选择不翻译了。原文链接是: [An introduction to the Web Bluetooth API](https://dev.opera.com/articles/web-bluetooth-intro/)
 
 ## Introduction
 
@@ -29,3 +29,78 @@ So far, the ability to communicate with BLE devices has been possible only for n
 Right now, the Web Bluetooth API is in [Opera for Android beta](https://play.google.com/store/apps/details?id=com.opera.browser.beta). You can activate it by going to `opera://flags` and enabling Web Bluetooth in the options provided on that page.
 
 你可以下一个 [Opera for Android beta 版](https://play.google.com/store/apps/details?id=com.opera.browser.beta) 体验 Web Bluetooth API：在 ```opera://flags``` 设置中开启 'Web Bluetooth'。
+
+### Some prerequisites
+
+### 首先你要知道：
+
++ **HTTPS only**: The API only works on pages served over HTTPS. Most privacy-sensitive web APIs are now switching over to the HTTPS-only model, and this one is no exception.
++ **仅限HTTPS**：Web Bluetooth API 只支持基于 https 的页面。现在大部分信息敏感的 web API 都必须基于 HTTPS 的服务，蓝牙传输有这个要求也不奇怪。
++ **Requires user action**: We want to make sure that the API doesn’t work in the background without the user knowing about it, which is why there is a prompt shown to user to choose which device to pair with. Additionally, we also don’t want sites to show up this prompt straightaway without any user interaction. That is why methods in this API only work when called in response to a user action (like responding to a`click` event).
++ **通过用户操作触发**：需要确保这个 API 不会在用户未知的情况下偷偷再后台运行，所以会有一个提示，询问用户要通过蓝牙连接哪一个设备。不过我们也不希望用户什么都没有做，站点就直接弹出一个提示吓到用户。于是，就像 ```click``` 一样，只有当用户作出了操作，这个方法才会被调用。
+
+
+
+### Getting Basic Device Information
+
+### 获取设备基本信息
+
+Let’s take a look at some code to figure out how to use this API to get some basic information regarding a BLE device.
+
+接下来就是代码环节，你很快会知道如何获取到一台 BLE 设备的基本信息。
+
+Here is a very simple example, showing a button:
+
+下面这段代码……就是一个按钮：
+
+``` html
+<button id="the-button">Try it</button>
+```
+
+…and the following JavaScript:
+
+当然还有对应的 JS 代码：
+
+``` javascript
+const button = document.querySelector('#the-button');
+button.addEventListener('click', function() {
+	navigator.bluetooth.requestDevice({
+		filters: [{
+			services: ['battery_service']
+		}]
+	}).then(device => {
+		console.log('Got device:', device.name);
+		console.log('id:', device.id);
+	});
+});
+
+```
+
+As mentioned earlier, the method `navigator.bluetooth.requestDevice()` can only be called in response to a user action like a button click. This method calls up a dialog box showing the list of available BLE devices matching the query filter. In our case, the filter we have set pertains to BLE devices which expose a so-called “GATT service” called `battery_service`. We’ll find out more about GATT services in the next section.
+
+```navigator.bluetooth.requestDevice()``` 就是上文说到的“用户没有召唤，就不能随随便便出现”的方法。也就是说，按照例子中的代码逻辑，只有当用户点击了按钮，这个方法才会被调用。它将会呼出一个对话窗（dialog box），窗口中会显示符合**筛选条件**的 BLE 设备列表。像上面例子里的筛选条件就是“GATT 服务是‘battery_service’的 BLE 设备”。（不要惊慌，下一节我们会讲到“GATT 服务”的）
+
+Keep in mind that it is necessary to include at least one filter when requesting device access using the Web Bluetooth API.
+
+这边要注意的一点是，要想使用 Web Bluetooth API，那**必须至少要设定一个筛选条件**。
+
+Once the user selects the device and connects to it, it can then print out the device name and its ID.
+
+当用户选择成功连接上某一台设备之后，控制台中会打印出设备名和 ID。
+
+### What are GATT services?
+
+### 什么是 GATT 服务？
+
+GATT stands for [Generic Attribute Profile](https://developer.bluetooth.org/TechnologyOverview/Pages/GATT.aspx) and provides a standard way for Bluetooth devices to advertise their services to the outside world. Your cell phone might provide a GATT service to show the current battery level. Your fitness band might provide a service that too, along with another one showing the current heart rate count. There are a [number of services which are exposed through GATT](https://developer.bluetooth.org/gatt/services/Pages/ServicesHome.aspx), and we can listen to those services depending on which of those services are exposed by the device.
+
+Some devices may not list their services in the standardized list of GATT services, in which case you could use their full Bluetooth UUID or a short 16- or 32-bit ID instead. Of course, this depends on whether the device has any documentation mentioning these UUIDs and what they are for.
+
+``` javascript
+navigator.bluetooth.requestDevice({
+	filters: [{
+		services: ['0009180d-0000-1000-8000-00705f9b34fb']
+	}]
+});
+```
+
