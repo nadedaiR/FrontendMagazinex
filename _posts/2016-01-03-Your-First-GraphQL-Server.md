@@ -4,7 +4,7 @@ title:      "搭建你的第一个 GraphQL 服务器"
 subtitle:   ""
 date:       2016-01-03
 author:     "寸志"
-header-img: "/images/Your-First-GraphQL-Server.20d16e52.png"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Your-First-GraphQL-Server.20d16e52.png"
 tags:
     - GraphQL
     - React

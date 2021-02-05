@@ -4,7 +4,7 @@ title:      "浏览器内建支持的响应式图像"
 subtitle:   ""
 date:       2014-10-08
 author:     "范洪春"
-header-img: "/images/Responsive-Images.d839ae25.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Responsive-Images.d839ae25.jpg"
 tags:
     - HTML5
     - HTML

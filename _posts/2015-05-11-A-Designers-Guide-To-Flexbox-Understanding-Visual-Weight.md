@@ -38,7 +38,7 @@ tags:
 
 你看，flex项其实是根据它们的内容宽度来排版的，所以宽度不同。
 
-![](/images/A-Designers-Guide-To-Flexbox-Understanding-Visual-Weight/flexbox-distribution.d4038e21.jpg)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-Designers-Guide-To-Flexbox-Understanding-Visual-Weight/flexbox-distribution.d4038e21.jpg)
 
 ## 给 Flex 元素设置相同的宽度 ##
 

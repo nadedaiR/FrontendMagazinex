@@ -4,7 +4,7 @@ title:      "使用 NW.js 跨平台开发"
 subtitle:   ""
 date:       2015-06-14
 author:     "寸志"
-header-img: "/images/Cross-Platform-Development-With-NW.js.66e865d8.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Cross-Platform-Development-With-NW.js.66e865d8.jpg"
 tags:
     - NW.js
     - Node.js

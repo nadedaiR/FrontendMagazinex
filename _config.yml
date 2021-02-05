@@ -1,7 +1,7 @@
 # Site settings
 title: 前端外刊评论
 SEOTitle: 前端外刊评论-翻译 前端 前端开发 JavaScript Angular jQuery React Node.js 互联网
-header-img: images/great-frontend.9d9e3846.png
+header-img: http://7xrvqo.com1.z0.glb.clouddn.com/images/great-frontend.9d9e3846.png
 email: island205@gmail.com
 description: ""
 keyword: ""
@@ -22,7 +22,7 @@ github_username:    FrontendMagazine
 highlighter: pygments
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", 'src']
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", 'src', 'dist']
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
@@ -60,7 +60,7 @@ ga_domain: qianduan.guru
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "欢迎关注「前端外刊评论」公众号——关注前端前沿技术，探寻业界深邃思想。"
-sidebar-avatar: /images/wechat-qrcode.d7c4d058.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/wechat-qrcode.d7c4d058.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 

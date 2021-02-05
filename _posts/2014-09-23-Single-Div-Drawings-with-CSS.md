@@ -4,7 +4,7 @@ title:      "基于单个 Div 的 CSS 绘图"
 subtitle:   ""
 date:       2014-09-23
 author:     "寸志"
-header-img: "/images/Single-Div-Drawings-with-CSS.315cf75e.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS.315cf75e.jpg"
 tags:
     - HTML
     - CSS3
@@ -35,7 +35,7 @@ tags:
 
 因为 CSS 有伪类，所以虽然只有一个 Div，但实际上我可以使用三个元素。因此，使用 `div`，`div:before`，`div:after`，我们可以这样：
 
-![pseudo elements](/images/Single-Div-Drawings-with-CSS/asinglediv-1.b3d015eb.png)
+![pseudo elements](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-1.b3d015eb.png)
 
     div { background: red; }
     div:before { background: yellow; }
@@ -43,13 +43,13 @@ tags:
 
 容易想到，这三个元素可以并排成为三个叠在一起的层。因此，在我的脑海中，它看起来是下面这样的：
 
-![pseudo elements as layers](/images/Single-Div-Drawings-with-CSS/asinglediv-2.8a21c95a.png)
+![pseudo elements as layers](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-2.8a21c95a.png)
 
 ### 形状
 
 使用 CSS 和单个元素，我们可以制作三种基础图形。使用 width 和 height 属性制作正方形/矩形，使用 border-radius 制作圆/椭圆，使用 border 制作三角形/梯形。
 
-![css shapes](/images/Single-Div-Drawings-with-CSS/asinglediv-3.b559730a.png)
+![css shapes](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-3.b559730a.png)
 
 我们还可以使用 CSS 创建其他图形，不过大部分都可以简单组合这些基础图形来实现，这些简单的图形最容易制作，也最容易修改。
 
@@ -57,7 +57,7 @@ tags:
 
 使用叠加的 box-shadow，我们可以创建多个相同的形状，这些形状可以拥有不一样的大小、颜色和模糊效果。我们可以在x或者y轴上移动这些图形，因此几乎可以绘制无限的图形。
 
-![multiple box-shadows](/images/Single-Div-Drawings-with-CSS/asinglediv-4.0ec759bb.png)
+![multiple box-shadows](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-4.0ec759bb.png)
 
     div {
         box-shadow: 170px 0 10px yellow,
@@ -71,7 +71,7 @@ tags:
 
 渐变通过给定一个光源，可以被用来制造明暗和深浅效果，可以让简单扁平的图形看起来更真实。结合多个 background-image，我们可以使用很多层的渐变来实现更加复杂光影，甚至是更多的图形。
 
-![gradients](/images/Single-Div-Drawings-with-CSS/asinglediv-5.472a74c9.png)
+![gradients](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-5.472a74c9.png)
 
     div {
         background-image: linear-gradient(to right, gray, white, gray, black);
@@ -92,7 +92,7 @@ tags:
 
 蜡笔由两个基础图形构成：矩形的笔身和三角形的笔尖。
 
-![crayon shapes](/images/Single-Div-Drawings-with-CSS/asinglediv-6.bf30603b.png)
+![crayon shapes](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-6.bf30603b.png)
 
 
 我必须实现下面这些点来捕获真实蜡笔的感觉：
@@ -111,7 +111,7 @@ tags:
 
 然后，我使用一个从左到右的 linear-gradient 制作纸包装。alpha 值为.6，这样的之前的渐变可以透出来。
 
-![crayon wrapper](/images/Single-Div-Drawings-with-CSS/asinglediv-8.fc34868e.png)
+![crayon wrapper](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-8.fc34868e.png)
 
     div {
         background-image: linear-gradient(to right,
@@ -123,7 +123,7 @@ tags:
 
 接下来，我继续使用同样的方式，从左到右渐变，制作蜡笔上的条纹。
 
-![crayon printing](/images/Single-Div-Drawings-with-CSS/asinglediv-9.a398eb14.png)
+![crayon printing](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-9.a398eb14.png)
 
     div {
         background-image: linear-gradient(to right,
@@ -147,7 +147,7 @@ tags:
 
 纸包装上印刷的椭圆，使用一个 radial-gradient 轻松搞定！
 
-![crayon printing](/images/Single-Div-Drawings-with-CSS/asinglediv-10.630da1f0.png)
+![crayon printing](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-10.630da1f0.png)
 
     div {
         background-image: radial-gradient(ellipse at top,
@@ -194,7 +194,7 @@ tags:
 
 完成了 div，我们把注意力转移到 :before 伪类元素上，创建蜡笔的笔头。使用实心和透明的边框，我制作了一个三角形，把它和我之前绘制 的 div 放到一起。
 
-![triangle crayon tip](/images/Single-Div-Drawings-with-CSS/asinglediv-11.95677e2c.png)
+![triangle crayon tip](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-11.95677e2c.png)
 
     div:before {
         height: 10px;
@@ -205,7 +205,7 @@ tags:
 
 比起蜡笔笔杆，笔头看起来有点平，我们可以使用 :after 伪类元素来修复这个问题。我添加一个从顶部到底部的 linear-gradient，制作了一个反光效果，贯穿整只蜡笔。
 
-![crayon gloss](/images/Single-Div-Drawings-with-CSS/asinglediv-12.fc142ae0.png)
+![crayon gloss](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-12.fc142ae0.png)
 
     div:after {
         background-image: linear-gradient(to bottom,
@@ -217,7 +217,7 @@ tags:
 
 这给那个扁平的三角形添加更多的层次感，更加真实。制作接近尾声，我给 :after 添加一些文字，定位，使得看起来像是印刷在蜡笔包装上的一样。
 
-![crayon color label](/images/Single-Div-Drawings-with-CSS/asinglediv-13.5341d5dc.png)
+![crayon color label](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-13.5341d5dc.png)
 
     div:after {
         content: 'green';
@@ -238,11 +238,11 @@ tags:
 
 这是照相机的主体部分，使用 background-image 和 border-image 制作的。
 
-![camera body](/images/Single-Div-Drawings-with-CSS/asinglediv-14.0834c007.png)
+![camera body](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-14.0834c007.png)
 
 下面是一张 gif，展示 :before 伪类元素（黑色的那个矩形），以及使用它的 box-shadow 创建出来的很多照相机的细节部分。
 
-![camera rectangle](/images/Single-Div-Drawings-with-CSS/asinglediv-15.28b50691.gif)
+![camera rectangle](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-15.28b50691.gif)
 
     div:before {
         background: #333;
@@ -267,7 +267,7 @@ tags:
 
 类似的，下面是 :after（灰色的圆）以及使用它的 box-shadow 制作的几个细节部分。
 
-![camera circle](/images/Single-Div-Drawings-with-CSS/asinglediv-16.6b126038.gif)
+![camera circle](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-16.6b126038.gif)
 
     div:after {
         background: linear-gradient(45deg, #ccc 40%, #ddd 100%);
@@ -316,7 +316,7 @@ tags:
 
 因为三角形是使用 border 创建的，这极大地限制了我对它的利用。使用 border-image 给 border 添加 gradient，不能单独添加其中一边。无法给 border 创建出来的三角形添加 box-shadow，因为 box-shadow 是添加在盒模型上的。因此要创建多个三角形就会很困难。看起来就是下面这样：
 
-![trouble with triangles](/images/Single-Div-Drawings-with-CSS/asinglediv-17.d879ae54.png)
+![trouble with triangles](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-17.d879ae54.png)
 
     div {
         border-left: 80px solid transparent;
@@ -344,11 +344,11 @@ tags:
 
 Tardis 就是一个很好的例子，显示或隐藏渐变，创建了一张细节极强的图片。下图显示的是绘制的中间过程，可以看到数个从顶部到底部的渐变，宽度填满整个容器。
 
-![single div tardis in-process](/images/Single-Div-Drawings-with-CSS/asinglediv-18.5b1248c0.png)
+![single div tardis in-process](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-18.5b1248c0.png)
 
 使用从左到右和从右到左的 gradient，我可以遮住一部分渐变，同时把其他部分渐变显示出来。
 
-![single div tardis in-process](/images/Single-Div-Drawings-with-CSS/asinglediv-19.d68d539e.png)
+![single div tardis in-process](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-19.d68d539e.png)
 
 最终的结果看上去包含了很多图形来构成 Tardis 的前面，但实际上它就是层叠的 linear-gradient。很多时候不得不伪造呀。
 

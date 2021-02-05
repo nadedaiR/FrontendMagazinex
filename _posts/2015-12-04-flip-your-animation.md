@@ -4,7 +4,7 @@ title:      "开启你的动画"
 subtitle:   ""
 date:       2015-12-04
 author:     "kmokidd"
-header-img: "/images/flip/window.73b49c22.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/flip/window.73b49c22.jpg"
 tags:
     - 动画
     - CSS3
@@ -114,7 +114,7 @@ Ta daaaaa!
 
 你之所以能做这样相对昂贵的预计算，是因为当用户与站点发生交互的时候，存在一个 100ms 的时窗，用户是不会察觉到在这 100ms 之内完成的动作的，只要在 100ms 之内，用户都会认为你的站点是很快的！只有当元素在移动的时候，你要保证帧率达到 60fps。
 
-![](/images/flip/window.73b49c22.jpg)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/flip/window.73b49c22.jpg)
 
 我们可以利用这段时窗完成``` getBoundingClientRect ```（或者是``` getComputedStyle  ```），接着我们就能又快又好地执行动画，这么做对浏览器排版友好，也减少了 ```transform``` 和 ```opacity``` 引起的重绘（想知道为什么只有这两个？请阅读[这篇](https://aerotwist.com/blog/pixels-are-expensive/)）。
 

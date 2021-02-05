@@ -4,7 +4,7 @@ title:      "ECMAScript 6 模块架构"
 subtitle:   "ES6 Modules 实现一览。"
 date:       2015-09-25
 author:     "寸志"
-header-img: "/images/Architecture-of-ECMAScript-6-Modules.61fd2711.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Architecture-of-ECMAScript-6-Modules.61fd2711.jpg"
 tags:
   - ECMAScript6
   - JavaScript

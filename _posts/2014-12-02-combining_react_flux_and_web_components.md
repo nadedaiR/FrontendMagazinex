@@ -4,7 +4,7 @@ title:      "结合 React，Flux & Web Components"
 subtitle:   ""
 date:       2014-12-02
 author:     "范洪春"
-header-img: "/images/combining_react_flux_and_web_components.9756d0eb.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/combining_react_flux_and_web_components.9756d0eb.jpg"
 tags:
     - React
     - Flux

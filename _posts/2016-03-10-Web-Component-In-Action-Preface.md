@@ -4,7 +4,7 @@ title:      "《Web Component 实战》译者序"
 subtitle:   ""
 date:       2016-03-10
 author:     "范洪春"
-header-img: "/images/Web-Component-In-Action-Preface.b2149462.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Web-Component-In-Action-Preface.b2149462.jpg"
 tags:
     - Web Component
     - React

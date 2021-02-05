@@ -4,7 +4,7 @@ title:      "中文排版的最佳实践——使得长篇文章更易读的十�
 subtitle:   "使得长篇文章更易读的十条法则"
 date:       2014-11-12
 author:     "寸志"
-header-img: "/images/Best-Practices-for-Chinese-Layout.34375a73.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Best-Practices-for-Chinese-Layout.34375a73.jpg"
 tags:
     - 中文排版
     - CSS3

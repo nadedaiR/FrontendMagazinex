@@ -4,7 +4,7 @@ title:      "RAIL，以用户为核心的性能模型"
 subtitle:   ""
 date:       2015-10-16
 author:     "kmokidd"
-header-img: "/images/rail/rail-response-animation-idle-load.f9dabd07.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/rail/rail-response-animation-idle-load.f9dabd07.jpg"
 tags:
     - 前端开发
     - 性能优化
@@ -43,7 +43,7 @@ Chrome 团队已经考虑过这个问题，并提出了 **RAIL** 模型。用户
 
 改变 DOM 结构会拖慢性能？如果在 ```<head>``` 标签中添加 ```<script>```，让脚本一开始就被加载呢？JavaScript 动画比 CSS 动画要慢。一个操作要用 20 毫秒会不会太慢了？0.5 秒呢？10 秒呢？
 
-![](/images/rail/rail-slow-cloud.921f2a2c.png)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/rail/rail-slow-cloud.921f2a2c.png)
 
 
 不同的操作需要的完成时间长短不一，这是肯定的。脱离内容谈加载速度都是耍流氓。举个例子，在浏览器空闲的时间里，代码在 touch 句柄和游戏循环（game loop）中的主线路径的性能要求应该是不同的。换言之，用户的**性能期望**会根据产品的内容不同而不同。我们为用户体验所做的一切能不能被终端用户感知到，才是最重要的。事实上，在 [Google’s ten things we know to be true](http://www.google.com/about/company/philosophy/) 这篇文章中第一条就是“聚焦于用户，则一切将水到渠成”。
@@ -80,7 +80,7 @@ Chrome 团队已经考虑过这个问题，并提出了 **RAIL** 模型。用户
 
 给用户的刚刚采取的动作用色块做记号，然后得到下面这张图：
 
-![](/images/rail/02-user-journey-breakdown-opt.eed7eebd.jpg)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/rail/02-user-journey-breakdown-opt.eed7eebd.jpg)
 
 
 每个色块代表一个动作，你可以观察到一共有**4**个色块也就是**4**个动作。emmm，RAIL 也是**4**个字母呢，美妙的巧合。
@@ -102,7 +102,7 @@ RAIL 是 response （响应）、 animation（动画）、idle（浏览器空置
 
 从这四个模块角度来思考你的产品。如果在每个模块上，你都可以达到性能优化的目标值（也就是上文提及的阀值），那么最终用户感受到的将会是极致的体验。
 
-![](/images/rail/rail-response-animation-idle-load.f9dabd07.jpg)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/rail/rail-response-animation-idle-load.f9dabd07.jpg)
 
 
 现在让我们一个个来看。
@@ -163,7 +163,7 @@ RAIL 是 response （响应）、 animation（动画）、idle（浏览器空置
 
 既然现在我们有了 RAIL 模型，让我们来总结一个性能目标吧
 
-![](/images/rail/table.3a8cbdd6.jpg)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/rail/table.3a8cbdd6.jpg)
 
 ### 如何实践
 
