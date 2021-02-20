@@ -4,7 +4,7 @@ title:      "Flexbox 设计指南4：排序"
 subtitle:   "flexbox 强悍之处千千万，有一点不得不提及：你只需要一行 CSS，就可以调换页面内容的顺序，这个效果从前只能借助 JavaScript 完成呢。这个特性在响应式设计中有多大的便利，相信聪明的你马上就能想象到了。"
 date:       2015-06-18
 author:     "kmokidd"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order.996039aa.png"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order.e5619e1a.png"
 tags:
   - CSS3
   - Flexbox

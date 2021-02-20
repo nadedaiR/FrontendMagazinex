@@ -14,7 +14,7 @@
 
 不知道你有没有留意到，Twitter 已经不再使用星星动画做“收藏”的效果，现在用的是爱心版的“赞”。不管大家对此有何评价，今天我们要来模拟的就是这个效果了。
 
-![](images/twitter-heart/effect.9c4d404f.gif)
+![](images/twitter-heart/effect.c6286a6e.gif)
 
 
 
@@ -74,7 +74,7 @@
 
 接着就可以看到一个爱心图案：
 
-![first-frame](images/twitter-heart/anim-f-frame.4bce1a73.png)
+![first-frame](images/twitter-heart/anim-f-frame.431438c6.png)
 
 
 
@@ -187,19 +187,19 @@ Done！
 + 左上和右上区域都是占总高度的 25%，总宽度的 50%
 + 左下和右下区域是占总高度的 75%，总宽度的 50%
 
-![](images/twitter-heart/heart.ae714320.png)
+![](images/twitter-heart/heart.cdf19df1.png)
 
 
 
 接着在每个矩形结构中，我都使用上设置了 ```border-radius``` 值的伪元素（```:after```），尽可能地模拟每个对应部分的形状。
 
-![](images/twitter-heart/pieces.7d04c9bc.png)
+![](images/twitter-heart/pieces.760913be.png)
 
 
 
 更改 ```color``` ，并将 ```overflow``` 设置为 ```hidden```：
 
-![](images/twitter-heart/pieces-color.ab5c270c.png)
+![](images/twitter-heart/pieces-color.450fa398.png)
 
 
 
@@ -229,7 +229,7 @@ Done！
 
 通过增减“爱心”元素的宽高比，并相应调整元素的 ```left``` 和 ```top``` 值，同时，不要忘了校正其他和“爱心”元素又相对位置关系的元素位置。
 
-![](images/twitter-heart/heart-ani.8d350304.png)
+![](images/twitter-heart/heart-ani.5edae748.png)
 
 
 
@@ -237,7 +237,7 @@ Done！
 
 调整 ```border``` 的大小以及其中的圆形的尺寸，并相应调整它们的位置和颜色。
 
-![](images/twitter-heart/ring-ani.6b7e30f6.png)
+![](images/twitter-heart/ring-ani.c919a722.png)
 
 
 
@@ -330,7 +330,7 @@ Done！
 
 在实际项目中，译者比较多用 ```background-position``` 的雪碧图动画做法，但是更改 ```background-position``` 将会引起重绘：
 
-![](images/twitter-heart/bgpos.b6aaee6c.png)
+![](images/twitter-heart/bgpos.f7217eb2.png)
 
 
 

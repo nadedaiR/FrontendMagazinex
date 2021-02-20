@@ -4,7 +4,7 @@ title:      "基于单个 Div 的 CSS 绘图"
 subtitle:   ""
 date:       2014-09-23
 author:     "寸志"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS.315cf75e.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS.befe6761.jpg"
 tags:
     - HTML
     - CSS3
@@ -267,7 +267,7 @@ tags:
 
 类似的，下面是 :after（灰色的圆）以及使用它的 box-shadow 制作的几个细节部分。
 
-![camera circle](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-16.6b126038.gif)
+![camera circle](http://7xrvqo.com1.z0.glb.clouddn.com/images/Single-Div-Drawings-with-CSS/asinglediv-16.885ce554.gif)
 
     div:after {
         background: linear-gradient(45deg, #ccc 40%, #ddd 100%);

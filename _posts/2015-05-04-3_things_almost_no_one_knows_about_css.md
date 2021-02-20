@@ -4,7 +4,7 @@ title:      "关于CSS[几乎]没人知道的3件事"
 subtitle:   "你了解 CSS 吗？在六个月前，我提供了一个在线免费 CSS 测试系统。测试结果表明很多一线开发者并没有如他们所想的那样了解 CSS。目前有超过 3,000 人参加了该项测试，平均成绩只有 55 分。"
 date:       2015-05-04
 author:     "范洪春"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/things_almost_no_one_knows_about_css.7e09f3c1.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/things_almost_no_one_knows_about_css.f474bfc0.jpg"
 tags:
     - CSS
 ---

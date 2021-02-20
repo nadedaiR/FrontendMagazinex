@@ -4,7 +4,7 @@ title:      "指尖的流畅体验－－基于canvas建立移动界面"
 subtitle:   "在智能手机和平板电脑的黎明时期， Flipboard 推出“移动先行”的体验,使我们可以重新思考页面中内容布局的原则，以及与触摸屏相关的，如何获得更好的用户体验的因素。"
 date:       2015-03-04
 author:     "姜天意"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/60fps-on-the-mobile-web/60fps-on-the-mobile-web.26582b62.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/60fps-on-the-mobile-web/60fps-on-the-mobile-web.8058bc65.jpg"
 tags:
     - canvas
     - Flipboard

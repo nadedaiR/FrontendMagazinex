@@ -4,7 +4,7 @@ title:      "图解 Flux"
 subtitle:   "在如今的 Web 开发领域，Flux 最流行也最容易被大家所误解的技术之一。本教程打算以一种大家都能理解方式图解 Flux。"
 date:       2015-10-11
 author:     "寸志"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-rNyINoYDbC53QNgHuTwriA.d3e79b0d.png"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-rNyINoYDbC53QNgHuTwriA.abbfd802.png"
 tags:
     - Flux
     - React
@@ -18,11 +18,11 @@ tags:
 
 一个众所周知的例子就是关于通知的 Bug。当你登录 Facebook 后，可能会看到在消息 icon 上有一个通知。当你点击消息 icon，却发现并没有新的消息，然后通知不见了。几分钟之后，你在网页上做了一些交互，通知又回来了，你再一次点击消息 icon……但并没有新消息。然后就进入周而复始的循环。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-EfeNEshl8-uwZSuUw275Ag.4354b3cf.png)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-EfeNEshl8-uwZSuUw275Ag.a2c42e4b.png)
 
 这种循环不仅仅影响了网站的用户，还包含 Facebook 的开发团队。他们修复这个问题，一段时间内是 OK 的，但这个 Bug 过段时间又会出现。周而复始，一下被解决了，一下又有问题。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-4xc1FzIHWiyAvb1iAQKSqQ.f22cc796.png)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-4xc1FzIHWiyAvb1iAQKSqQ.fb96d121.png)
 
 因此 Facebook 试图寻找解决方案来跳出这个怪圈，而不是一次次地修复它。他们希望可以打造一个确定的系统，以此确保这个问题不会反复出现。
 
@@ -32,7 +32,7 @@ Facebook 的工程师发现，更深层次的问题来自应用的数据传递�
 
 注意：我是从他们简化版的分享中了推测出来的。我确定真实的架构可能是不一样的。
 
-![Model 传递数据给 View 层](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-OcTeAqv8AU_z-O2HuucmeA.0b165b3c.png)
+![Model 传递数据给 View 层](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-OcTeAqv8AU_z-O2HuucmeA.4606e5af.png)
 
 他们用 Model 保存数据，并把数据传递一个 View 层，把这些数据渲染出来。
 
@@ -48,7 +48,7 @@ Facebook 的工程师发现，更深层次的问题来自应用的数据传递�
 
 因此 Facebook 决定尝试另外一种架构，即单向数据流——就一个方向——当你需要插入新的数据，流完全重新开始。他们把这种架构称为 Flux。
 
-![The diagram you’ll find in Facebook’s Flux docs. It is way cooler than it looks.](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-lZM0yU9ExEMd7DggVxXkxA.301fae08.png)
+![The diagram you’ll find in Facebook’s Flux docs. It is way cooler than it looks.](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-lZM0yU9ExEMd7DggVxXkxA.f57f41cc.png)
 
 在 Facebook 的 Flux 文档中也可以找到这张图，本身要比看起来更酷，真的，非常酷……但光看上面这张图可能无法完全明白。
 
@@ -64,7 +64,7 @@ Facebook 的工程师发现，更深层次的问题来自应用的数据传递�
 
 第一个角色是 Action Creator。它负责创建 Aaction，作为全部改变和交互的入口。当需要改变应用的状态或有 View 需要更新时，你需要触发一个 Action。
 
-![Action Creator 就像一个电报员，它帮助你制作消息。](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-DATbW4s4Ls6UPieavtdB7w.0ff85519.png)
+![Action Creator 就像一个电报员，它帮助你制作消息。](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-DATbW4s4Ls6UPieavtdB7w.3bc3def9.png)
 
 我认为 Action Creator 就像电报员。你拿着你想要寄出的消息，找到 Action Creator，它就把消息格式化成系统其他部分可以理解的形式。
 
@@ -78,7 +78,7 @@ Action Creator 把 type 和 payload（载荷）封装成一个 Action。type 是
 
 Dispatcher 就是一个巨大的回调函数登记表。就好比一个坐在电话总机前的接线员。它保存着所有需要发送 action 的 store 列表。当 Action Creator 给过来一个 action，它会把这个 action 传递给各个 store。
 
-![The dispatcher is like a switchboard operator. It knows all the callbacks for the different stores.](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-R5XHVGZfkPkmL7BcN5jMqg.903bf714.png)
+![The dispatcher is like a switchboard operator. It knows all the callbacks for the different stores.](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-R5XHVGZfkPkmL7BcN5jMqg.f8a0c01e.png)
 
 Dispatcher  的行为是同步的，这对我之前讲的多个乒乓球游戏有所帮助。如果想要在 store 之间实现依赖，有的更新完了其他的才能更新，你可以使用 Dispatcher 提供的 `waitFor()` 来实现。
 
@@ -88,7 +88,7 @@ Flux 的 Dispatcher 不同于其他大部分架构中的 dispatcher。它会把 
 
 轮到说 store 了。store 保存了整个程序的状态，而且状态变化的逻辑都在 store 里。
 
-![store 是一个充满控制欲的长官，所有的变化都必须进过它](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-17MbK8jz94ynP-NFfL0rfw.a36eeae2.png)
+![store 是一个充满控制欲的长官，所有的变化都必须进过它](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-17MbK8jz94ynP-NFfL0rfw.41a136a1.png)
 
 我觉得 store 就是一个充满控制欲的长官。所有所有的状态变化都必须由它来亲自操作的。而且你不能直接通过 store 来更改状态。在 store 上并没有 setter API。要更新一次状态，你必须经过正当的手续——必须通过 Action Creator/Dispatcher 通道。
 
@@ -100,7 +100,7 @@ Flux 的 Dispatcher 不同于其他大部分架构中的 dispatcher。它会把 
 
 View 层负责将 state 渲染给用户，并接受用户的输入。
 
-![Controller View 是一个中间管理者，从 store 中获得通知，并把数据传递给它所负责的 View，View 将数据渲染给用户。](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-MY5xNk_JeKvGsGdywYD4EA.32250de8.png)
+![Controller View 是一个中间管理者，从 store 中获得通知，并把数据传递给它所负责的 View，View 将数据渲染给用户。](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-MY5xNk_JeKvGsGdywYD4EA.96e36cf6.png)
 
 View 就像一个主持。它对应用一无所知，只懂该如何把交到它们手中的数据渲染格式化成用户能够理解的输出（HTML）。
 
@@ -116,17 +116,17 @@ Controller View 是一个中间管理者。store 在 state 变化时通知它，
 
 1. Store 告知 Dispatcher 只要有 action 产生就通知它。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-WTufEd_jfuGyMGCeg85GuA.657481b9.png)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-WTufEd_jfuGyMGCeg85GuA.a09869bc.png)
 
 2. Controller View 从 Store 中获取最新的 state。
 
 3. 当 Controller View 接到来自 store 的 state，就将其传递给它所管辖的子 View 去渲染。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-h2tP5ojNDPy5YyXrA19N4A.a69c2ee5.png)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-h2tP5ojNDPy5YyXrA19N4A.d6d60b9e.png)
 
 4. Controller View 同时让 store 在 state 变化的时候通知自己。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-I3zHW9FAIZwnr1yCXMGBHA.3ff14f4f.png)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-I3zHW9FAIZwnr1yCXMGBHA.74264908.png)
 
 ### 数据流
 
@@ -134,29 +134,29 @@ Controller View 是一个中间管理者。store 在 state 变化时通知它，
 
 用户交互我们就产生一次数据流。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-SusQ7Aip2fSWg6raQtPSnA.e0f3e496.png)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-SusQ7Aip2fSWg6raQtPSnA.9ef0199b.png)
 
 1. View 告知 Action Creator 准备一个 action。
 
-  ![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-dkm9qsWuD9DtXzH-u-DjJQ.9df70273.png)
+  ![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-dkm9qsWuD9DtXzH-u-DjJQ.0126017e.png)
 
 2. Action Creator 做好 action 并将其发送给 Dispatcher。
 
-  ![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-fJwvtpq0XQhB4mUZwh7YOQ.ac165282.png)
+  ![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-fJwvtpq0XQhB4mUZwh7YOQ.0f5637e4.png)
 
 3. Dispatcher 按照顺序将 action 传递给 store。每一个 store 都会受到所有的 action 通知，然后自行觉得是否对这个 action 做出响应，更新 state。
 
-  ![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-RLrImTDeArSMoA4kZsajLQ.b0bb2338.png)
+  ![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-RLrImTDeArSMoA4kZsajLQ.a1ebc3fb.png)
 
 4. 一旦 store 更新 state 完毕，就会告知订阅了该 store 的 controller view。
 
 5. 这些 controller view 就会向 store 请求更新了的 state。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-5SXO2eftdQveFqImGDVB9A.834682fd.png)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-5SXO2eftdQveFqImGDVB9A.745c0f54.png)
 
 6. 从 store 中获得 state 之后，view controller 将会让它所管辖的子 view 渲染新的 state。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-fWBaUg9-_1-V5M2YQBWhWg.774bf297.png)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/A-cartoon-guide-to-Flux/1-fWBaUg9-_1-V5M2YQBWhWg.e611784e.png)
 
 好了，这些就是我对 Flux 的理解，希望能够帮助到你！
 

@@ -4,7 +4,7 @@ title:      "2014年5个最流行的前端框架"
 subtitle:   ""
 date:       2015-02-07
 author:     "寸志"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared.3cb1aae3.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared.65409e1d.jpg"
 tags:
     - 前端框架
     - Bootstrap
@@ -84,7 +84,7 @@ Foundation 的确是一个非常专业的框架，有商业的支持、培训以
 
 Semantic UI 一直在努力让网站建设更加语义化。它利用了自然语言的原则，使得代码更容易读更容易理解。
 
-![Semantic UI](http://7xrvqo.com1.z0.glb.clouddn.com/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared/1418135026semanticui-screen.2f7a779f.jpg)
+![Semantic UI](http://7xrvqo.com1.z0.glb.clouddn.com/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared/1418135026semanticui-screen.331604e3.jpg)
 
 - 作者: Jack Lukic
 - 发布时间: 2013

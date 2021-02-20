@@ -4,7 +4,7 @@ title:      "使用 React 和 Flux 创建一个记事本应用"
 subtitle:   ""
 date:       2015-01-14
 author:     "范洪春"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/creating_a_note_taking_app_with_react_and_flux.46249e8f.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/creating_a_note_taking_app_with_react_and_flux.d1f01479.jpg"
 tags:
   - React
   - Flux

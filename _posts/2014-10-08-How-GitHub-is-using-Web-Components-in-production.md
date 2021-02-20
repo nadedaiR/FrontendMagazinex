@@ -4,7 +4,7 @@ title:      "Web Components 在 GitHub 中的应用"
 subtitle:   ""
 date:       2014-10-08
 author:     "寸志"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/How-GitHub-is-using-Web-Components-in-production.8652c7e1.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/How-GitHub-is-using-Web-Components-in-production.24d24299.jpg"
 tags:
     - Web Component
     - Github

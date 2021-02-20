@@ -26,7 +26,8 @@
   },
   "scripts": {
     "preview": "cd _site; anywhere -p 8020",
-    "watch": "gulp watch & npm run preview & jekyll serve -w;",
-    "build": "gulp clean && gulp build"
+    "dev": "gulp clean & gulp watch & npm run preview & jekyll serve -w -s src;",
+    "build": "gulp clean && gulp build",
+    "upload": "gulp qiniu"
   }
 }

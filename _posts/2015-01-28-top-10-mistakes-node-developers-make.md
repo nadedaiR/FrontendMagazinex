@@ -4,7 +4,7 @@ title:      "10个Node.js开发者最易犯的错误"
 subtitle:   ""
 date:       2015-01-28
 author:     "姜天意"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/top-10-mistakes-node-developers-make.4ff37fc8.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/top-10-mistakes-node-developers-make.444b7182.jpg"
 tags:
   - Node.js
 ---

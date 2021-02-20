@@ -4,7 +4,7 @@ title:      "RAIL，以用户为核心的性能模型"
 subtitle:   ""
 date:       2015-10-16
 author:     "kmokidd"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/rail/rail-response-animation-idle-load.f9dabd07.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/rail/rail-response-animation-idle-load.72f38db0.jpg"
 tags:
     - 前端开发
     - 性能优化
@@ -80,7 +80,7 @@ Chrome 团队已经考虑过这个问题，并提出了 **RAIL** 模型。用户
 
 给用户的刚刚采取的动作用色块做记号，然后得到下面这张图：
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/rail/02-user-journey-breakdown-opt.eed7eebd.jpg)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/rail/02-user-journey-breakdown-opt.20493e17.jpg)
 
 
 每个色块代表一个动作，你可以观察到一共有**4**个色块也就是**4**个动作。emmm，RAIL 也是**4**个字母呢，美妙的巧合。
@@ -102,7 +102,7 @@ RAIL 是 response （响应）、 animation（动画）、idle（浏览器空置
 
 从这四个模块角度来思考你的产品。如果在每个模块上，你都可以达到性能优化的目标值（也就是上文提及的阀值），那么最终用户感受到的将会是极致的体验。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/rail/rail-response-animation-idle-load.f9dabd07.jpg)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/rail/rail-response-animation-idle-load.72f38db0.jpg)
 
 
 现在让我们一个个来看。
@@ -163,7 +163,7 @@ RAIL 是 response （响应）、 animation（动画）、idle（浏览器空置
 
 既然现在我们有了 RAIL 模型，让我们来总结一个性能目标吧
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/rail/table.3a8cbdd6.jpg)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/rail/table.b41556e9.jpg)
 
 ### 如何实践
 

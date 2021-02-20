@@ -28,9 +28,9 @@ gulp.task('min-style', ['less'], function () {
 
 gulp.task('min-images', function () {
   return gulp.src('src/images/**/*.{jpg,gif,png}')
-    // .pipe(imagemin({
-    //   progressive: true
-    // }))
+    .pipe(imagemin({
+      progressive: true
+    }))
     .pipe(gulp.dest('dist/images/'))
 })
 
@@ -73,6 +73,10 @@ gulp.task('build', ['dist'], function () {
     .pipe(revAll.revision())
     .pipe(gulp.dest('.'))
 })
+
+gulp.task('watch', function () {
+  return gulp.watch('src/less/**/*.less', ['less'])
+});
 
 gulp.task('qiniu', function () {
   return gulp.src([

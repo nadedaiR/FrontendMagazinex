@@ -94,7 +94,11 @@ Once the user selects the device and connects to it, it can then print out the d
 
 GATT stands for [Generic Attribute Profile](https://developer.bluetooth.org/TechnologyOverview/Pages/GATT.aspx) and provides a standard way for Bluetooth devices to advertise their services to the outside world. Your cell phone might provide a GATT service to show the current battery level. Your fitness band might provide a service that too, along with another one showing the current heart rate count. There are a [number of services which are exposed through GATT](https://developer.bluetooth.org/gatt/services/Pages/ServicesHome.aspx), and we can listen to those services depending on which of those services are exposed by the device.
 
+GATT 全称是 [Generic Attribute Profile](https://developer.bluetooth.org/TechnologyOverview/Pages/GATT.aspx)（通用属性配置文件），这份文件制定了一个蓝牙设备所能提供的服务，广而告之天下的标准。手机的电池情况就是通过 GATT 来确认的，同理，你的运动手环也在使用相同的服务来评估电池情况还有计算你的心率。GATT 提供了[很多服务](https://developer.bluetooth.org/gatt/services/Pages/ServicesHome.aspx)，我们可以根据服务所暴露出的设备对象，来坚挺服务。
+
 Some devices may not list their services in the standardized list of GATT services, in which case you could use their full Bluetooth UUID or a short 16- or 32-bit ID instead. Of course, this depends on whether the device has any documentation mentioning these UUIDs and what they are for.
+
+一些设备可能不会把它们的服务罗列在 GATT 的标准服务中，这种情况下，你需要使用设备完整的蓝牙 UUID，也就是一串 16 bits 或者 32 bits 长度的 ID（如下文）。当然，如果设备文档中压根没有提到标准之外的服务，也谈不上使用什么 UUID 了。
 
 ``` javascript
 navigator.bluetooth.requestDevice({
@@ -103,4 +107,3 @@ navigator.bluetooth.requestDevice({
 	}]
 });
 ```
-

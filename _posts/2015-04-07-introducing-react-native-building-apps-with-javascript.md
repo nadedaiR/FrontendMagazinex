@@ -4,7 +4,7 @@ title:      "深入浅出 React Native：使用 JavaScript 构建原生应用"
 subtitle:   ""
 date:       2015-04-07
 author:     "kmokidd"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/introducing-react-native-building-apps-with-javascript.03aab091.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/introducing-react-native-building-apps-with-javascript.13906788.jpg"
 tags:
   - React
   - React Native

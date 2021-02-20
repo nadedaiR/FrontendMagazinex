@@ -4,7 +4,7 @@ title:      "同构 JavaScript 应用 ——  Web 世界的未来？"
 subtitle:   ""
 date:       2015-03-11
 author:     "范洪春"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/isomorphic_javascript_applications_the_future_of_the_web.bc8cfaf6.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/isomorphic_javascript_applications_the_future_of_the_web.b419b512.jpg"
 tags:
   - JavaScript
   - 前端性能优化

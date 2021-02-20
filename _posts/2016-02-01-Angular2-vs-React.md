@@ -4,7 +4,7 @@ title:      "Angular 2 vs React: 冰与火之歌"
 subtitle:   "是时候进行一场巅峰对决了！"
 date:       2016-02-01
 author:     "黄玄、李凌豪"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Angular2-vs-React/Angular-vs-React.5d6febd0.jpg"
+header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Angular2-vs-React/Angular-vs-React.367662f0.jpg"
 tags:
     - React
     - Angular
@@ -75,7 +75,7 @@ JSX 是一种类似 HTML 的语法，但它实际上会被编译成 JavaScript�
 
 如果你不喜欢 Angular 的字符串模版，你可以把模版移到一个单独的文件里去。不过这样你就回到了我认为的“老样子”：你需要在自己脑袋里记住这两个文件的关联，不但没有代码自动补全，也没有任何编译时检查来协助你。这听起来可能并不算什么……除非你已经爱上了与 React 相伴的日子。在同一个文件中组合组件还能享受编译时的检查，大概是 JSX 最与众不同的地方之一了。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/Angular2-vs-React/1-ivDnyMP63YJBBGKCNyRUzQ.434beb75.png)
+![](http://7xrvqo.com1.z0.glb.clouddn.com/images/Angular2-vs-React/1-ivDnyMP63YJBBGKCNyRUzQ.c2ecf1d0.png)
 
 对比 Angular 2 与 React 在标签忘记闭合时是如何表现的。
 
