@@ -107,3 +107,120 @@ navigator.bluetooth.requestDevice({
 	}]
 });
 ```
+
+
+
+### Reading and writing GATT services
+
+### GATT 服务的读写
+
+Once we have connected to a device, the next step is of course, to read some useful data from it. To do that, we need to connect to the device’s GATT server by using the method `gatt.connect()`. Let’s take our previous code sample and extend it. This is based on the [Battery Level Sample Code](https://googlechrome.github.io/samples/web-bluetooth/battery-level.html) demo, which you can also check out (Note however that it uses the `connectGATT()` method which is deprecated from Chromium 50 onwards).
+
+一旦我们连接上了设备，那自然而然，下一步就是从设备中读取点数据出来。要实现这个，需要用 ```gatt.connect()``` 方法连接上设备的 GATT 服务器。就让我们接着上面的例子往下写一个[电量demo](https://googlechrome.github.io/samples/web-bluetooth/battery-level.html)，不过请注意，demo 中使用到的 ```connectGATT()``` 方法在 Chromium 50 及以上版本已经弃用了。
+
+``` javascript
+navigator.bluetooth.requestDevice({
+	filters: [{
+		services: ['battery_service']
+	}]
+}).then(device => {
+	console.log('Got device:', device.name);
+	console.log('id:', device.id);
+    // Chromium 49 及以下版本请使用 connectGATT()
+    // Chromium 50 之后版本请使用 gatt.connect()
+	return device.gatt.connect();
+})
+.then(server => {
+	console.log('Getting Battery Service…');
+	return server.getPrimaryService('battery_service');
+})
+.then(service => {
+	console.log('Getting Battery Characteristic…');
+	return service.getCharacteristic('battery_level');
+})
+.then(characteristic => {
+	console.log('Reading battery level…');
+	return characteristic.readValue();
+})
+.then(value => {
+	value = value.buffer ? value : new DataView(value);
+	console.log('Battery percentage:', value.getUint8(0));
+})
+.catch(exception => {
+	console.log(exception);
+});
+```
+
+
+
+Here we are reading the [standardized battery level GATT characteristic](https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.battery_level.xml). Keep in mind that the value in the end is given as a [`DataView`](https://docs.webplatform.org/wiki/javascript/DataView)object which then needs to be parsed correctly to get the final value.
+
+到目前为止，我们都是按照[标准的 GATT 电量 ```characteristic``` 属性](https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.battery_level.xml)来写代码的。用这种写法，返回值是一个  [`DataView`](https://docs.webplatform.org/wiki/javascript/DataView) 对象，要解析这个对象才能得到最后的值。
+
+
+
+Writing values would typically require entering the appropriate values to be parsed as a `BufferSource`, which are either an `ArrayBuffer` or a view onto an `ArrayBuffer` like a `DataView` object (You can see a[list of buffer source types](https://heycam.github.io/webidl/#idl-buffer-source-types)). For example, for resetting the `enerygyExpended` field in a heart rate monitor, we can use the [`writeValue()`](https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue)method like so:
+
+需要以 ```BufferSource``` 的形态写入值，可以是 ```ArrayBuffer``` 也可以是 ```ArrayBuffer``` 的视图 (view)，比如一个  `DataView`  对象。具体的 buffer source 类型可以查看[这张清单](https://heycam.github.io/webidl/#idl-buffer-source-types)。再举一个例子，如果想要重置一台心率仪的 ```enerygyExpended``` 字段，我们可以使用 [`writeValue()`](https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-writevalue) 方法：
+
+``` javascript
+navigator.bluetooth.requestDevice({
+	filters: [{
+		services: ['heart_rate']
+	}]
+}).then(device => {
+	console.log('Got device:', device.name);
+	console.log('id:', device.id);
+	return device.gatt.connect();
+})
+.then(server => server.getPrimaryService('heart_rate'))
+.then(service => service.getCharacteristic('heart_rate_control_point'))
+.then(characteristic => {
+	const resetEnergyExpended = new Uint8Array([1]);
+	// resetEnergyExpended 的值是'1'，表示重置
+	return characteristic.writeValue(resetEnergyExpended);
+})
+.then(value => {
+	console.log('Reset value of energy expended field');
+})
+.catch(exception => {
+	console.log(exception);
+});
+```
+
+
+
+If you don’t have a device which exposes GATT services but still want to play with the API, try out the [BLE Peripheral Simulator App](https://github.com/WebBluetoothCG/ble-test-peripheral-android).
+
+介绍道现在，知道你一定手痒了，就算手上没有支持 GATT 服务的设备，也可以试试[这个安卓 app](https://github.com/WebBluetoothCG/ble-test-peripheral-android)，它提供了各种新奇的 Web Bluetooth API 供用户测试。
+
+
+
+### Advanced uses
+
+### 高级魔法
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
