@@ -3,7 +3,7 @@ layout:     post
 title:      "Angular 2 vs React: 冰与火之歌"
 subtitle:   "是时候进行一场巅峰对决了！"
 date:       2016-02-01
-author:     "黄玄、李凌豪"
+author:     黄玄
 header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Angular2-vs-React/Angular-vs-React.367662f0.jpg"
 tags:
     - React

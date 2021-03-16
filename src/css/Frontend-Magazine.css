@@ -381,6 +381,9 @@ pre code {
   margin-bottom: 0px;
   /* 0 on mobile, modify by Hux */
 }
+.intro-header .gray-mark {
+  background-color: rgba(0, 0, 0, 0.14);
+}
 @media only screen and (min-width: 768px) {
   .intro-header {
     margin-bottom: 20px;
@@ -468,6 +471,14 @@ pre code {
 .intro-header .post-heading .meta a {
   color: white;
 }
+.intro-header .post-heading .meta .author-avatar {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-size: cover;
+  display: inline-block;
+}
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
     font-size: 55px;
@@ -503,7 +514,6 @@ pre code {
 .post-preview > .post-meta {
   font-family: 'Lora', 'Times New Roman', serif;
   color: #808080;
-  font-size: 16px;
   font-style: italic;
   margin-top: 0;
 }
@@ -531,7 +541,6 @@ pre code {
 }
 .post-content-preview {
   font-size: 13px;
-  font-style: italic;
   color: #a3a3a3;
 }
 .post-content-preview:hover {
@@ -921,4 +930,33 @@ body {
 }
 .page-fullscreen footer .copyright a:hover {
   color: #ddd;
+}
+/* Team Members */
+.team-members {
+  margin-top: 20px;
+}
+.team-members .team-member {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+.team-members .team-member:hover {
+  background-color: #F7F7F7;
+  border-radius: 3px;
+}
+.team-members .team-member .author-avatar {
+  border-radius: 50%;
+  margin: 20px auto;
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  border: 1px solid #efefef;
+}
+.team-members .team-member h4 {
+  color: #666;
+  font-weight: normal;
+}
+.team-members .team-member p {
+  margin: 10px 0 30px 0;
+  color: #999;
 }

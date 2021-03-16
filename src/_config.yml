@@ -8,7 +8,117 @@ keyword: ""
 url: "http://qianduan.guru"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
+author_list: [
+  寸志,
+  范洪春,
+  kmokidd,
+  姜天意,
+  橙子,
+  张轩,
+  李凌豪,
+  黄玄,
+  MrSunny
+]
 
+authors:
+  寸志:
+    name: 寸志
+    display_name: 寸志
+    avatar: /images/avatars/cunzhi.jpg
+    email: island205@gmail.com
+    web: island205.github.io
+    twitter: island205
+    company: 陆金所
+    position: 前端架构师
+    github: island205
+    weibo: chromeappsstore
+  范洪春:
+    name: 范洪春
+    display_name: 范洪春
+    avatar: /images/avatars/fanhongchun.jpg
+    email: fanhc019@gmail.com
+    web: https://www.zhihu.com/people/fanhc
+    twitter:
+    company: 阿里巴巴
+    position: 高级前端工程师
+    github: fanhc019
+    weibo: fanhc019
+  kmokidd:
+    name: kmokidd
+    display_name: 何语萱
+    avatar: /images/avatars/kmokidd.jpg
+    email: kmokidd@gmail.com
+    web:
+    twitter: kmokidd
+    company: 腾讯ISUX
+    position: UI工程师
+    github: kmokidd
+    weibo:
+  姜天意:
+    name: 姜天意
+    display_name: 99
+    avatar: /images/avatars/jtyjty99999.jpg
+    email: jtyjty99999@126.com
+    web: http://99jty.com
+    twitter:
+    company: 阿里巴巴
+    position: Node.js 工程师
+    github: jtyjty99999
+    weibo:
+  MrSunny:
+    name: MrSunny
+    display_name: MrSunny
+    avatar: /images/avatars/MrSunny.jpg
+    email:
+    web: https://www.zhihu.com/people/mrsunny
+    twitter:
+    company: 阿里巴巴
+    position: 前端工程师
+    github:
+    weibo:
+  橙子:
+    name: 橙子
+    display_name: 李金成
+    avatar: /images/avatars/chenzi.jpg
+    email: lylijincheng@hotmail.com
+    web: http://lylijincheng.herokuapp.com/blog
+    twitter: lylijincheng
+    company: 美柚
+    position: Web 工程师
+    github: lylijincheng
+    weibo:
+  张轩:
+    name: 张轩
+    display_name: 张轩
+    avatar: /images/avatars/vikingmute.jpg
+    email:
+    web: http://vikingmute.com/
+    twitter:
+    company: 苹果公司
+    position: 前端工程师
+    github: vikingmute
+    weibo: vikingmute
+  李凌豪:
+    name: 李凌豪
+    display_name: 李凌豪
+    avatar: /images/avatars/llh911001.jpg
+    email: llh911001@gmail.com
+    web: http://hackll.com
+    twitter: lilh42
+    company: 阿里巴巴
+    position: 资深前端工程师
+    github: llh911001
+  黄玄:
+    name: 黄玄
+    display_name: 黄玄
+    avatar: /images/avatars/hux.jpg
+    email: huxpro@gmail.com
+    web: http://huangxuan.me
+    twitter: huxpro
+    company: 微信电影票
+    position: 高级前端工程师
+    github: huxpro
+    weibo:  huxpro
 
 # SNS settings
 RSS: true

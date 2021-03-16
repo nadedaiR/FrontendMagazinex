@@ -3,7 +3,7 @@ layout:     post
 title:      "为什么整个互联网行业都缺前端工程师？"
 subtitle:   ""
 date:       2016-02-24
-author:     "寸志"
+author:     寸志
 header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/why-can-not-find-frontend-developer/web-developer.ea955ec4.jpg"
 tags:
     - 前端开发

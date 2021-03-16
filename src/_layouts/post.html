@@ -13,6 +13,7 @@ layout: default
     }
 </style>
 <header class="intro-header" >
+  <div class="gray-mark">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -29,11 +30,19 @@ layout: default
                     {% comment %} if page.subtitle {% endcomment %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% comment %} endif {% endcomment %}
-                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                    <span class="meta">
+                      {% assign author = site.authors[page.author] %}
+                      {% if author %}
+                      <div class="author-avatar" style="background-image:url({{author.avatar}})"></div>
+                      <span class="post-author">{{ author.display_name }} · </span>
+                      {% endif %}
+                      <span class="post-data">{{ page.date | date: "%Y年%m月%d日" }}</span>
+                    </span>
                 </div>
             </div>
         </div>
     </div>
+  </div>
 </header>
 
 <!-- Post Content -->

@@ -19,7 +19,11 @@ description: "关注前端前沿技术，探寻业界深邃思想"
         </div>
     </a>
     <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+        {% assign author = site.authors[post.author] %}
+        {% if author %}
+        <span class="post-author">{{ author.display_name }} · </span>
+        {% endif %}
+        <span class="post-data">{{ post.date | date: "%Y年%m月%d日" }}</span>
     </p>
 </div>
 <hr>
