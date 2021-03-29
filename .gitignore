@@ -5,3 +5,7 @@ js
 images
 fonts
 css
+!src/js
+!src/images
+!src/fonts
+!src/css
