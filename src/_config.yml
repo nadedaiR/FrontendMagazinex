@@ -132,7 +132,7 @@ github_username:    FrontendMagazine
 highlighter: rouge #pygments
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", 'src', 'dist']
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", 'src', 'dist', 'contribution']
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
