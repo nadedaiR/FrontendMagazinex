@@ -22,7 +22,7 @@ Read part 1 if you haven’t yet.
 Part 2 will continue where we left off the last time. The post will focus on improving our simple todo list. The current implementation consists of a composition of functions that render the complete app and includes a naive store that manages our state. There are a number of things we need to do to improve our application though. Here is a link to the current example and code.
 
 让我们继续 Part 1 没讲到的东西。
-我们这两篇文章主要是专注于如何重构我们的 todo list。现在，我们的实现包含了可以渲染整个应用的函数（组合），还有管理我们状态（state）的 *store*。然而，我们还有很多方法去优化我们的应用。[完整代码请查看这里](http://plnkr.co/edit/fjQbQwZpQlhd5wXoc9J8?p=preview)。
+这次的文章主要是专注于如何重构我们的 todo list。现在，我们实现了可以渲染整个应用的函数（组合），还有管理我们状态（state）的 *store*。然而，我们还有很多方法去优化我们的应用。[完整代码请查看这里](http://plnkr.co/edit/fjQbQwZpQlhd5wXoc9J8?p=preview)。
 
 First of all we haven’t taken care of handling our events in a proper way. Our components don’t handle any events. In React data flows down while events move up. This means our functions should trigger events up the chain as soon as they occur. For example our ItemRow function should call a function that has been passed down via props. How do we achieve this? Here’s an initial try.
 
@@ -43,11 +43,11 @@ function ItemRow (props) {
 ```
 We added an event listener on our list element which fires an onClick function as soon as the item is clicked. The onUpdate function is passed down via props.
 
-在上面，我们给 `list` 元素绑定了一个事件。当点击他们的时候，`onUpdate` 函数就会被调用。可以看到, `onUpdate` 是从 `props` 传递下来的。
+在上面，我们给 `list` 元素绑定了一个事件。当点击他们的时候，`onUpdate` 函数就会被调用。可以看到, `onUpdate` 函数是从 `props` 传递下来的。
 
 Now what if we could create a function that handles creating the elements for us?
 
-现在，我们不妨定义一个函数，他可以在创建元素的时候同时为其绑定事件。
+现在，我们不妨定义一个函数，他可以在创建元素的同时为其绑定事件。
 
 ```javascript
 function createElement (tag, attrs, children) {
@@ -84,7 +84,7 @@ function ItemRow (props) {
 ```
 It is important to note that in React createElement creates a javaScript objects that is a representation of a Dom Element not an element itself. On a side note let’s take a look at what really happens when you write JSX in React.
 
-需要注意的是 React 中的 `createElement` 函数是创建了一个 JavaScript 对象来表示 DOM 元素。还有一点，让我们来看看 React 中的 JSX 语法到底是怎样子的。
+需要注意的是，React 中的 `createElement` 函数是创建了一个 JavaScript 对象来表示 DOM 元素。还有一点，让我们来看看 React 中的 JSX 语法到底是怎样子的。
 
 The following JSX example
 
@@ -133,7 +133,7 @@ Back to our example. Where does onUpdate come from?
 
 Let’s take a look at our initial render function. Our render defined a updateState function and passed it on to the ItemList component via props.
 
-现在来看看我们的 `render` 函数。他定义了一个 `updateState` 函数，然后通过 `props` 把这个函数传给 `ItemList` 组件。
+首先来看看我们的 `render` 函数。他定义了一个 `updateState` 函数，然后通过 `props` 把这个函数传给 `ItemList` 组件。
 
 ```javascript
 function render (props, node) {
@@ -155,23 +155,24 @@ function render (props, node) {
 
 ItemsList function itself passes onUpdate to every single ItemRow.
 
-然后，`ItemList` 函数会把 `onUpdate` 传到每个 `ItemRow`。
+然后，`ItemList` 函数会把 `onUpdate` 传递到每个 `ItemRow`。
 
 ```javascript
-functions extending(base, item) {
+function extending (base, item) {
   return $.extend({}, item, base)
 }
 
 function ItemsList (props) {
   return createElement('ul', {}, props.items
-    .map(extending.bind(null, {onUpdate: props.onUpdate}))
-  )
-    .map(ItemRow)
+    .map(extending.bind(null, {
+      onUpdate: props.onUpdate
+    }))
+    .map(ItemRow))
 }
 ```
 By taking this approach we achieved the following: data flows down the component hierarchy and events flow up the tree. This also means that we can remove the global listener we previously defined to listen on item clicks, toggling the state accordingly. We moved the function into render, which is now the aforementioned updateState.
 
-通过以上我们实现了：数据流是从下往下的，而事件流是从下往上。这就意味着我们可以把定义在全局的监听器移除掉（用来监听点击 item 的时候，改变他的状态）。我们把这个函数移到了 `render` 函数里面，也就是前面所讲的 `updateState`。
+通过以上我们实现了：数据流是沿着组件链从上往下流，而事件流是从下往上。这就意味着我们可以把定义在全局的监听器移除掉（用来监听点击 item 的时候改变其状态的监听器）。那么，我们把这个函数移到了 `render` 函数里面，也就是前面所讲的 `updateState`。
 
 More improvements.
 
@@ -179,7 +180,7 @@ More improvements.
 
 Let’s refactor the input and button elements from the markup into a function. So eventually our markup will only consist of a div.
 
-现在我们把 `input` 和 `button` 从 HTML 标签变成函数。因此，我们整个 HTML 文件就只剩下一个 `div`。
+现在我们把 `input` 和 `button` 从 HTML 标签变成了函数。因此，我们整个 HTML 文件就只剩下一个 `div`。
 
 ```HTML
 <div id="app"></app>
@@ -187,7 +188,7 @@ Let’s refactor the input and button elements from the markup into a function. 
 
 For example a input element can be easily created like this
 
-我们的 `input` 元素很容易创建，就这样：
+因此，我们可以很简便地创建 `input` 元素，就这样：
 
 ```javascript
 var input = createElement('input', {id: 'input'})
@@ -195,10 +196,10 @@ var input = createElement('input', {id: 'input'})
 
 We can also move the global listener function that listened on button clicks into our SearchBar function. SearchBar returns an input and button element and handles click events by triggering a callback function passed in via props.
 
-同样地，我们也可以把监听搜索框按钮点击的全局函数放在我们的 `SearchBar` 函数里面。`SearchBar` 函数会返回一个 `input` 和一个 `button` 元素，他会通过 `props` 传进来的回调函数来处理点击事件。
+同样地，我们也可以把监听 *searchBar button* 点击事件的全局函数放在我们的 `SearchBar` 函数里面。`SearchBar` 函数会返回一个 `input` 和一个 `button` 元素，他会通过 `props` 传进来的回调函数来处理点击事件。
 
 ```javascript
-functions SearchBar(props) {
+function SearchBar(props) {
   function onButtonClick (e) {
     var val = $('#input').val()
     $('#input').val('')
@@ -207,6 +208,8 @@ functions SearchBar(props) {
   }
 
   var input = createElement('input', {id: 'input'})
+
+  // move listener to here
   var button = createElement('button', {
     id: 'add',
     onClick: onButtonClick.bind(null)
@@ -217,7 +220,9 @@ functions SearchBar(props) {
 ```
 Our render function needs to call SearchBar and pass in the appropriate props now. Before we update the render function, let’s take a second to get an idea on how a re-render should take place. Let’s neglect our store for a moment and take care of handling state in a high level component. Up until now, all functions were stateless, we’ll create a function that handles state and updates the children functions when suitable.
 
-我们的 `render` 函数调用 `SearchBar` 的同时传递正确的 `props` 参数。在我们更新 `update` 函数之前，让我们想想 *re-render* 应该在哪里调用才是正确的。首先，忽略我们的 `store`，把注意力集中在如何在一个 high level component 中处理 *state*。
+在上面，我们的 `render` 函数在调用 `SearchBar` 的同时需要传递正确的 `props` 参数。
+
+在我们重构 `render` 函数之前，让我们想想 *re-render* 应该在哪里调用才是正确的。首先，忽略我们的 `store`，把注意力集中在如何在一个 high level component 中处理 *state*。
 
 目前为止，所有的函数都是 *stateless* 的。接下来我们会创建一个函数，他会处理 *state*，以及在适当的时候更新子组件（children）。
 
@@ -289,7 +294,7 @@ Let’s refactor the App function to re-render it’s children components withou
 
 First of all let’s neglect the store and figure out how calling a setState function would re-render the component and it’s children elements.
 
-首先我们要忽略 `store`，并且想想怎么调用 `setState` 函数，从而使得组件和他的子组件重新渲染。
+首先我们暂时不考虑 `store`，而是想想怎么调用 `setState` 函数，使得组件和他的子组件重新渲染。
 
 We will need to keep track of the current state inside this high level component and also take care of re-rendering the DOM as soon as setState has changed. Here’s a very primitive approach:
 
@@ -350,7 +355,7 @@ In no way is this efficient, it should only highlight the fact, that calling set
 
 Here is the updated render call. We’re calling App without any arguments, simply relying on getInitialState to return the initial state.
 
-下面是 `render` 函数的最新代码，我们调用 `App` 时不需要带任何参数，只是需要简单地调用 `getInitialState` 返回初始的状态。
+下面是 `render` 函数的最新代码，我们调用 `App` 时不需要带任何参数，只是需要在 `App` 里面简单地调用 `getInitialState` 来初始化 `state`。
 
 ```javascript
 function render(component, node) {
@@ -399,11 +404,11 @@ var App = createClass({
 
 The good news is that React offers you multiple options to create Components including using React.createClass. Other options include ES6 classes and stateless functions for more information consult the docs.
 
-很幸运的是，在 React 中，你可以通过调用 `React.createClass` 来创建组件。他提供了很多选择，比如 ES6 Class ，stateless function 等，[更多请查看文档](https://facebook.github.io/react/docs/reusable-components.html)。
+很幸运的是，在 React 中，你可以通过调用 `React.createClass` 来创建这样的组件。他还提供了很多选择，比如 ES6 Class ，stateless function 等，[更多请查看文档](https://facebook.github.io/react/docs/reusable-components.html)。
 
 Our example app covered how data flows down and events flow up the component hierarchy. We’ve all seen how to handle state inside a component. There is a lot more to know and learn about React. The following links should help with continuing from here on.
 
-综上，我们讲解了数据流如何从上往下，而事件从下往上。我们也看到了如何处理一个组件的状态。关于 React 的东西，还有很多要学习。下面的链接也许可以帮助到你。
+综上，我们讲解了数据流如何从上往下，而事件流从下往上。我们也看到了如何处理一个组件的状态。关于 React 的东西，还有很多要学习。下面的链接也许可以帮助到你。
 
 **扩展阅读**
 
@@ -428,5 +433,10 @@ I might write a part 2.1 if there is some interest.
 *原文链接：[Learning React Without Using React Part 2](https://medium.com/javascript-inside/learning-react-without-using-react-part-2-703621a89432#.x3b88sqrx)*
 
 **译者注**
+
+TL;DR:
+
+- 把事件处理放在组件（`createElement`）里面，事件处理程序可通过 `props` 委托到父组件中。
+- 创建一个 container component，他包含了整个应用的状态，并且可以传递给其他组件。
 
 看完这两篇文章后，我根据这种思路，实现了一个二叉树的遍历。（[CODE](https://github.com/FrontEnd-Addiction/Baidu-IFE/blob/master/stage02%2Ftask22%2Ftree-traversal-react-like%2FREADME.md)，[DEMO](http://frontend-addiction.github.io/Baidu-IFE/stage02/task22/tree-traversal-react-like/index.html)）
