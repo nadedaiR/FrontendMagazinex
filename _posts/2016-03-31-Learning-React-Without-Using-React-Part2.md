@@ -183,7 +183,7 @@ function SearchBar(props) {
     onClick: onButtonClick.bind(null)
   }, 'Add')
 
-  return createElement('div', {}, {input, button})
+  return createElement('div', {}, [input, button])
 }
 ```
 
