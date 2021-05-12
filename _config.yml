@@ -18,7 +18,8 @@ author_list: [
   李凌豪,
   黄玄,
   MrSunny,
-  追客
+  追客,
+  林鸿
 ]
 
 authors:
@@ -131,6 +132,17 @@ authors:
     position: 前端魔法师
     github: DrakeLeung
     weibo:  DrakeLeung
+  林鸿:
+    name: 林鸿
+    display_name: 林鸿
+    avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/avatars/lin-hong.977dd729.jpg
+    email:
+    web:
+    twitter:
+    company: 无
+    position: 无
+    github:
+    weibo:
 
 
 # SNS settings

@@ -25,8 +25,7 @@
     "url": "git@github.com:FrontendMagazine/FrontendMagazine.github.io.git"
   },
   "scripts": {
-    "preview": "cd _site; anywhere -p 8020",
-    "dev": "gulp clean & gulp watch & npm run preview & jekyll serve -w -s src;",
+    "dev": "gulp clean & gulp watch & cd src; jekyll serve",
     "build": "gulp clean && gulp build",
     "upload": "gulp qiniu"
   }
