@@ -4,7 +4,7 @@ title:      "Airbnb React 编码规范"
 subtitle:   "用更合理的方式书写 React 和 JSX"
 date:       2016-03-03
 author:     "张轩"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/airbnb-react-style-guide/airbnb-react-style-guide.88278879.jpg"
+header-img: "/images/airbnb-react-style-guide/airbnb-react-style-guide.jpg"
 tags:
     - 前端开发
     - JavaScript

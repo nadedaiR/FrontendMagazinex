@@ -7,27 +7,28 @@ var RevAll = require('gulp-rev-all')
 var imagemin = require('gulp-imagemin')
 var qiniu = require('gulp-qiniu')
 var qiniuConfig = require('../../../.qiniu.json')
+var jekyll = require('gulp-jekyll')
 
 gulp.task('less', function () {
-  return gulp.src('src/less/Frontend-Magazine.less')
+  return gulp.src('./less/Frontend-Magazine.less')
     .pipe(less())
-    .pipe(gulp.dest('src/css/'))
+    .pipe(gulp.dest('./css/'))
 })
 
 gulp.task('min-script', function () {
-  return gulp.src('src/js/**/*.js')
+  return gulp.src('./js/**/*.js')
     .pipe(uglify().on('error', function(e) { console.log('\x07',e.message);}))
     .pipe(gulp.dest('dist/js/'))
 })
 
 gulp.task('min-style', ['less'], function () {
-  return gulp.src('src/css/**/*.css')
+  return gulp.src('./css/**/*.css')
     .pipe(minifyCss())
     .pipe(gulp.dest('dist/css/'))
 })
 
 gulp.task('min-images', function () {
-  return gulp.src('src/images/**/*.{jpg,gif,png}')
+  return gulp.src('./images/**/*.{jpg,gif,png}')
     .pipe(imagemin({
       progressive: true
     }))
@@ -36,27 +37,21 @@ gulp.task('min-images', function () {
 
 gulp.task('copy', function () {
     return gulp.src([
-        'src/**',
-        '!src/css/**',
-        '!src/images/**',
-        '!src/js/**',
-        '!src/less/**'
-      ])
+      './_includes/**',
+      './_layouts/**',
+      './_posts/**',
+      './fonts/**',
+      './*.html',
+      './_config.yml',
+      './favicon.ico',
+      'feed.xml'
+      ], {base: './'})
     .pipe(gulp.dest('dist/'))
 })
 
 gulp.task('clean', function () {
   return gulp.src([
-    'dist',
-    'build',
-    '_layouts',
-    '_includes',
-    '_posts',
-    'css',
-    'js',
-    'images',
-    'fonts',
-    '_config.yml'
+    'dist'
   ], {read: false})
     .pipe(clean());
 })
@@ -75,7 +70,7 @@ gulp.task('build', ['dist'], function () {
 })
 
 gulp.task('watch', function () {
-  return gulp.watch('src/less/**/*.less', ['less'])
+  return gulp.watch('./less/**/*.less', ['less'])
 });
 
 gulp.task('qiniu', function () {

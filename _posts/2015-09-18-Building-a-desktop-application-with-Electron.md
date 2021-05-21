@@ -167,7 +167,7 @@ npm start
 
 现在沐浴在这个 app 的圣光中吧。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/Electron/hello-world.accbec33.png)
+![](/images/Electron/hello-world.png)
 
 ### 开发一个真正的应用
 
@@ -177,7 +177,7 @@ npm start
 
 声效器是一个小设备，当你按下不同按键的时候，它会发出不同声音，比如卡通音或者效果音。在办公室里听到这样有趣的声音，好像整个人都明亮起来了呢。用这个例子作为探索如何使用 Electron 是个很棒的主意。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/Electron/sound-machine.5f4595f6.png)
+![](/images/Electron/sound-machine.png)
 
 具体来说，我们将会实现以下功能，并涉及到以下知识：
 
@@ -200,7 +200,7 @@ npm start
 
 我们的应用结构非常简单直白。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/Electron/proj-archtecture.95390abd.png)
+![](/images/Electron/proj-archtecture.png)
 
 在应用的**根目录**中，要有一个`package.json`，`main.js`和其他全局所需的应用文件。
 
@@ -307,7 +307,7 @@ function prepareButton(buttonEl, soundName) {
 ```bash
 npm start
 ```
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/Electron/working-sound-machined.24934817.png)
+![](/images/Electron/working-sound-machined.png)
 
 ### 通过远程事件从浏览窗口中关闭应用
 
@@ -323,7 +323,7 @@ git checkout 02-basic-sound-machine
 
 Electron 为主进程和渲染器进程提供了 ipc （跨进程通信）模块，ipc 模块允许接收和发送通信频道的信息。频道由字符串表示（比如“channel-1”，“channel-2”这样），可以用于区分不同的信息接收者。传递的信息中也可以包含数据。根据接收到的信息，订阅者可以做出响应。信息传递的最大好处就是做到分离任务 -- 主进程不需要知道是哪些渲染器进程发送了信息。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/Electron/ipc.1a9c189e.png)
+![](/images/Electron/ipc.png)
 
 这正是我们想要做的 -- 将主进程（`main.js`）订阅到“关闭主窗口”频道中，当用户点击关闭按钮时，从渲染器进程（index.js）向该频道发送信息。
 
@@ -376,7 +376,7 @@ git checkout 03-closable-sound-machine
 这就是全局快捷键要介入的地方。Electron 提供了[全局快捷模块](https://github.com/atom/electron/blob/master/docs/api/global-shortcut.md)（global shortcut module）允许开发者捕获组合键并做出相应的反应。在 Eelctron 中组合键被称为[加速器](https://github.com/atom/electron/blob/master/docs/api/accelerator.md)，它以字符串的形式被记录下（比如 “Ctrl+Shift+1”）。
 
 因为我们想要捕获到原生的 GUI 事件（全局快捷键），并执行应用窗口事件（播放声音），我们将使用 ipc 模块从主进程发送信息到渲染器进程。
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/Electron/shortcut.63a3604e.png)
+![](/images/Electron/shortcut.png)
 
 在看代码之前，还有两件事情要我们考虑：
 

@@ -4,7 +4,7 @@ title:      "Border-radius 50% vs 100%"
 subtitle:   "最近我在回顾曾经写过的代码。在过去写代码的时候，我似乎从未认真思考自己为什么要那么写，只是根据经验或者已有的代码写出来"
 date:       2015-07-25
 author:     "kmokidd"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/c9ff.square-to-circle.11356516.jpg"
+header-img: "/images/c9ff.square-to-circle.jpg"
 tags:
   - CSS
 ---

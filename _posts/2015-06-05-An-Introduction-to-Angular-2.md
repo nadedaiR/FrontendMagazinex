@@ -4,7 +4,7 @@ title:      "Angular2 简介"
 subtitle:   "声明：Angular2 现在还处于开发预览版，所以会有很多功能缺失，非兼容性升级，并且也会存在各种变化。"
 date:       2015-06-05
 author:     "MrSunny"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/An-Introduction-to-Angular-2.0f9a69d7.jpg"
+header-img: "/images/An-Introduction-to-Angular-2.jpg"
 tags:
     - Angular
     - ECMAScript6

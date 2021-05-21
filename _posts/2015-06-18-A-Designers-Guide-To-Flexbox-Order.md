@@ -4,7 +4,7 @@ title:      "Flexbox 设计指南4：排序"
 subtitle:   "flexbox 强悍之处千千万，有一点不得不提及：你只需要一行 CSS，就可以调换页面内容的顺序，这个效果从前只能借助 JavaScript 完成呢。这个特性在响应式设计中有多大的便利，相信聪明的你马上就能想象到了。"
 date:       2015-06-18
 author:     "kmokidd"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order.e5619e1a.png"
+header-img: "/images/Flexbox-For-Designers-Order.png"
 tags:
   - CSS3
   - Flexbox
@@ -60,9 +60,9 @@ ul { display: flex; flex-direction: row-reverse; }
 效果是酱紫的：
 
 <ul class="roman-columns columns-reversed columns-body-examples">
-<li><a href="#">Doric</a><img src="http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order/doric-column.801d9dc8.png" alt="">
-</li><li><a href="#">Ionic</a><img src="http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order/ionic-column.ceb5aac5.png" alt="">
-</li><li><a href="#">Corinthian</a><img src="http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order/corinthian-column.3e5c41c8.png" alt="">
+<li><a href="#">Doric</a><img src="/images/Flexbox-For-Designers-Order/doric-column.png" alt="">
+</li><li><a href="#">Ionic</a><img src="/images/Flexbox-For-Designers-Order/ionic-column.png" alt="">
+</li><li><a href="#">Corinthian</a><img src="/images/Flexbox-For-Designers-Order/corinthian-column.png" alt="">
 </li></ul>
 
 要注意哦，内容呈现的顺序是不同了，但是 DOM 结构并没有发生变化。
@@ -76,9 +76,9 @@ ul li:last-child { order: -1; }
 `order` 为*负值*可以控制元素调整到起始位置：
 
 <ul class="roman-columns columns-body-examples">
-<li><a href="#">Doric</a><img src="http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order/doric-column.801d9dc8.png" alt="">
-</li><li><a href="#">Ionic</a><img src="http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order/ionic-column.ceb5aac5.png" alt="">
-</li><li id="last-column"><a href="#">Corinthian</a><img src="http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order/corinthian-column.3e5c41c8.png" alt="">
+<li><a href="#">Doric</a><img src="/images/Flexbox-For-Designers-Order/doric-column.png" alt="">
+</li><li><a href="#">Ionic</a><img src="/images/Flexbox-For-Designers-Order/ionic-column.png" alt="">
+</li><li id="last-column"><a href="#">Corinthian</a><img src="/images/Flexbox-For-Designers-Order/corinthian-column.png" alt="">
 </li></ul>
 
 相对的，`order` 为*正值*会让一个元素被放在最后一个位置：
@@ -88,9 +88,9 @@ ul li:first-child { order: 1; }
 ````
 
 <ul class="roman-columns columns-body-examples">
-<li class="first-to-last"><a href="#">Doric</a><img src="http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order/doric-column.801d9dc8.png" alt="">
-</li><li><a href="#">Ionic</a><img src="http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order/ionic-column.ceb5aac5.png" alt="">
-</li><li><a href="#">Corinthian</a><img src="http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order/corinthian-column.3e5c41c8.png" alt="">
+<li class="first-to-last"><a href="#">Doric</a><img src="/images/Flexbox-For-Designers-Order/doric-column.png" alt="">
+</li><li><a href="#">Ionic</a><img src="/images/Flexbox-For-Designers-Order/ionic-column.png" alt="">
+</li><li><a href="#">Corinthian</a><img src="/images/Flexbox-For-Designers-Order/corinthian-column.png" alt="">
 </li></ul>
 
 当然，任何 [CSS 选择器](http://demosthenes.info/blog/css/selectors)（class、id 或者 伪元素）都可以控制 `order` 属性。
@@ -104,9 +104,9 @@ ul li:first-child { order: 1; }
 + 如果存在，元素的 `order` 值大于或者小于0，那么这样的 flex 元素就会被按照它们的 `order` 值相对大小来排列。所以才会呈现出这样的效果：
 
 <figure id="captioned-columns" class="columns-body-examples">
-<figure><img src="http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order/corinthian-column.3e5c41c8.png" alt=""><figcaption>order: -1</figcaption></figure>
-<figure><img src="http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order/doric-column.801d9dc8.png" alt=""><figcaption>order: 0</figcaption></figure>
-<figure><img src="http://7xrvqo.com1.z0.glb.clouddn.com/images/Flexbox-For-Designers-Order/ionic-column.ceb5aac5.png" alt=""><figcaption>order: 1</figcaption></figure>
+<figure><img src="/images/Flexbox-For-Designers-Order/corinthian-column.png" alt=""><figcaption>order: -1</figcaption></figure>
+<figure><img src="/images/Flexbox-For-Designers-Order/doric-column.png" alt=""><figcaption>order: 0</figcaption></figure>
+<figure><img src="/images/Flexbox-For-Designers-Order/ionic-column.png" alt=""><figcaption>order: 1</figcaption></figure>
 </figure>
 
 所以如果有一个元素是 `order:-2`，它会出现在现有 flex-item 的“背部”：在这例子里，它会出现在最左边。

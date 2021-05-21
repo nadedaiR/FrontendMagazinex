@@ -1,7 +1,7 @@
 # Site settings
 title: 前端外刊评论
 SEOTitle: 前端外刊评论-翻译 前端 前端开发 JavaScript Angular jQuery React Node.js 互联网
-header-img: http://7xrvqo.com1.z0.glb.clouddn.com/images/great-frontend.9d9e3846.png
+header-img: /images/great-frontend.png
 email: island205@gmail.com
 description: ""
 keyword: ""
@@ -26,7 +26,7 @@ authors:
   寸志:
     name: 寸志
     display_name: 寸志
-    avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/avatars/cunzhi.d4b31d0f.jpg
+    avatar: /images/avatars/cunzhi.jpg
     email: island205@gmail.com
     web: http://island205.github.io
     twitter: island205
@@ -37,7 +37,7 @@ authors:
   范洪春:
     name: 范洪春
     display_name: 范洪春
-    avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/avatars/fanhongchun.07138240.jpg
+    avatar: /images/avatars/fanhongchun.jpg
     email: fanhc019@gmail.com
     web: https://www.zhihu.com/people/fanhc
     twitter:
@@ -48,7 +48,7 @@ authors:
   kmokidd:
     name: kmokidd
     display_name: 何语萱
-    avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/avatars/kmokidd.d5ef6fa1.jpg
+    avatar: /images/avatars/kmokidd.jpg
     email: kmokidd@gmail.com
     web:
     twitter: kmokidd
@@ -59,7 +59,7 @@ authors:
   姜天意:
     name: 姜天意
     display_name: 99
-    avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/avatars/jtyjty99999.e310947f.jpg
+    avatar: /images/avatars/jtyjty99999.jpg
     email: jtyjty99999@126.com
     web: http://99jty.com
     twitter:
@@ -70,7 +70,7 @@ authors:
   MrSunny:
     name: MrSunny
     display_name: MrSunny
-    avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/avatars/MrSunny.d7aa3379.jpg
+    avatar: /images/avatars/MrSunny.jpg
     email:
     web: https://www.zhihu.com/people/mrsunny
     twitter:
@@ -81,7 +81,7 @@ authors:
   橙子:
     name: 橙子
     display_name: 李金成
-    avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/avatars/chenzi.57547cf3.jpg
+    avatar: /images/avatars/chenzi.jpg
     email: lylijincheng@hotmail.com
     web: http://lylijincheng.herokuapp.com/blog
     twitter: lylijincheng
@@ -92,7 +92,7 @@ authors:
   张轩:
     name: 张轩
     display_name: 张轩
-    avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/avatars/vikingmute.3ceecea1.jpg
+    avatar: /images/avatars/vikingmute.jpg
     email:
     web: http://vikingmute.com/
     twitter:
@@ -103,7 +103,7 @@ authors:
   李凌豪:
     name: 李凌豪
     display_name: 李凌豪
-    avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/avatars/llh911001.6aa6c3e2.jpg
+    avatar: /images/avatars/llh911001.jpg
     email: llh911001@gmail.com
     web: http://hackll.com
     twitter: lilh42
@@ -113,7 +113,7 @@ authors:
   黄玄:
     name: 黄玄
     display_name: 黄玄
-    avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/avatars/hux.e4c0d069.jpg
+    avatar: /images/avatars/hux.jpg
     email: huxpro@gmail.com
     web: http://huangxuan.me
     twitter: huxpro
@@ -124,7 +124,7 @@ authors:
   追客:
     name: 梁远成
     display_name: 追客
-    avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/avatars/drake.ab896153.png
+    avatar: /images/avatars/drake.png
     email: drakeleung42@gmail.com
     web: http://drakeleung.github.io/blog/
     twitter: DrakeLeung
@@ -135,7 +135,7 @@ authors:
   林鸿:
     name: 林鸿
     display_name: 林鸿
-    avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/avatars/lin-hong.977dd729.jpg
+    avatar: /images/avatars/lin-hong.jpg
     email: plantvsbird@gmail.com
     web: http://hl0.co
     twitter: Plantvsbird
@@ -195,7 +195,7 @@ ga_domain: qianduan.guru
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "欢迎关注「前端外刊评论」公众号——关注前端前沿技术，探寻业界深邃思想。"
-sidebar-avatar: http://7xrvqo.com1.z0.glb.clouddn.com/images/wechat-qrcode.ac648ab0.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /images/wechat-qrcode.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 

@@ -4,7 +4,7 @@ title:      "Angular 2：基于 TypeScript"
 subtitle:   "非常兴奋地为大家揭开我们与 Angular 团队合作数月之久的成果！这次合作不但硕果累累，还馈赠给我们非常多的经验。作为合作的一方，我们非常愉快地宣布 Angular2 将基于 TypeScript 来开发。我们期待基于新工具会产生怎样的火花，并且将会持续地与 Angular 团队协作，提升 Angular 开发者的开发体验。"
 date:       2015-03-07
 author:     "寸志"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/Angular-2-Built-on-TypeScript.fd5eb751.jpg"
+header-img: "/images/Angular-2-Built-on-TypeScript.jpg"
 tags:
     - Angular2
     - TypeScript

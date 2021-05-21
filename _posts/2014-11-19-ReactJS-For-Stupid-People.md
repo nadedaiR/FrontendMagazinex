@@ -4,7 +4,7 @@ title:      "ReactJS 傻瓜教程"
 subtitle:   ""
 date:       2014-11-19
 author:     "范洪春"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/ReactJS-For-Stupid-People.ca31c017.jpg"
+header-img: "/images/ReactJS-For-Stupid-People.jpg"
 tags:
     - React
     - MVC

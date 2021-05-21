@@ -4,7 +4,7 @@ title:      抛开 React 学习 React 第一部分
 subtitle:   ""
 date:       2016-03-27
 author:     "追客"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/learning-react-without-using-react/banner.044e8949.png"
+header-img: "/images/learning-react-without-using-react/banner.png"
 tags:
   - React
   - Redux
@@ -123,7 +123,7 @@ render()
 
 效果图如下。我们的应用现在可以显示所有的 todo，也可以改变每个 todo 的状态（进行中或者完成）。
 
-![simple todo lsit](http://7xrvqo.com1.z0.glb.clouddn.com/images/learning-react-without-using-react/todo-list.b96ad942.png)
+![simple todo lsit](/images/learning-react-without-using-react/todo-list.png)
 
 在上面，我们定义了两个 `click` 事件，当他们触发时就会更新我们的 `state` 以及调用 `render` 函数。而 `render` 函数会创建一个 todo list 。 `state` 作为中间媒介，简化了事件和 DOM 元素之间的交互，而不是** 通过事件来直接操作 DOM ** （不需要定义每个 DOM 元素和每个事件以及他们之间的关系）。当某个 *action*（如 click 事件） 触发之后，`state` 就会更新，接着调用 `render` 函数，最后我们的应用就会更新。这样一来，就简化了好多复杂的交互。
 

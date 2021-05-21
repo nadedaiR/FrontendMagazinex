@@ -4,7 +4,7 @@ title:      "2014年5个最流行的前端框架"
 subtitle:   ""
 date:       2015-02-07
 author:     "寸志"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared.65409e1d.jpg"
+header-img: "/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared.jpg"
 tags:
     - 前端框架
     - Bootstrap
@@ -26,7 +26,7 @@ tags:
 
 Bootstrap 无疑地是目前这些类库的领跑者。它非常流行，流行程度还在一天天的增加。这个令人赞叹的工具集不会让你失望的，在你构建成功站点之路上少不了它。
 
-![Bootstrap](http://7xrvqo.com1.z0.glb.clouddn.com/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared/1418134773bootstrap-screen.1bc8a6c5.png)
+![Bootstrap](/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared/1418134773bootstrap-screen.png)
 
 - 作者：Mark Otto 和 Jacob Thornton
 - 发布时间：2011年
@@ -55,7 +55,7 @@ Bootstrap 最大的优势就是它非常流行。从技术上讲，它并不是�
 
 Foundation 是这个领域的第二大玩家。拥有像 ZURB 这样的公司在背后支持，不得不说它确实有一个非常坚实的基础。总之，Foundation 被很多大的网站采用。包括 Facebook、Mozilla、Ebay、Yahoo 以及 National Geographic 等等。
 
-![ZURB Foundation](http://7xrvqo.com1.z0.glb.clouddn.com/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared/1418134774foundation-screen.65dde7fc.png)
+![ZURB Foundation](/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared/1418134774foundation-screen.png)
 
 - 作者: ZURB
 - 发布时间: 2011
@@ -84,7 +84,7 @@ Foundation 的确是一个非常专业的框架，有商业的支持、培训以
 
 Semantic UI 一直在努力让网站建设更加语义化。它利用了自然语言的原则，使得代码更容易读更容易理解。
 
-![Semantic UI](http://7xrvqo.com1.z0.glb.clouddn.com/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared/1418135026semanticui-screen.331604e3.jpg)
+![Semantic UI](/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared/1418135026semanticui-screen.jpg)
 
 - 作者: Jack Lukic
 - 发布时间: 2013
@@ -114,7 +114,7 @@ Rating、Shape
 
 Pure 是一个轻量的、模块化的框架——使用纯 CSS 编写的——根据你的需要，可以组合或者分开使用 Pure 的模块。
 
-![Pure by Yahoo!](http://7xrvqo.com1.z0.glb.clouddn.com/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared/1418134767pure-screen.490025e1.png)
+![Pure by Yahoo!](/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared/1418134767pure-screen.png)
 
 
 - 作者: Yahoo
@@ -147,7 +147,7 @@ Pure 只提供一套极简的样式，便于你从零开始你的项目。对于
 
 UIkit 包含了一些列简洁的易用的便于自定义的组件。尽管它没有其他在列的框架流行，但是它提供了相当的功能和质量。
 
-![UIkit](http://7xrvqo.com1.z0.glb.clouddn.com/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared/1418134769uikit-screen.fb6f612e.png)
+![UIkit](/images/The-5-Most-Popular-Frontend-Frameworks-of-2014-Compared/1418134769uikit-screen.png)
 
 - 作者: YOOtheme
 - 发布时间: 2013

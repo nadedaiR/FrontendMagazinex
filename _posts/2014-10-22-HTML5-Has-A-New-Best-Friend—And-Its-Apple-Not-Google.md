@@ -4,7 +4,7 @@ title:      "HTML5 最好的新朋友，是 Apple 不是 Google"
 subtitle:   ""
 date:       2014-10-22
 author:     "寸志"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/HTML5-Has-A-New-Best-Friend—And-Its-Apple-Not-Google.53c84df5.jpg"
+header-img: "/images/HTML5-Has-A-New-Best-Friend—And-Its-Apple-Not-Google.jpg"
 tags:
     - HTML5
     - Apple

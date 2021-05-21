@@ -4,7 +4,7 @@ title:      "2015 前端[JS]工程师必知必会"
 subtitle:   "上次我写《前端工程师必知必会》已经是三年前了，那是我写过最火的文章了。三年了，我仍然会在Twitter上收到关于这篇文章的消息。"
 date:       2015-04-14
 author:     "MrSunny"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/A-Baseline-for-Front-End-JS-Developers-2015.1e27ed7b.jpg"
+header-img: "/images/A-Baseline-for-Front-End-JS-Developers-2015.jpg"
 tags:
     - 前端开发
     - JavaScript

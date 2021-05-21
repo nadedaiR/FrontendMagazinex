@@ -4,7 +4,7 @@ title:      抛开 React 学习 React 第二部分
 subtitle:   ""
 date:       2016-03-31
 author:     "追客"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/learning-react-without-using-react/banner2.66b9d3ae.png"
+header-img: "/images/learning-react-without-using-react/banner2.png"
 tags:
   - React
   - Redux

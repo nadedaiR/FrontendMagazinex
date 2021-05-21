@@ -4,7 +4,7 @@ title:      NPM 与 left-pad 事件：我们是不是早已忘记该如何好好
 subtitle:   ""
 date:       2016-04-04
 author:     "林鸿"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/npm_left_pad_unpublished-1024x466.2fa83584.jpg"
+header-img: "/images/npm_left_pad_unpublished-1024x466.jpg"
 tags:
   - npm
   - Node.js

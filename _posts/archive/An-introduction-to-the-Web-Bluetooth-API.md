@@ -4,7 +4,7 @@ title:      "Web Bluetooth API 初探"
 subtitle:   ""
 date:       2016-03-18
 author:     "kmokidd"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/web-bluetooth-api.5d35e190.jpg"
+header-img: "/images/web-bluetooth-api.jpg"
 tags:
   - JavaScript
   - 前端开发

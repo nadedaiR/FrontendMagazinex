@@ -4,7 +4,7 @@ title:      "使用 Alias 来定制 Git"
 subtitle:   ""
 date:       2014-10-18
 author:     "范洪春"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/personalizing_git_with_aliases.35f29395.jpg"
+header-img: "/images/personalizing_git_with_aliases.jpg"
 tags:
     - Git
 ---

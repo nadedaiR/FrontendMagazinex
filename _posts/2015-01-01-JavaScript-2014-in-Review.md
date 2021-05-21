@@ -4,7 +4,7 @@ title:      "JavaScript：回首2014年"
 subtitle:   ""
 date:       2015-01-01
 author:     "寸志"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/JavaScript-2014-in-Review.35d08ec5.jpg"
+header-img: "/images/JavaScript-2014-in-Review.jpg"
 tags:
     - JavaScript
 ---

@@ -132,7 +132,7 @@ Here’s what we have so far:
 
 现在可以看到这个了：
 
-![first-frame](images/twitter-heart/anim-f-frame.431438c6.png)
+![first-frame](images/twitter-heart/anim-f-frame.png)
 
 
 
@@ -201,7 +201,7 @@ Here, we’re saying play the animation named *heart-burst *for a duration of 
 
 ```heart-burst``` 动画有28帧，会执行800毫秒。当把它应用到我们的爱心上，它会变成这样：
 
-![](images/twitter-heart/effect01.765257dd.gif)
+![](images/twitter-heart/effect01.gif)
 
 
 
@@ -254,7 +254,7 @@ And last but not least, let’s add a hover effect to complete the experience:
 
 
 
-![](images/twitter-heart/final.dfeac64c.gif)
+![](images/twitter-heart/final.gif)
 
 
 
@@ -316,7 +316,7 @@ After a few trials on this challenge I finally have my answer. The result is not
 
 在经过一些尝试之后，我终于实现了。不过你可能会觉得我的代码不够漂亮，毕竟 400 行之长 SCSS/CSS 代码真的也不算回事儿嘛，不过对我来说，能找到这个方案已经很高兴了。
 
-![](images/twitter-heart/effect.c6286a6e.gif)
+![](images/twitter-heart/effect.gif)
 
 I will now describe the steps I went through to find it.
 
@@ -357,7 +357,7 @@ I separated the full area in 4 rectangles :
 + Bottom / Left and Bottom / Right : 75% high / 50% wide
 + 左下和右下区域是占总高度的 75%，总宽度的 50%
 
-![](images/twitter-heart/heart.cdf19df1.png)
+![](images/twitter-heart/heart.png)
 
 
 
@@ -365,7 +365,7 @@ And I used a pseudo element (:after) inside every rectangle and played with bord
 
 接着在每个矩形结构中，我都使用上设置了 ```border-radius``` 值的伪元素（```:after```），尽可能地模拟每个对应部分的形状。
 
-![](images/twitter-heart/pieces.760913be.png)
+![](images/twitter-heart/pieces.png)
 
 
 
@@ -373,7 +373,7 @@ Then I applied the color and overflow:hidden
 
 接着再使用 ```color``` 和 ```overflow:hidden```：
 
-![](images/twitter-heart/pieces-color.450fa398.png)
+![](images/twitter-heart/pieces-color.png)
 
 ### Ring
 
@@ -389,7 +389,7 @@ This one is a simple rounded element with different border-size values and width
 
 通过设置不同的 ```border-size```、```width``` 和 ```height``` 就能画出各种各样的环形了。
 
-![](images/twitter-heart/ring.e9e2a3fa.png)
+![](images/twitter-heart/ring.png)
 
 
 
@@ -407,7 +407,7 @@ I built this one using a transparent rounded element in the middle and adding sh
 
 将一个透明的圆形元素居中，然后给它加上阴影（```shadow-box```）。
 
-![](images/twitter-heart/circles01.5838db25.png)
+![](images/twitter-heart/circles01.png)
 
 
 
@@ -415,7 +415,7 @@ A shadow-box value for each circle, comma separated. The position x / y is compu
 
 圆形的阴影值，用逗号分隔。坐标值可以通过圆规和三角函数算出来：
 
-![](images/twitter-heart/circles02.d631249b.png)
+![](images/twitter-heart/circles02.png)
 
 ## Animation
 
@@ -435,7 +435,7 @@ Increasing / decreasing the width / height of the main element (and setting the 
 
 通过增减“爱心”元素的宽高比，并相应调整元素的 ```left``` 和 ```top``` 值，要保证其他和“爱心”元素有相对位置关系的元素的位置也校正好了。
 
-![](images/twitter-heart/heart-ani.5edae748.png)
+![](images/twitter-heart/heart-ani.png)
 
 ### Ring
 
@@ -445,7 +445,7 @@ Adjusting the size of the border and the circle inside and the position accordin
 
 调整```边界```的大小以及其中的圆形的尺寸，并相应调整它们的位置和颜色。
 
-![](images/twitter-heart/ring-ani.c919a722.png)
+![](images/twitter-heart/ring-ani.png)
 
 
 
@@ -612,7 +612,7 @@ A picture will be better than a long explanation :
 
 一图胜千言：
 
-![](images/twitter-heart/spirit.de7dacb5.png)
+![](images/twitter-heart/spirit.png)
 
 The animation will be active / inactive just by adding / removing the class (.active) on the container (.heart-wrapper). In my example this class toggles on click.
 

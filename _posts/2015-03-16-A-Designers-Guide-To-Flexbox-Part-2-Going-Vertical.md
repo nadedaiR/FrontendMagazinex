@@ -4,7 +4,7 @@ title:      "Flexbox 设计指南2：垂直布局"
 subtitle:   "一如之前说过的，flexbox 是一个很强大的 CSS 布局模块。它的优点之一就是，如果你想要将水平布局的 flexbox 改为垂直布局，一行 CSS 代码就能搞定，而且盒子中的元素排列顺序也能用 CSS 来更改。"
 date:       2015-03-16
 author:     "kmokidd"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/A-Designers-Guide-To-Flexbox-Part-2-Going-Vertical.cbbb3bcb.jpg"
+header-img: "/images/A-Designers-Guide-To-Flexbox-Part-2-Going-Vertical.jpg"
 tags:
   - CSS3
   - Flexbox

@@ -4,7 +4,7 @@ title:      "虚拟研讨会——真实世界的 JavaScript MVC 框架"
 subtitle:   ""
 date:       2015-06-25
 author:     "范洪春"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/虚拟研讨会——真实世界的_javascript_mvc_框架.f6b7af6e.jpg"
+header-img: "/images/虚拟研讨会——真实世界的_javascript_mvc_框架.jpg"
 tags:
     - MVC
     - Backbone.js

@@ -4,7 +4,7 @@ title:      "指尖的流畅体验－－基于canvas建立移动界面"
 subtitle:   "在智能手机和平板电脑的黎明时期， Flipboard 推出“移动先行”的体验,使我们可以重新思考页面中内容布局的原则，以及与触摸屏相关的，如何获得更好的用户体验的因素。"
 date:       2015-03-04
 author:     "姜天意"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/60fps-on-the-mobile-web/60fps-on-the-mobile-web.8058bc65.jpg"
+header-img: "/images/60fps-on-the-mobile-web/60fps-on-the-mobile-web.jpg"
 tags:
     - canvas
     - Flipboard
@@ -353,8 +353,8 @@ React Canvas 并不能完全取代 DOM。我们在我们的移动 web app 中，
 原文：http://engineering.flipboard.com/2015/02/mobile-web/
 
   [1]: http://www.html5rocks.com/en/tutorials/speed/scrolling/
-  [2]: http://7xrvqo.com1.z0.glb.clouddn.com/images/60fps-on-the-mobile-web/follow_btn.4de364b4.gif
-  [3]: http://7xrvqo.com1.z0.glb.clouddn.com/images/60fps-on-the-mobile-web/topbar.711845ea.gif
+  [2]: /images/60fps-on-the-mobile-web/follow_btn.gif
+  [3]: /images/60fps-on-the-mobile-web/topbar.gif
   [4]: http://jankfree.org/
   [5]: http://chrome.angrybirds.com/
   [6]: http://dev.w3.org/csswg/css-font-loading/
@@ -364,8 +364,8 @@ React Canvas 并不能完全取代 DOM。我们在我们的移动 web app 中，
   [10]: http://www.chromium.org/developers/design-documents/gpu-accelerated-compositing-in-chrome
   [11]: http://updates.html5rocks.com/2014/05/A-More-Compatible-Smoother-Touch
   [12]: https://github.com/zynga/scroller
-  [13]: http://7xrvqo.com1.z0.glb.clouddn.com/images/60fps-on-the-mobile-web/scrolling.9c62014b.gif
-  [14]: http://7xrvqo.com1.z0.glb.clouddn.com/images/60fps-on-the-mobile-web/flip_ui.d23572e9.gif
+  [13]: /images/60fps-on-the-mobile-web/scrolling.gif
+  [14]: /images/60fps-on-the-mobile-web/flip_ui.gif
   [15]: http://facebook.github.io/react/
   [16]: https://www.youtube.com/watch?v=KVZ-P-ZI6W4
   [17]: https://github.com/flipboard/react-canvas

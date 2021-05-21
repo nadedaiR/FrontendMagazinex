@@ -4,7 +4,7 @@ title:     「译」Learning React Without Using React Part 1
 subtitle:   ""
 date:       2016-03-26
 author:     "追客"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/learning-react-without-using-react/banner.044e8949.png"
+header-img: "/images/learning-react-without-using-react/banner.png"
 tags:
   - React
   - Redux
@@ -152,7 +152,7 @@ This is the visual output for now. We have a simple todo list including the abil
 
 效果图如下。我们的应用现在可以显示所有的 todo，也可以改变每个 todo 的状态（进行中或者完成）。
 
-![simple todo lsit](http://7xrvqo.com1.z0.glb.clouddn.com/images/learning-react-without-using-react/todo-list.b96ad942.png)
+![simple todo lsit](/images/learning-react-without-using-react/todo-list.png)
 
 A set of defined events updated the state and then called our render function. render then created the item list and added the string to the list element. We added state to simplify the interaction between events and elements. Instead of having to define every event and element and their respective relationship, we always update as soon as an action has been triggered. It simplifies handling complex interactions. We always call render when state has changed.
 

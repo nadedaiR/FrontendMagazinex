@@ -4,7 +4,7 @@ title:      "HTML 处理利器 PostHTML 入门教程"
 subtitle:   ""
 date:       2015-11-22
 author:     "寸志"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/getting-start-with-posthtml.d0cba82e.png"
+header-img: "/images/getting-start-with-posthtml.png"
 tags:
     - PostHTML
     - PostCSS

@@ -4,7 +4,7 @@ title:      "使用 AngularJS & NodeJS 实现基于 token 的认证应用"
 subtitle:   ""
 date:       2014-12-23
 author:     "范洪春"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/jwt.6157557b.png"
+header-img: "/images/jwt.png"
 tags:
     - Angular.js
     - JWT

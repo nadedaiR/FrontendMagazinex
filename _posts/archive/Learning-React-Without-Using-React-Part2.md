@@ -4,7 +4,7 @@ title:     「译」Learning React Without Using React Part 2
 subtitle:   ""
 date:       2016-03-26
 author:     "追客"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/learning-react-without-using-react/banner2.66b9d3ae.png"
+header-img: "/images/learning-react-without-using-react/banner2.png"
 tags:
   - React
   - Redux

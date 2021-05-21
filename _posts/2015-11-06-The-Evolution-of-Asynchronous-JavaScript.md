@@ -4,7 +4,7 @@ title:      "异步 JavaScript 进化史"
 subtitle:   ""
 date:       2015-11-06
 author:     "橙子 "
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/The-Evolution-of-Asynchronous-JavaScript.0e2c1296.jpg"
+header-img: "/images/The-Evolution-of-Asynchronous-JavaScript.jpg"
 tags:
     - JavaScript
     - Promise
@@ -195,7 +195,7 @@ ES7 中引入了异步函数，当前只能使用通过转译(如 [babel](http:/
 
 简单来讲，使用 `async` 关键字，我们可以做 co 和 generators 相结合的工作，而不是 hack。
 
-![async-hack](http://7xrvqo.com1.z0.glb.clouddn.com/images/denicola-yield-await-asynchronous-javascript.cf63fa0d.jpg)
+![async-hack](/images/denicola-yield-await-asynchronous-javascript.jpg)
 
 
 在其内部， `async` 关键字使用了 Promises，这也是异步函数会返回一个 `Promise` 对象的原因。

@@ -4,7 +4,7 @@ title:      "Twitter \"like\" 动画实战"
 subtitle:   "不知道你有没有留意到，Twitter 已经不再使用星星动画做“收藏”的效果，现在用的是爱心版的“赞”。不管大家对此有何评价，今天我们要来模拟的就是这个效果了。"
 date:       2016-01-10
 author:     "kmokidd"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/heart-ani.5edae748.png"
+header-img: "/images/twitter-heart/heart-ani.png"
 tags:
     - Twitter
     - CSS3
@@ -34,7 +34,7 @@ tags:
 
 为什么减少请求数很重要？服务器端和客户端之间的传输成本很高，如果你的产品有320万活跃用户，即使只是减少几个请求数，性能也能得到非常大的优化。“赞”动画被我们分成了29帧，用雪碧图的方式可以将请求数从29减少到1。
 
-![anim-sprit](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/anim-spirit.c56e1174.png)
+![anim-sprit](/images/twitter-heart/anim-spirit.png)
 
 雪碧图（如上图）做好了之后，我们可以通过 CSS 一帧帧地展现这张图片，原理和[走马灯](https://en.wikipedia.org/wiki/Zoetrope)类似。
 
@@ -76,7 +76,7 @@ tags:
 
 现在可以看到这个了：
 
-![first-frame](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/anim-f-frame.431438c6.png)
+![first-frame](/images/twitter-heart/anim-f-frame.png)
 
 接下来是最激动人心的时刻 -- 让爱心动起来！讲真，是没有那么激动啦，但是够直白：
 
@@ -95,7 +95,7 @@ tags:
 
 现在动画已经定义好了，我们可以把它加到爱心的 ```div```  上了：
 
-![zoetrope](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/zoetrope.9e7ac6ec.gif)
+![zoetrope](/images/twitter-heart/zoetrope.gif)
 
 很明显，这不是我们想要的效果，不过已经很接近了！
 
@@ -111,7 +111,7 @@ tags:
 
 ```heart-burst``` 动画有28帧，会执行800毫秒。当把它应用到我们的爱心上，它会变成这样：
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/effect01.765257dd.gif)
+![](/images/twitter-heart/effect01.gif)
 
 现在我们有一个像样的动画了，不过还有最后一件事情 -- 绑定点击事件，就交给 jQuery 来做啦：
 
@@ -138,7 +138,7 @@ $(“.heart”).on(‘animationend’, function(){
 
 ### 最终成果
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/final.dfeac64c.gif)
+![](/images/twitter-heart/final.gif)
 
 完工！
 
@@ -164,7 +164,7 @@ twitter 官方也[发推](https://blog.twitter.com/2015/hearts-on-twitter)说了
 
 在经过一些尝试之后，我终于实现了。不过你可能会觉得我的代码不够漂亮，毕竟 400 行之长 SCSS/CSS 代码真的也不算回事儿嘛，不过对我来说，能找到这个方案已经很高兴了。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/effect.c6286a6e.gif)
+![](/images/twitter-heart/effect.gif)
 
 接下来，你会读到我的心路历程。
 
@@ -181,15 +181,15 @@ twitter 官方也[发推](https://blog.twitter.com/2015/hearts-on-twitter)说了
 + 左上和右上区域都是占总高度的 25%，总宽度的 50%
 + 左下和右下区域是占总高度的 75%，总宽度的 50%
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/heart.cdf19df1.png)
+![](/images/twitter-heart/heart.png)
 
 接着在每个矩形结构中，我都使用上设置了 ```border-radius``` 值的伪元素（```:after```），尽可能地模拟每个对应部分的形状。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/pieces.760913be.png)
+![](/images/twitter-heart/pieces.png)
 
 接着再使用 ```color``` 和 ```overflow:hidden```：
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/pieces-color.450fa398.png)
+![](/images/twitter-heart/pieces-color.png)
 
 ### 环形
 
@@ -197,7 +197,7 @@ twitter 官方也[发推](https://blog.twitter.com/2015/hearts-on-twitter)说了
 
 通过设置不同的 ```border-size```、```width``` 和 ```height``` 就能画出各种各样的环形了。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/ring.e9e2a3fa.png)
+![](/images/twitter-heart/ring.png)
 
 ### 圆形
 
@@ -205,11 +205,11 @@ twitter 官方也[发推](https://blog.twitter.com/2015/hearts-on-twitter)说了
 
 将一个透明的圆形元素居中，然后给它加上阴影（```shadow-box```）。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/circles01.5838db25.png)
+![](/images/twitter-heart/circles01.png)
 
 圆形的阴影值，用逗号分隔。坐标值可以通过圆规和三角函数算出来：
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/circles02.d631249b.png)
+![](/images/twitter-heart/circles02.png)
 
 ## 动画
 
@@ -219,13 +219,13 @@ twitter 官方也[发推](https://blog.twitter.com/2015/hearts-on-twitter)说了
 
 通过增减“爱心”元素的宽高比，并相应调整元素的 ```left``` 和 ```top``` 值，要保证其他和“爱心”元素有相对位置关系的元素的位置也校正好了。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/heart-ani.5edae748.png)
+![](/images/twitter-heart/heart-ani.png)
 
 ### 环形
 
 调整```边界```的大小以及其中的圆形的尺寸，并相应调整它们的位置和颜色。
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/ring-ani.c919a722.png)
+![](/images/twitter-heart/ring-ani.png)
 
 ### 圆形
 
@@ -336,7 +336,7 @@ twitter 官方也[发推](https://blog.twitter.com/2015/hearts-on-twitter)说了
 
 一图胜千言：
 
-![](http://7xrvqo.com1.z0.glb.clouddn.com/images/twitter-heart/spirit.de7dacb5.png)
+![](/images/twitter-heart/spirit.png)
 
 通过在容器（```.heart-wrapper```）上添加 ```active``` 这个class来控制动画。在我的代码中，通过点击可以切换效果。
 

@@ -4,7 +4,7 @@ title:      "Flexbox 设计指南"
 subtitle:   "Flexbox 是一个强大的新生 CSS 布局模块，完全脱离于传统的 web 开发实践。网上有很多相关的文章，大都关注于规范的细节，导致文章冗长，难懂，甚至有些晦涩。相反，对于设计师和开发者如何使用 flexbox 解决布局问题的讨论相当少：至此，这篇文章出现了。"
 date:       2015-02-16
 author:     "范洪春"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/a_designers_guide_to_flexbox/a_designers_guide_to_flexbox.b459a4fb.jpg"
+header-img: "/images/a_designers_guide_to_flexbox/a_designers_guide_to_flexbox.jpg"
 tags:
     - Flexbox
     - CSS3

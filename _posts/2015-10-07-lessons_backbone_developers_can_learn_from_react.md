@@ -4,7 +4,7 @@ title:      "React 带给 Backbone 开发者的福利"
 subtitle:   ""
 date:       2015-10-07
 author:     "范洪春"
-header-img: "http://7xrvqo.com1.z0.glb.clouddn.com/images/lessons_backbone_developers_can_learn_from_react.dc0e42c3.png"
+header-img: "/images/lessons_backbone_developers_can_learn_from_react.png"
 tags:
     - React
     - Backbone.js
