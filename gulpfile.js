@@ -40,14 +40,19 @@ gulp.task('copy', function () {
         '!src/css/**',
         '!src/images/**',
         '!src/js/**',
-        '!src/less/**'
+        '!src/less/**',
+        '!src/_posts/archive/**',
+        '!src/_posts/doing/**',
+        '!src/_posts/todo/**'
       ])
     .pipe(gulp.dest('dist/'))
 })
 
 gulp.task('clean', function () {
   return gulp.src([
-    'dist'
+    'dist',
+    'rev',
+    '_site'
   ], {read: false})
     .pipe(clean());
 })
@@ -62,7 +67,7 @@ gulp.task('build', ['dist'], function () {
   })
   return gulp.src('dist/**')
     .pipe(revAll.revision())
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest('rev'))
 })
 
 gulp.task('watch', function () {
@@ -71,11 +76,11 @@ gulp.task('watch', function () {
 
 gulp.task('qiniu', function () {
   return gulp.src([
-    'css/**',
-    'fonts/**',
-    'js/**',
-    'images/**'
-  ], {base: '.'})
+    'rev/css/**',
+    'rev/fonts/**',
+    'rev/js/**',
+    'rev/images/**'
+  ], {base: 'rev'})
   .pipe(qiniu({
     accessKey: qiniuConfig.accessKey,
     secretKey: qiniuConfig.secretKey,
