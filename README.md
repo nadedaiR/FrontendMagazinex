@@ -18,14 +18,12 @@ $npm run dev
   $npm run build
   ```
 
-- 上传静态文件到七牛：
+- 上传静态文件到七牛，上传 `HTML` 到 Digital Ocean：
 
   ```bash
-  $npm run upload
+  $npm run pub
   ```
-  > qiniu.json 文件私下找我获取
-
-- 提交代码到 Github 即可
+  > `qiniu.json`  `digitalocean.json` 文件私下找我获取
 
   > **不发布但需要提交代码时，不要运行 `npm run build`，直接提交 `src` 下的文件即可**
 

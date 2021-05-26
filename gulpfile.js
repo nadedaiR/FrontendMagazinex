@@ -7,6 +7,8 @@ var RevAll = require('gulp-rev-all')
 var imagemin = require('gulp-imagemin')
 var qiniu = require('gulp-qiniu')
 var qiniuConfig = require('../../../.qiniu.json')
+var digitaloceanConfig = require('../../../.digitalocean.json')
+var scp = require('gulp-scp2')
 
 gulp.task('less', function () {
   return gulp.src('src/less/Frontend-Magazine.less')
@@ -68,6 +70,20 @@ gulp.task('build', ['dist'], function () {
   return gulp.src('dist/**')
     .pipe(revAll.revision())
     .pipe(gulp.dest('rev'))
+})
+
+gulp.task('digitalocean', function () {
+  return gulp.src([
+    '_site/**',
+    '!_site/css/**',
+    '!_site/fonts/**',
+    '!_site/images/**',
+    '!_site/js/**'
+  ], {base: '_site'})
+    .pipe(scp(digitaloceanConfig))
+    .on('error', function(err) {
+      console.log(err)
+    })
 })
 
 gulp.task('watch', function () {
