@@ -217,4 +217,7 @@ friends: [
   }
 ]
 
-gems: ['jekyll-paginate']
+gems: [
+    'jekyll-paginate',
+    'jekyll-sitemap'
+]
