@@ -25,8 +25,6 @@ $npm run dev
   ```
   > `qiniu.json`  `digitalocean.json` 文件私下找我获取
 
-  > **不发布但需要提交代码时，不要运行 `npm run build`，直接提交 `src` 下的文件即可**
-
 ## 欢迎投稿
 
 本专栏欢迎各位大大投稿，原创译文均可。
