@@ -19,7 +19,8 @@ author_list: [
   黄玄,
   MrSunny,
   追客,
-  林鸿
+  林鸿,
+  SuneBear
 ]
 
 authors:
@@ -143,6 +144,17 @@ authors:
     position: 无
     github: plantvsbirds
     weibo:
+  SuneBear:
+    name: SuneBear
+    display_name: SuneBear
+    avatar: /images/avatars/SuneBear.jpg
+    email: hi@sunebear.com
+    web: http://sunebear.com
+    twitter: HiSuneBear
+    company: Teambition
+    position: Frontend Engineer
+    github: SuneBear
+    weibo: SuneXiong
 
 
 # SNS settings
