@@ -2,7 +2,7 @@
 layout:     post
 title:      "可能是最好的 Rx 初学者教程"
 subtitle:   ""
-date:       2016-04-08
+date:       
 author:     "追客"
 header-img: "/images/The-Intro-to-Reactive-Programming/everything-is-a-stream.png"
 tags:
