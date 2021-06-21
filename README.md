@@ -38,18 +38,18 @@ $npm run dev
 1. PR 你的文章到本项目，将你的大作放到 `contribution/` 目录下，文章中使用到的图片放到 `contribution/images/` 下，文章格式为 Markdown；
 2. 为你的文章寻找或者制作一张头图，用来作为在这些媒体上发布时需要的头图资源；
 3. 在 `src/_config.yml` 文件中，在 `authors` 字段中添加你的个人资料，例如：
-4. 
-  寸志:
-    name: 寸志
-    display_name: 寸志
-    avatar: /images/avatars/cunzhi.jpg
-    email: island205@gmail.com
-    web: http://island205.github.io
-    twitter: island205
-    company: 陆金所
-    position: 前端架构师
-    github: island205
-    weibo: chromeappsstore
+
+        寸志:
+          name: 寸志
+          display_name: 寸志
+          avatar: /images/avatars/cunzhi.jpg
+          email: island205@gmail.com
+          web: http://island205.github.io
+          twitter: island205
+          company: 陆金所
+          position: 前端架构师
+          github: island205
+          weibo: chromeappsstore
 
 3. PR 通过后，我们通知你发稿时间，届时请使用你的知乎账号，向我们的[知乎专栏](http://zhuanlan.zhihu.com/FrontendMagazine)投稿；
 4. [qianduan.guru](http://qianduan.guru/) 等其他地方都由外刊君来发。
