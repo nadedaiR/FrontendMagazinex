@@ -52,6 +52,11 @@ $npm run dev
           weibo: chromeappsstore
 
 3. PR 通过后，我们通知你发稿时间，届时请使用你的知乎账号，向我们的[知乎专栏](http://zhuanlan.zhihu.com/FrontendMagazine)投稿；
+
+  > 注意：投稿文章需要在文末加上本专栏的微信 banner：
+
+  ![](src/images/wechat.png)
+  
 4. [qianduan.guru](http://qianduan.guru/) 等其他地方都由外刊君来发。
 
 ### 格式建议
