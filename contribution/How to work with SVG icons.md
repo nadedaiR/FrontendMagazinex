@@ -339,7 +339,7 @@ public/
 
 ## part3.5 在 Webpack 中使用 SVG 图标 {#section-webpack}
 
-译者注：本部分内容与原文无关，是译者为展示在 Webpack 中使用 SVG icon 的示例。
+> 译者注：本部分内容与原文无关，是译者为展示在 Webpack 中使用 SVG icon 的示例。
 
 在日常开发中，我不知道各位前端朋友们有没有碰到一个问题，就是使用 `font-awesome` 或类似的 `icon-font` 包，无法满足设计稿中的需求，比如说来了一个中国地图形状的 icon，你会怎么办？
 
@@ -703,7 +703,7 @@ SVG许多样式属性都是继承来的，比如在最外层的 `<svg>` 标签�
 }
 ```
 
-译者注：`.MyComponent-button .Icon .style1` 无法选中 `class` 名为 `style1` 的 `path`。
+> 译者注：`.Icon` 与 `.style1` 并非嵌套关系，`.MyComponent-button .Icon .style1` 无法选中 `class` 名为 `style1` 的 `path`。
 
 除非在火狐浏览器离，你可以轻松选中 `<symbol>` 中的实例，但这是属于火狐浏览器的私有特性，意味着其他浏览器存在着兼容性问题，所以希望火狐浏览器能修复这个问题（或者说是 bug）。当新标准来临时，也许可以通过 Shadow DOM 来选中，但标准本身也在不断变化，所以这一点无法确定（[`/deep/` 连结符](https://www.w3.org/TR/css-scoping-1/#deep-combinator)已被弃用）。
 
