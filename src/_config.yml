@@ -176,17 +176,17 @@ authors:
     position: 学生
     github: Brooooooklyn
     weibo: 2633406351
-  SivaGao:
-    name: SivaGao
-    display_name: SivaGao
-    avatar: /images/avatars/sivagao.jpg
-    email: ghlndslpsp@gmail.com
-    web: http://sivagao.com
-    twitter: ghlndsl
-    company: 广发证券
-    position: 高级研发工程师
-    github: gaohailang
-    weibo: 1siva
+  卢泰安:
+    name: 卢泰安
+    display_name: vagusX
+    avatar: /images/avatars/vagusX.jpg
+    email: vagusxl@gmail.com
+    web:
+    twitter:
+    company: 一财新媒体
+    position: 前端实习工程师
+    github: vagusX
+    weibo: onlylae
 
 
 # SNS settings
