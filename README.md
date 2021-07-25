@@ -18,24 +18,58 @@ $npm run dev
   $npm run build
   ```
 
-- 上传静态文件到七牛：
+- 上传静态文件到七牛，上传 `HTML` 到 Digital Ocean：
 
   ```bash
-  $npm run upload
+  $npm run pub
   ```
-  > qiniu.json 文件私下找我获取
-
-- 提交代码到 Github 即可
-
-  > **不发布但需要提交代码时，不要运行 `npm run build`，直接提交 `src` 下的文件即可**
+  > `qiniu.json`  `digitalocean.json` 文件私下找我获取
 
 ## 欢迎投稿
 
 本专栏欢迎各位大大投稿，原创译文均可。
 
+### 投稿被使用的范围
+
+前端外刊评论目前在多个媒体上运营——知乎专栏、微信公众号、[qianduan.guru](http://qianduan.guru/)、微博等。还会在稀土掘金等媒体上推广文章。如果你给本专栏投稿就意味着我们可以在上面提到的媒体上使用传播你的文章，文章中保留你的著名、出处以及任何你觉得需要添加的信息。
+
 ### 投稿方式
 
-给本项目提交 PR，将你的大作放到 `contribution/` 目录下，文章中使用到的图片放到 `contribution/images/` 下。
+1. PR 你的文章到本项目，将你的大作放到 `contribution/` 目录下，文章中使用到的图片放到 `contribution/images/` 下，文章格式为 Markdown；
+2. 为你的文章寻找或者制作一张头图，用来作为在这些媒体上发布时需要的头图资源；
+3. 在 `src/_config.yml` 文件中，在 `authors` 字段中添加你的个人资料，例如：
+
+        寸志:
+          name: 寸志
+          display_name: 寸志
+          avatar: /images/avatars/cunzhi.jpg
+          email: island205@gmail.com
+          web: http://island205.github.io
+          twitter: island205
+          company: 陆金所
+          position: 前端架构师
+          github: island205
+          weibo: chromeappsstore
+
+3. PR 通过后，我们通知你发稿时间，届时请使用你的知乎账号，向我们的[知乎专栏](http://zhuanlan.zhihu.com/FrontendMagazine)投稿；
+
+  > 注意：投稿文章需要在文末加上本专栏的微信 banner：
+
+  ![](src/images/wechat.png)
+  
+4. [qianduan.guru](http://qianduan.guru/) 等其他地方都由外刊君来发。
+
+### 格式建议
+
+1. 区分好 “的” “地” “得”；
+2. 英文单词的首位要加一个空格，主要是单词出现在中文内容时；
+3. 除了引用的英文外，文中不要出现英文标点；
+4. 中文的出现英文名词复数格式改为单数；
+5. 英文出现在句首大写；
+6. 英文中貌似没有“、”，按照语义将英文逗号改为中文顿号；
+7. 避免文中出现错别字；
+8. 如果是译文，译稿有中英文对照；
+9. 文件名中只能包含大小写字母以及下划线。
 
 ### 回馈
 

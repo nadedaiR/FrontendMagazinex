@@ -7,6 +7,8 @@ var RevAll = require('gulp-rev-all')
 var imagemin = require('gulp-imagemin')
 var qiniu = require('gulp-qiniu')
 var qiniuConfig = require('../../../.qiniu.json')
+var digitaloceanConfig = require('../../../.digitalocean.json')
+var scp = require('gulp-scp2')
 
 gulp.task('less', function () {
   return gulp.src('src/less/Frontend-Magazine.less')
@@ -40,7 +42,10 @@ gulp.task('copy', function () {
         '!src/css/**',
         '!src/images/**',
         '!src/js/**',
-        '!src/less/**'
+        '!src/less/**',
+        '!src/_posts/archive/**',
+        '!src/_posts/doing/**',
+        '!src/_posts/todo/**'
       ])
     .pipe(gulp.dest('dist/'))
 })
@@ -48,15 +53,8 @@ gulp.task('copy', function () {
 gulp.task('clean', function () {
   return gulp.src([
     'dist',
-    'build',
-    '_layouts',
-    '_includes',
-    '_posts',
-    'css',
-    'js',
-    'images',
-    'fonts',
-    '_config.yml'
+    'rev',
+    '_site'
   ], {read: false})
     .pipe(clean());
 })
@@ -71,7 +69,21 @@ gulp.task('build', ['dist'], function () {
   })
   return gulp.src('dist/**')
     .pipe(revAll.revision())
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest('rev'))
+})
+
+gulp.task('digitalocean', function () {
+  return gulp.src([
+    '_site/**',
+    '!_site/css/**',
+    '!_site/fonts/**',
+    '!_site/images/**',
+    '!_site/js/**'
+  ], {base: '_site'})
+    .pipe(scp(digitaloceanConfig))
+    .on('error', function(err) {
+      console.log(err)
+    })
 })
 
 gulp.task('watch', function () {
@@ -80,11 +92,11 @@ gulp.task('watch', function () {
 
 gulp.task('qiniu', function () {
   return gulp.src([
-    'css/**',
-    'fonts/**',
-    'js/**',
-    'images/**'
-  ], {base: '.'})
+    'rev/css/**',
+    'rev/fonts/**',
+    'rev/js/**',
+    'rev/images/**'
+  ], {base: 'rev'})
   .pipe(qiniu({
     accessKey: qiniuConfig.accessKey,
     secretKey: qiniuConfig.secretKey,

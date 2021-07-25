@@ -17,7 +17,9 @@ author_list: [
   张轩,
   李凌豪,
   黄玄,
-  MrSunny
+  MrSunny,
+  追客,
+  林鸿
 ]
 
 authors:
@@ -26,7 +28,7 @@ authors:
     display_name: 寸志
     avatar: /images/avatars/cunzhi.jpg
     email: island205@gmail.com
-    web: island205.github.io
+    web: http://island205.github.io
     twitter: island205
     company: 陆金所
     position: 前端架构师
@@ -119,6 +121,83 @@ authors:
     position: 高级前端工程师
     github: huxpro
     weibo:  huxpro
+  追客:
+    name: 梁远成
+    display_name: 追客
+    avatar: /images/avatars/drake.png
+    email: drakeleung42@gmail.com
+    web: http://drakeleung.github.io/blog/
+    twitter: DrakeLeung
+    company: 无
+    position: 前端魔法师
+    github: DrakeLeung
+    weibo:  DrakeLeung
+  林鸿:
+    name: 林鸿
+    display_name: 林鸿
+    avatar: /images/avatars/lin-hong.jpg
+    email: plantvsbird@gmail.com
+    web: http://hl0.co
+    twitter: Plantvsbird
+    company: 无
+    position: 无
+    github: plantvsbirds
+    weibo:
+  SuneBear:
+    name: SuneBear
+    display_name: SuneBear
+    avatar: /images/avatars/SuneBear.jpg
+    email: hi@sunebear.com
+    web: http://sunebear.com
+    twitter: HiSuneBear
+    company: Teambition
+    position: Frontend Engineer
+    github: SuneBear
+    weibo: SuneXiong
+  达仔:
+    name: 达仔
+    display_name: 达仔
+    avatar: /images/avatars/zhangjd.jpg
+    email: bbtzjd@gmail.com
+    web: http://blog.zhangjd.me
+    twitter:
+    company: 华南理工大学（SCUT）修改
+    position: 学生
+    github: Zhangjd
+    weibo: 532109747
+  龙逸楠:
+    name: 龙逸楠
+    display_name: 龙逸楠
+    avatar: /images/avatars/yinan.jpg
+    email: lynweklm@gmail.com
+    web:
+    twitter:
+    company: Teambition
+    position: 学生
+    github: Brooooooklyn
+    weibo: 2633406351
+  卢泰安:
+    name: 卢泰安
+    display_name: vagusX
+    avatar: /images/avatars/vagusX.png
+    email: vagusxl@gmail.com
+    web:
+    twitter:
+    company: 一财新媒体
+    position: 前端实习工程师
+    github: vagusX
+    weibo: onlylae
+  SivaGao:
+    name: SivaGao
+    display_name: SivaGao
+    avatar: /images/avatars/sivagao.jpg
+    email: ghlndslpsp@gmail.com
+    web: http://sivagao.com
+    twitter: ghlndsl
+    company: 广发证券
+    position: 高级研发工程师
+    github: gaohailang
+    weibo: 1siva
 
 # SNS settings
 RSS: true
@@ -192,4 +271,7 @@ friends: [
   }
 ]
 
-gems: ['jekyll-paginate']
+gems: [
+    'jekyll-paginate',
+    'jekyll-sitemap'
+]
