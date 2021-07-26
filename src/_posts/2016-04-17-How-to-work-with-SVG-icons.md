@@ -107,7 +107,7 @@ tags:
 
 现在有很多种方法在网页中使用 SVG 图标，我并没有把它们全部尝试一遍，我将要介绍的方法是我们 [Kaliop](http://www.kaliop.com/) 的前端团队所使用的，目前能够很好的满足我们的开发需求，比如：
 
-- 基于大型 CMS 系统的内容管理网站（非全栈 JS 的 Web App；
+- 基于大型 CMS 系统的内容管理网站（非全栈 JS 的 Web App）；
 - 图标通常简单且单色（可能根据网站内容和交互来使用不同的颜色），也有可能是单个图标有两种不同颜色；
 - 支持 IE9+。
 
@@ -125,7 +125,7 @@ tags:
 
 ## 第一步：准备图标 {#section-preparing}
 
-当你从设计师那里或者绘图工具（如Illustrator、 Adobe Assets、 Sketch、 Inkscape等）中拿到SVG图标时，你可能会直接放到网页中，但是，如果能把图标稍微处理下（用你常用的处理工具），可以避免不少头疼的问题。
+当你从设计师那里或者绘图工具（如 Illustrator、 Adobe Assets、 Sketch、 Inkscape 等）中拿到 SVG 图标时，你可能会直接放到网页中，但是，如果能把图标（用你常用的处理工具）稍微处理下，可以避免不少头疼的问题。
 
 <figure class="full">
   <img src="/images/example-1.png" alt="">
@@ -138,7 +138,7 @@ tags:
 
 ### 正方形更好
 
-图标不需要非得是正方形的，但是正方形的图标更好处理，除非图标太宽或者太高。当你有像素级的需求时，比如在低分辨率屏幕上获得更好的显示效果，你需要确定图标尺寸。比如图标需要适应15x15 px的网格，而且用的时候也多是这个尺寸时，就应该去创建15x15 px的画板。不确定的时候，一般建议选择20x20的尺寸。
+图标不需要非得是正方形的，除非图标太宽或者太高，否则还是建议做成正方形的图标，更好处理。当你有像素级的需求时，比如想要在低分辨率屏幕上获得更好的显示效果，就需要确定图标尺寸。比如图标需要适应 15x15 px 的网格，而且用的时候也多是这个尺寸时，就应该去创建 15x15 px 的画板。不确定的时候，一般建议选择 20x20 的尺寸。
 
 ### 毛边问题
 
@@ -149,17 +149,17 @@ tags:
   <figcaption>图标边缘未做留白处理，所以可能边缘渲染出方形的边，当浏览器对 SVG 的渲染不给力时，效果更糟糕。</figcaption>
 </figure>
 
-因此，每次处理16px或20px的图标时，要记得在每个边缘留0.5px或1px的空白，还要记得导出整个画板，而不是选中位于中间的路径，否则边缘的留白是不会导出。
+因此，每次处理 16px 或 20px 的图标时，要记得在每个边缘留 0.5px 或 1px 的空白，还要记得导出整个画板，而不是选中位于中间的路径，否则边缘的留白是不会导出。
 
-### 导出SVG
+### 导出 SVG
 
-- 在 Illustrator 中，选择 “Save As” 并选择格式为 “SVG”（也许选择 “Export as…” 会更好）。
-- 在 Sketch 中，先选中画板，点击右下角 “Make Exportable”，并选择格式为 “SVG”。
-- 在 Inkscape 中，选择 “Save As” 并选择格式为 “Optimized SVG”。
+- 在 Illustrator 中，选择 ‘Save As’ 并选择格式为 ‘SVG’（也许选择 ‘Export as…’ 会更好）。
+- 在 Sketch 中，先选中画板，点击右下角 ‘Make Exportable’，并选择格式为 ‘SVG’。
+- 在 Inkscape 中，选择 ‘Save As’ 并选择格式为 ‘Optimized SVG’。
 
-### 关于SVG的知识点
+### 关于 SVG 的知识点
 
-你可能学习过关于 SVG 的基础知识，并且能读懂 SVG 的结构。至少你应该知道：
+你可能学习过关于 SVG 的基础知识，并且能读懂 SVG 的结构。至少你知道：
 
 - SVG 元素： `<svg>`，`<symbol>` ，`<g>`， `<path>`
 - SVG 属性： `d`， `fill`， `stroke`， `stroke-width`
@@ -179,7 +179,7 @@ Illustrator 导出的SVG 中 `path` 都是黑色(`#000000`)且不带 `fill` �
 
 ## 第二步：制作 SVG sprite {#section-sprite}
 
-这一部分会包含不少代码，内容其实并不复杂。我们将创建包含多个 `<symbol>` 元素的 SVG 文件，每个 `<symbol>` 都有`id` 和 `viewBox` 属性，且包含图标的 `<path>` 元素（或者其他元素如`<circle>` 、 `<rect>` 等）。
+这一部分会包含不少代码，但内容其实并不复杂。我们将创建包含多个 `<symbol>` 元素的 SVG 文件，每个 `<symbol>` 都有`id` 和 `viewBox` 属性，且包含图标的 `<path>` 元素（或者其他元素如`<circle>` 、 `<rect>` 等）。
 
 我将这个 SVG 文件称为 SVG sprite（参考 [sprites in computer games](https://en.wikipedia.org/wiki/Sprite_%28computer_graphics%29) 和 CSS），也可以被称为 sprite sheet 或者 symbol store。
 
@@ -245,14 +245,14 @@ public/
         icons.svg
 ```
 
-当你需要重新构建 `icons.svg` 或者修改某个图标时，你仍然可以找到图标的源文件（在`icons` 文件夹中）。请尽量保持 SVG sprite 文件与源文件同步。当然如果你有 Grunt/Gulp 做自动构建打包时，你只需要维护一份图标源文件（即`icons` 文件夹）。
+当你需要重新构建 `icons.svg` 或者修改某个图标时，你仍然可以找到图标的源文件（在`icons` 文件夹中）。请尽量保持 SVG sprite 文件与源文件同步。当然如果你有 Grunt/Gulp 做自动构建打包时，你只需要维护一份图标源文件（即`icons` 文件夹）。
 
 ## 第三步：将图标放到网页中 {#section-adding}
 
 为了使用 SVG 图标，我们得把它放到 HTML 中去，我们不能用 CSS 的 background 相关属性，不能使用 `::before` 等伪元素。用法如下：
 
-``` markup
-  <svg><use xlink:href="/path/to/icons.svg#play"></use></svg>
+``` html
+<svg><use xlink:href="/path/to/icons.svg#play"></use></svg>
 ```
 
 <figure>
@@ -261,7 +261,7 @@ public/
 
 ### 为图标提供替代文本
 
-目前有几种方案可以为图标增加替代文本，经过我们自己的屏幕语音阅读测试，下面给出我们用的方案。
+目前有几种方案可以为图标添加替代文本（为方便视障用户），下面将介绍我们所用的方案，这个方案已经经过我们自己的屏幕语音阅读测试了。
 
 首先，当不需要增加替代文本时（网页上经常已经存在相关文字内容了），可以设置 `aria-hidden="true"` 来确保屏幕语音阅读时会跳过图标：
 
@@ -297,14 +297,14 @@ public/
 
 最后，切记：
 
-* 替代文本因根据内容来定（比如放大镜图标的替代文本为“显示搜索框“或者”提交搜索“）。
+* 替代文本因根据内容来定（比如放大镜图标的替代文本为“显示搜索框“或者”提交搜索“）；
 * 替代文本要做国际化。
 
 替代文本应该根据 HTML 内容的上下文而定，有人推荐在 SVG sprite 里面增加 `<title>` 标签，但是我们实践后发现并不总是生效，很多屏幕语音阅读都会忽略。
 
 ### 外部 sprite 和内联 sprite
 
-目前为止我们所提到的都是外部的 sprite，但是老版本的WebKit 内核浏览器和所有版本的 IE 浏览器（低于Edge 13），只支持 `<use xlink:href="#some-id"/>` 这种内联的引用。可以考虑引入比如 [svg4everybody](https://github.com/jonathantneal/svg4everybody), [svgxuse](https://github.com/Keyamoon/svgxuse) 等来 ployfill，或者将 SVG sprite 元素写到每个页面的 HTML 中去。
+目前为止我们所提到的都是外部的 sprite，但是老版本的 WebKit 内核浏览器和所有版本的 IE 浏览器（低于 Edge 13），只支持 `<use xlink:href="#some-id"/>` 这种内联的引用。可以考虑引入比如 [svg4everybody](https://github.com/jonathantneal/svg4everybody), [svgxuse](https://github.com/Keyamoon/svgxuse) 等来 ployfill，或者将 SVG sprite 元素写到每个页面的 HTML 中去。
 
 ``` markup
 <body>
@@ -324,11 +324,31 @@ public/
 
 两种方法各有利弊，比较如下：
 
-| | **内联 SVG sprite** | **外部 SVG sprite** |
+|      | **内联 SVG sprite** | **外部 SVG sprite** |
+| ---- | ----------------- | ----------------- |
+|      |                   |                   |
+
+
 | **浏览器兼容性** | 原生支持兼容到 IE9+<br />老版本 Safari/WebKit <a href="http://fvsch.com/code/svg-icons/symbol-sprite/">中将 SVG sprite置于<body>元素内最顶部</a>。 | 原生支持兼容到 Edge 13+, Safari 9+<br>IE 和老版本 Safari/WebKit 需要引入JS polyfill 比如 <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a> 或 <a href="https://github.com/Keyamoon/svgxuse">svgxuse</a>。<br>无法跨域加载外部的 SVG sprite (即使是CORS <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=470601">Chromium bug</a> ），可以通过引入 svgxuse 解决 |
+| ---------- | ---------------------------------------- | ---------------------------------------- |
+|            |                                          |                                          |
+
+
 | **缓存** | 无法缓存<br>每个页面都会将 SVG sprite重新加载一遍 | SVG sprite 是个独立文件且能被浏览器缓存<br>同时不会增加服务端 HTTP 缓存的体积 |
+| ------ | -------------------------------- | ---------------------------------------- |
+|        |                                  |                                          |
+
+
 | **渲染速度** | SVG sprite 是个独立文件且能被浏览器缓存<br>同时不会增加服务端 HTTP 缓存的体积 | 毫无影响<br>图标加载可能有延时因为 <br> 1）独立 http 请求图标 <br> 2）浏览器不会优先加载它 (详见 <a href="http://andydavies.me/blog/2013/10/22/how-the-browser-pre-loader-makes-pages-load-faster/">浏览器预加载器</a>)。 |
-| **更新** | 图标加载快<br>仅在弱网情况下，网页内容因顶部较大的 SVG sprite 的加载而变慢 | 只有一个静态文件需要修改，因此对于内联 SVG sprtie的更新管理和服务端缓存都更容易做。|
+| -------- | ---------------------------------------- | ---------------------------------------- |
+|          |                                          |                                          |
+
+
+| **更新** | 图标加载快<br>仅在弱网情况下，网页内容因顶部较大的 SVG sprite 的加载而变慢 | 只有一个静态文件需要修改，因此对于内联 SVG sprtie的更新管理和服务端缓存都更容易做。 |
+| ------ | ---------------------------------------- | ---------------------------------------- |
+|        |                                          |                                          |
+
+
 
 我喜欢将两种方法混起来用，创建两个 SVG sprite：
 
