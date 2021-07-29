@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      关于 SVG 图标二三事
+title:      SVG 图标制作指南
 subtitle:   ""
 date:       2016-04-17
 author:     "卢泰安"
@@ -9,6 +9,7 @@ tags:
   - CSS
   - SVG
   - icon
+  - 设计
 ---
 <style>
   .Icon {
@@ -325,29 +326,10 @@ public/
 两种方法各有利弊，比较如下：
 
 |      | **内联 SVG sprite** | **外部 SVG sprite** |
-| ---- | ----------------- | ----------------- |
-|      |                   |                   |
-
-
 | **浏览器兼容性** | 原生支持兼容到 IE9+<br />老版本 Safari/WebKit <a href="http://fvsch.com/code/svg-icons/symbol-sprite/">中将 SVG sprite置于<body>元素内最顶部</a>。 | 原生支持兼容到 Edge 13+, Safari 9+<br>IE 和老版本 Safari/WebKit 需要引入JS polyfill 比如 <a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a> 或 <a href="https://github.com/Keyamoon/svgxuse">svgxuse</a>。<br>无法跨域加载外部的 SVG sprite (即使是CORS <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=470601">Chromium bug</a> ），可以通过引入 svgxuse 解决 |
-| ---------- | ---------------------------------------- | ---------------------------------------- |
-|            |                                          |                                          |
-
-
 | **缓存** | 无法缓存<br>每个页面都会将 SVG sprite重新加载一遍 | SVG sprite 是个独立文件且能被浏览器缓存<br>同时不会增加服务端 HTTP 缓存的体积 |
-| ------ | -------------------------------- | ---------------------------------------- |
-|        |                                  |                                          |
-
-
 | **渲染速度** | SVG sprite 是个独立文件且能被浏览器缓存<br>同时不会增加服务端 HTTP 缓存的体积 | 毫无影响<br>图标加载可能有延时因为 <br> 1）独立 http 请求图标 <br> 2）浏览器不会优先加载它 (详见 <a href="http://andydavies.me/blog/2013/10/22/how-the-browser-pre-loader-makes-pages-load-faster/">浏览器预加载器</a>)。 |
-| -------- | ---------------------------------------- | ---------------------------------------- |
-|          |                                          |                                          |
-
-
-| **更新** | 图标加载快<br>仅在弱网情况下，网页内容因顶部较大的 SVG sprite 的加载而变慢 | 只有一个静态文件需要修改，因此对于内联 SVG sprtie的更新管理和服务端缓存都更容易做。 |
-| ------ | ---------------------------------------- | ---------------------------------------- |
-|        |                                          |                                          |
-
+| **更新** | 图标加载快<br>仅在弱网情况下，网页内容因顶部较大的 SVG sprite 的加载而变慢 | 只有一个静态文件需要修改，因此对于内联 SVG sprtie的更新管理和服务端缓存都更容易做。|
 
 
 我喜欢将两种方法混起来用，创建两个 SVG sprite：
