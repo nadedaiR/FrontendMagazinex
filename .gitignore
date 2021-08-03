@@ -2,3 +2,5 @@ node_modules
 _site
 dist
 rev
+qiniu.json
+digitalocean.json
