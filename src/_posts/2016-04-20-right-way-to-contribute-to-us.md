@@ -2,8 +2,8 @@
 layout:     post
 title:      向前端外刊评论投稿的正确姿势
 subtitle:   ""
-date:       2016-04-18
-author:     "kmokidd && 范洪春"
+date:       2016-04-20
+author:     "kmokidd"
 header-img: "/images/right-gesture-to-write.png"
 ---
 

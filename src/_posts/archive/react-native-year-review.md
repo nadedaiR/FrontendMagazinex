@@ -2,7 +2,7 @@
 layout:     post
 title:      "React Native 开源一周年回顾"
 subtitle:   "来吧看看 RN 发展的传奇之路"
-date:       2016-04-16
+date:       2016-04-21
 author:     "SivaGao"
 header-img: "/images/react-native-year-review/header.jpg"
 tags:
@@ -179,4 +179,3 @@ Facebook 中越来越多的产品团队用 RN 来开发新功能和应用。它�
 感谢每一位用 React Native 技术来开发他们优秀应用的开发者，感谢那些在 RN 之上构建工具和服务，开发开源第三方模块，帮助回答问题，提交PR，帮忙组织会议分享，给RN写技术博客等社区中的每一位成员。 继续保持吧！
 
 让我们期待来年的 RN 的大发展吧~
-

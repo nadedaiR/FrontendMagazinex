@@ -2,7 +2,7 @@
 layout:     post
 title:      "React Native 开源一周年回顾"
 subtitle:   "来吧看看 RN 发展的传奇之路"
-date:       2016-04-16
+date:       2016-04-21
 author:     "SivaGao"
 header-img: "/images/react-native-year-review/header.jpg"
 tags:
@@ -13,7 +13,7 @@ tags:
 ---
 
 > 翻译自Facebook工程团队的官方博客，[React Native: A year in review](https://code.facebook.com/posts/597378980427792/react-native-a-year-in-review)，本文分别从 RN 起源，项目过去一年在FB内部的发展，在业界的广泛使用和生态圈的快速建立，在 Github 上的开源协作，核心团队对 RN 的未来展望等进行一一讲述，来吧看看 RN 的传奇之路
-> 来自于[gaohailang/blog](https://github.com/gaohailang/blog) ：每天一篇好文章，为了技术视野和好奇心而广泛阅读吧~ 译文原地址 https://github.com/gaohailang/blog/issues/23
+> 来自于[gaohailang/blog](https://github.com/gaohailang/blog) ：每天一篇好文章，为了技术视野和好奇心而广泛阅读吧~ 译文原地址 [https://github.com/gaohailang/blog/issues/23](https://github.com/gaohailang/blog/issues/23)
 
 ## React Native 的一周年回顾
 
@@ -33,7 +33,7 @@ tags:
 
 在对此任务非常有信心实现后，我们决定尽早让 RN 能够跨平台，在伦敦组建了 RN 的 Android 团队。这团队在14年下半年开始写了最早的 Android 核心运行时和第一个组件。此后我们决定要让 Android 能顺利运行之前的 iOS 广告管理大师的JS代码。到2014年底，我们有个最基础版本，尽管它还缺了不少的界面，在低端Android手机上性能也不行，不过你还是可以看到如下图展示的一列广告和可以用它来创建新的广告。我们当时非常自信能把这项工作推进下去，获得更棒的性能，更强大的功能。
 
-![](/contribution/images/react-native-year-review/14607888929753.jpg)￼
+![](/images/react-native-year-review/14607888929753.jpg)￼
 
 `Facebook的广告管理大师运行在Android低端机上。2015/01`
 
@@ -45,7 +45,7 @@ FB 广告管理大师这款应用在2015年2月在iOS在苹果 AppStore 发布�
 
 类似于 iOS 部分的发布，我们希望 Android 部分也能尽早发布，从而尽快获得反馈。因此，我们从核心运行时开始，加上一小部分的视图和模块（如文本，图片，ScrollView，Network，AsyncStorage等）的支持。在9月14号，我们把 Android 核心运行时和初始部分的 Android 模块发布到 Github 和 npm 上。在 React Native 的0.11版本上，我们第一次发布了 Android 部分的支持。从开源 Android 部分后，我们也陆续加入这些模块的支持：Alert，APPState，CameraRoll，Clipboard，Date和time pickers，Geolocation，Intent，Modal，NetInfo，Pull to refresh view，Picker，Slider，View pager，WebView等（它们和 iOS 部分的 API 非常类似）
 
-![](/contribution/images/react-native-year-review/14607887374520.jpg)￼
+![](/images/react-native-year-review/14607887374520.jpg)￼
 
 `从最早 React Native 设想，到我们开源 RN的 Android 部分的时间轴`
 
@@ -57,32 +57,32 @@ React Native 的流行程度和它的开发者社区都在快速发展，远超�
 
 超过650个人给 RN 的代码仓库贡献过代码。在代码仓库的5800个提交，有30%左右都是被不在 FB 工作的贡献者提交的。在2016年2月，第一次超过50%的代码提交来源于这些外部贡献者。随着这么多来着于社区对RN的贡献，我们发现每个月都将近266新的 PR（每天多大10个PR）被要求合入。这些 PR 很多都是高质量的，提供着后续被广泛使用的功能特性。
 
-![](/contribution/images/react-native-year-review/14607867504699.jpg)￼
+![](/images/react-native-year-review/14607867504699.jpg)￼
 
 `这是RN的Github代码仓库每个月被提交PR数量趋势图`
 
 在一开始，这些暴涨的 PR 数量导致我们很难快速高效的审核合入。每天为这些 PR 找到合适的审核人员都消耗着很多人力成本。为了解决这个问题，我们通过开发两个 Github 机器人来自动化分发 PR 到合适的reviewer头上~
 
 第一个机器人是提醒机器人，为每个PR找出合适的 Reviewer 审核人。
-![](/contribution/images/react-native-year-review/14607871287611.jpg)￼
+![](/images/react-native-year-review/14607871287611.jpg)￼
 
 这个提醒机器人现在被开源了，他的确帮助了我们在一天中更高效的审核这些PR。有趣的是：在上个月（2月份）超过50%的提交来自于社区，提醒机器人总能在社区中找到合适的reviewer来审核（工作原理大概是通过在 Github issues 中定位到提出的人，和 PR 要解决的 issues 关联起来）
 
 很难Merge这些PR是我们遇到的第二个难题。FB 工程师们用的同一个代码仓库（就想你在 Github React Native Repo 上看到的一样），我没有对这个做任何 fork 没有其他的内部 commit 之类的。因此，每次要合入 PR 的代码到我们内部的大型叫做 fbsource 的Mercurial 仓库后我们都会自动执行测试脚本来回归我们类似于 Facebook Ads Manager（广告管理大师？）等应用功能。
 
-![](/contribution/images/react-native-year-review/14607875415387.jpg)￼
+![](/images/react-native-year-review/14607875415387.jpg)￼
 
 `简化版的单例Mercurial代码仓库fbsource。这个仓库包含所有的移动端和服务端端代码`
 
 之前合入一个 PR 涉及多个手动操作。我们现在把这些简化为仅仅需要在 Github 回复一句评论。
 
-![](/contribution/images/react-native-year-review/14607876610981.jpg)￼
+![](/images/react-native-year-review/14607876610981.jpg)￼
 
 `@facebook-github-bot-shipit： 如果所有的内部测试运行通过，PR的那些代码会被自动合入到 fbsource 主分支和 Github 主分支中`
 
 感谢这些工具，我们这个项目才能和这么多社区持续贡献的 PR 保持上同一进度。在过去一年，我们总共关闭了2351个 PR！！
 
-![](/contribution/images/react-native-year-review/14607877841379.jpg)￼
+![](/images/react-native-year-review/14607877841379.jpg)￼
 
 `Github的RN项目上每个月被关闭的PR数量趋势图`
 
@@ -93,7 +93,7 @@ React Native 的流行程度和它的开发者社区都在快速发展，远超�
 
 我们实施了另外一个机器人来使得社区中的任何人都能来帮助管理 Github issues。它可以让任何人（无需push权限）都可以关闭重复的 issues，回答后关闭 issues，给 issues 添加标签等等。你可以参考这篇指南参与进来 [guide to managing Github issues](https://github.com/facebook/react-native/blob/master/docs/IssueGuidelines.md)
 
-![](/contribution/images/react-native-year-review/14607880798120.jpg)￼
+![](/images/react-native-year-review/14607880798120.jpg)￼
 
 React Native 涉及的 API 面非常广泛。它暴露了构建 iOS 和 Android 应用的绝大部分 JavaScript 调用，同时提供了跨平台的抽象。很难有一个对这些所有APIs都很熟悉的人，即使 FB 中有很多产品团队在使用 RN，我们还是不能保证覆盖到所有的边缘情况。RN 适合我们，但是我们不能保证它绝对完美。这就是需要社区中了解这些代码仓库的人参与进来，这对于我们和更宽泛社区的其他人（那些把自己的应用押宝在 RN 上，在 RN 上构建自己的服务，为 RN 开发第三方类库工具的）都非常重要。
 
@@ -104,7 +104,7 @@ React Native 开源贡献者组织是由社区中那些提供非常高质量的�
 
 下面是我们 RN 开源贡献者组织的大合照，依次是这些人：*省略*
 
-![](/contribution/images/react-native-year-review/14607886543196.jpg)￼
+![](/images/react-native-year-review/14607886543196.jpg)￼
 
 `开源贡献者组织的不少人，在2016/02/22的旧金山的React.js Conf开发者大会的合照`
 
@@ -113,7 +113,7 @@ React Native 开源贡献者组织是由社区中那些提供非常高质量的�
 
 每两周RN就会有新的发布。意味着在主分支中发布后，你就能在你的应用中立即使用上这些功能特性。仅仅在2016年3月，RN 的代码在 NPM 上的下载次数就达到7w次。在 Github 有着近3w的加星，RN 是 Github 上最受关注的21项目之一。
 
-![](/contribution/images/react-native-year-review/14607863461307.jpg)￼
+![](/images/react-native-year-review/14607863461307.jpg)￼
 
 `在过去一年，RN在Github的代码仓库的加星数从0到30000之多`
 
@@ -122,7 +122,7 @@ React Native 开源贡献者组织是由社区中那些提供非常高质量的�
 
 自从 iOS 版的 RN 发布后的这一年，有非常多用RN开发的应用被上架到苹果的AppStore，高质量的RN写的的Android应用也慢慢出现了。在[展示页面](https://facebook.github.io/react-native/showcase.html)罗列了107个用 RN 构建的优秀应用，通过提交 PR 把你的 RN 应用也加入其中。
 
-![](/contribution/images/react-native-year-review/14607850063978.jpg)￼
+![](/images/react-native-year-review/14607850063978.jpg)￼
 
 我们尝试使用这些，发现了不少被精细打磨的RN应用。所以确保你也下载一些来试一试，看看 React Native 能用来干什么。
 
@@ -147,7 +147,7 @@ React Native 开源贡献者组织是由社区中那些提供非常高质量的�
 
 Facebook 中越来越多的产品团队用 RN 来开发新功能和应用。它即被应用在其他业务的单例App中也被集成在大Facebook的iOS/Android App中。
 
-![](/contribution/images/react-native-year-review/14607823429057.jpg)￼
+![](/images/react-native-year-review/14607823429057.jpg)￼
 
 `Facebook群组应用就是个混合应用，消息流就是用RN实现的`
 
@@ -179,4 +179,3 @@ Facebook 中越来越多的产品团队用 RN 来开发新功能和应用。它�
 感谢每一位用 React Native 技术来开发他们优秀应用的开发者，感谢那些在 RN 之上构建工具和服务，开发开源第三方模块，帮助回答问题，提交PR，帮忙组织会议分享，给RN写技术博客等社区中的每一位成员。 继续保持吧！
 
 让我们期待来年的 RN 的大发展吧~
-
