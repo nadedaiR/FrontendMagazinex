@@ -12,8 +12,11 @@ tags:
   - Facebook
 ---
 
+先帮忙填填 [外刊君读者小调查](https://jinshuju.net/f/VUW4ps)，就一个问题。
+
 > 翻译自Facebook工程团队的官方博客，[React Native: A year in review](https://code.facebook.com/posts/597378980427792/react-native-a-year-in-review)，本文分别从 RN 起源，项目过去一年在FB内部的发展，在业界的广泛使用和生态圈的快速建立，在 Github 上的开源协作，核心团队对 RN 的未来展望等进行一一讲述，来吧看看 RN 的传奇之路
-> 来自于[gaohailang/blog](https://github.com/gaohailang/blog) ：每天一篇好文章，为了技术视野和好奇心而广泛阅读吧~ 译文原地址 [https://github.com/gaohailang/blog/issues/23](https://github.com/gaohailang/blog/issues/23)
+> ——来自于[gaohailang/blog](https://github.com/gaohailang/blog) ：每天一篇好文章，为了技术视野和好奇心而广泛阅读吧~
+> 译文首发在 [https://github.com/gaohailang/blog/issues/23](https://github.com/gaohailang/blog/issues/23)
 
 ## React Native 的一周年回顾
 
