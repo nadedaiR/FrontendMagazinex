@@ -199,6 +199,17 @@ authors:
     position: 高级研发工程师
     github: gaohailang
     weibo: 1siva
+  Will_Wen_Gunn:
+    name: Will_Wen_Gunn
+    display_name: 小问
+    avatar: /images/avatars/xiaowen.jpg
+    email: willwengunn@gmail.com
+    web:
+    twitter:
+    company:
+    position:
+    github:
+    weibo:
 
 # SNS settings
 RSS: true
