@@ -1,5 +1,5 @@
 # Functional Programming for JavaScript People
-# JavaScript 函数式编程核心概念
+# 给 JavaScript 开发者讲讲函数式编程
 
 Like many of you, I started hearing a lot about functional programming several months ago and I had no idea what it was. It was just a buzzword to me. Since then, I’ve explored the depths of functional programming and I thought I’d try to help demystify the newcomer who keeps hearing about all this stuff but doesn’t know what to make of it.
 
@@ -26,7 +26,7 @@ const add10 = (a) => a + 10
 let x = 10
 const addx = (a) => a + x
 // 会产生副作用的非纯函数
-const setx = (v) => x = v 
+const setx = (v) => x = v
 ```
 
 The impure function indirectly depends on x. If you were to change x, then addx would output a different value for the same inputs. This makes it hard to statically analyze and optimize programs at compile-time. But more pragmatically for JavaScript developers, pure functions bound the congnitive load of programming. When you’re writing a pure function, you only need to concern yourself with the body of the function. You don’t need to worry about externalities that could cause problems, like anything that could change x while when you’re writing the addx function.
@@ -224,12 +224,12 @@ n.isJust() // true
 n.value() // 11
 const x= Maybe.Nothing
 const n = x.map(inc) // no error!
-n.isNothing // true 
+n.isNothing // true
 ```
 
 This monad may not seem terribly useful in your Javascript code, but its interesting to see why it’s so useful in Haskell. Haskell requires you to define what to do in every edge-case of your program, otherwise it won’t compile. When you make an HTTP request, you get back a Maybe type because the request may fail and return nothing. And if you didn’t handle the case in which the request failed, then your program won’t compile. This basically means that it’s impossible to get runtime errors. Maybe your code does the wrong thing, but it doesn’t just magically break like things tend to do in Javascript.
 
-这个 monad 在 JavaScript 代码中可能不是非常的有用，不过搞懂为何在 Haskell 中这么有用可能更有趣。Haskell 需要在程序的定义如何处理没处边界情况，否则它就不会编译。当你发送一个 HTTP 请求，你会得到一个 Maybe 类型，因为请求可能失败并且什么都不会返回。如果你没有处理请求失败的情况，程序也不会编译。这就意味着程序不可能产生运行时错误。或许你的代码出错了，不过它不会像 JavaScript 中那样直接中断执行。
+这个 monad 在 JavaScript 代码中可能不是非常的有用，不过搞懂为何在 Haskell 中这么有用可能更有趣。Haskell 要求必须定义程序中每一种边界情况的处理方法，否则它就不会编译。当你发送一个 HTTP 请求，你会得到一个 Maybe 类型，因为请求可能失败并且什么都不会返回。如果你没有处理请求失败的情况，程序也不会编译。这就意味着程序不可能产生运行时错误。或许你的代码出错了，不过它不会像 JavaScript 中那样直接中断执行。
 
 >This is a big selling point for using Elm. The type system and compiler enforces that your program will run without runtime errors.
 
@@ -237,7 +237,7 @@ This monad may not seem terribly useful in your Javascript code, but its interes
 
 Thinking about code in the context of monads and algebraic structures will help you define and understand your problem in a structured way. For example, an interesting extention of Maybe is the Railway-Oriented Programming concept for error handling. And observable streams are monads as well for dealing with asynchronous events.
 
-分析一下上下文中的 monads 和代数结构中的代码将有助于你以一种结构化的方式来定义和理解你的问题。比如，Maybe 的一个有趣的扩展就是用于错误处理的面向轨道编程的概念。值得注意，monads 也适用于处理异步事件。
+分析一下上下文中的 monads 和代数结构中的代码将有助于你以一种结构化的方式来定义和理解你的问题。比如，Maybe 一个有趣的扩展就是用于错误处理的面向轨道编程的概念。值得注意，monads 也适用于处理异步事件。
 
 There are all kinds of fancy monads and many other words that I don’t myself fully understand. But to keep all the lingo consistent, there are specifications like fantasy-land and the typeclassopedia which try to unify different concepts in category theory for the purpose of writing idiomatic functional code.  
 
@@ -318,6 +318,7 @@ square(3 + 4)
 ```
 
 >Fundamentally, lazy evaluation is outermost evaluation with reference sharing.
+
 >本质上，延迟计算就是引用共享的由外而内计算。
 
 Haskell does all this stuff under the hood for you, and what that means is you can define things like infinite lists. For example, you can recursively define an infinite list of ones as 1 joined with itself.
@@ -335,7 +336,7 @@ Suppose you have a function take(n, list) which takes the first n elements of a 
 
 However, since JavaScript and most other programming languages use innermost reduction, the only way we can replicate these constructs is by treating arrays as functions. For example:
 
-然而，由于 JavaScript 和大多数编程语言都使用了由内而外的规约，我们复制这种架构的唯一方式就是讲数组看成是函数，如下示例：
+然而，由于 JavaScript 和大多数编程语言都使用了由内而外的规约，我们复制这种架构的唯一方式就是将数组看成是函数，如下示例：
 
 ```
 const makeOnes = () => {next: () => 1}
@@ -371,7 +372,7 @@ function* numbers() {
   let n = 0
   while(true) {
     n += 1
-    yield n 
+    yield n
   }
 }
 ```
