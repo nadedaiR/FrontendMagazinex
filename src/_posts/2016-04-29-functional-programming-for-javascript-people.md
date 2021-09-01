@@ -291,7 +291,7 @@ function* numbers() {
 
 延迟可以带来巨大的性能效益。比如，你可以对比一下每秒钟 Lazy.js 计算与 Underscore 和 Lodash 的区别：
 
-![](https://cdn-images-1.medium.com/max/2000/1*gmsdj0qNqAbgxIlqO089dw.png)
+![](/images/1-gmsdj0qNqAbgxIlqO089dw.png)
 
 下面是解释它的原理的一个很好的示例（Lazy.js 网站给出的）。假定你现在有一个巨大的数组（元素是人），并且你想对它执行某些转换：
 
