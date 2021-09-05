@@ -11,6 +11,8 @@ tags:
   - Haskell
 ---
 
+> 本文译自：[Functional Programming for JavaScript People](https://medium.com/@chetcorcos/functional-programming-for-javascript-people-1915d8775504#.nvej2l773)
+
 和大多数人一样，我在几个月前听到了很多关于函数式编程的东西，不过并没有更深入的了解。于我而言，可能只是一个流行词罢了。从那时起，我开始更深地了解函数式编程并且我觉得应该为那些总能听到它但不知道究竟是什么的新人做一点事情。
 
 谈及函数式编程，你可能会想到它们：Haskell 和 Lisp，以及很多关于哪个更好的讨论。尽管它们都是函数式语言，不过的确有很大的不同，可以说各有各的卖点。在文章的结尾处，我希望你能够对这些有一个更加清晰的认识。它们都在某些更加现代的语言上留下了自己的影子。你可能听说过这样两种语言：Elm 和 Clojurescript，它们两个都可以编译为 JavaScript。不过在我深入了解语言的规范之前，我更想让你们深入了解函数式语言中的一些核心概念和模式。
@@ -107,7 +109,7 @@ const greet = (name, options) => {
 
 ## 函数柯里化
 
-函数柯里化的发明者与 Haskell 的发明者是同一个人-他的名字是：[Haskell Curry](https://en.wikipedia.org/wiki/Haskell_Curry)（以 Haskell Curry 命名）。函数柯里化的本质是，可以在调用一个函数的时候传入更少的参数，而这个函数会返回另外一个函数并且能够接收其他参数。[有一篇非常棒的文章](https://hughfdjackson.com/javascript/why-curry-helps/)非常详细地做了解释，下面是一个使用了 Ramda.js 完成柯里化的简单示例。
+函数柯里化的发明者与 Haskell 的发明者是同一个人-他的名字是 [Haskell Curry](https://en.wikipedia.org/wiki/Haskell_Curry)（更正：发明者不是 Haskell Curry， 而是以 Haskell Curry 命名）。函数柯里化的本质是，可以在调用一个函数的时候传入更少的参数，而这个函数会返回另外一个函数并且能够接收其他参数。[有一篇非常棒的文章](https://hughfdjackson.com/javascript/why-curry-helps/)非常详细地做了解释，下面是一个使用了 Ramda.js 完成柯里化的简单示例。
 
 下面的示例中，我们创建了一个柯里化函数『add』，接收两个参数。当我们传递一个参数时，会得到一个中间函数『add1』，它仅仅会接收一个参数。
 
@@ -356,5 +358,3 @@ user=> (macroexpand ‘(go (println (<! echo-chan))))
 不管怎样，我希望你能够喜欢这篇文章。如果你没有理解某些东西或者有什么自己的想法请发邮件 ccorcos@gmail.com 告诉我，同样帮助我提升写作能力。
 
 Happy Hacking
-
-原文：[Functional Programming for JavaScript People](https://medium.com/@chetcorcos/functional-programming-for-javascript-people-1915d8775504#.nvej2l773)
