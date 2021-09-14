@@ -1,6 +1,6 @@
 *这篇博客是[Gregor Adams](https://twitter.com/gregoradams)关于他如何设法如何用CSS重现Netflix商标。Gregor当他涉足CSS方面是star增速冠军。能在这里谈论他也是非常荣誉的。*<p>
 几个月前我尝试Netflix（一家在线影片租赁提供商），立即就把我迷住了。我观看了一些列以前在别处看的节目。每一集电视剧或者电影都已Netflix动画开始。<p>
-![Original animated Netflix logo](http://hugogiraudel.com/images/netflix-logo-in-css/logo.gif)<p>
+![Original animated Netflix logo](images/1.gif)<p>
 我突然开始想用CSS来实现。所以看了几集后就到[CodePen](http://codepen.io/pixelass/)来实现这个logo。<p>
 ###第一个概念
 我的第一个实施方式是有点不洁的，因为我尝试采用一点新东西。<p>
@@ -107,7 +107,7 @@ div(class="fig--1")
 }
 ```
 *实际效果*<p>
-![all text](http://upload-images.jianshu.io/upload_images/971705-a63b11ec3f8f8c9a.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)<p>
+![all text](images/2.png)<p>
 接下来我要对所有的字母应用这个样式，中间的字母不要变化。右边的字母朝着相反的方向倾斜，并且字母高度发生变化。<p>
 为了实现这些需要增加一些新逻辑：我使用SASS的标准语法来实现。<p>
 *scss代码*
@@ -317,11 +317,11 @@ div(class="fig--2")
 }
 ```
 *实际效果*<p>
-![all text](http://upload-images.jianshu.io/upload_images/971705-defda64c283c7976.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)<p>
+![all text](images/3.png)<p>
 
 ###一个用于阴影的函数
 写一个实现3d效果和阴影的函数。我把视频停在某一帧，并且仔细查看细节。<p>.
-![Image extracted from the original animated Netflix logo](http://hugogiraudel.com/images/netflix-logo-in-css/shadow.png)<p>
+![Image extracted from the original animated Netflix logo](images/4.png)<p>
 正如你所看到的，当这个阴影到达右下角，3d效果的消失点在中间。现在知道我们函数需要做什么了。<p>
 我们将会在keyframes中调用这个函数，所以我们希望他能处理一些值，例如：<br>
 <ul>
@@ -332,7 +332,7 @@ div(class="fig--2")
   <li>mix</li>
 </ul>
 我们还需要一个参数来定义阴影的深度。<p>
-![My CSS implementation of the previously shown image](http://hugogiraudel.com/images/netflix-logo-in-css/shadow-css.png)<p>
+![My CSS implementation of the previously shown image](images/5.png)<p>
 下面就是用来处理这些需求的函数。<p>
 ```
 /// 在特定方向创创建三维阴影
@@ -526,7 +526,7 @@ $c_shadow-mix: #6998da;
 }
 ```
 *实际效果*<p>
-![all text](http://upload-images.jianshu.io/upload_images/971705-dcf6346a1e88533f.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)<p>
+![all text](images/6.png)<p>
 ###组装在一起
 因为我已经创造了许多我需要的部分，现在可以建立动画里。
 #####弹出（动画进入）
