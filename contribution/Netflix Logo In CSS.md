@@ -26,13 +26,14 @@ fades back;</br>
 4.消失。</br>
 changes the font color to red.</br>
 5.把字体颜色变成红色。</br>
-So these were the animation steps I needed to replicate. But there is something else about the logo that I needed to take care of: the letters are tilted to the center of the logo.</br>
+<p>
+So these were the animation steps I needed to replicate. But there is something else about the logo that I needed to take care of: the letters are tilted to the center of the logo.<br/>
 这就是我需要实现的动画步骤。但是这里有另外一些关于这个logo的东西需要解决：**字母在商标中心是倾斜的。**<p>
 People have been asking me how I did that…</br>
 大家一直问我如何做到这些。<p>
-A trick from up my sleeve ;)
+A trick from up my sleeve ;)<br/>
 *从积累中获取的*<br/>
-I do a lot of 3d experiments, so this wasn’t that much of a difficulty to me.
+I do a lot of 3d experiments, so this wasn’t that much of a difficulty to me.<br/>
 我做了许多3D实验，所以这对我来说不是很难。<p>
 ###使字母变倾斜/Deforming/Tilting the letters
 I started with some basic markup for the word “Netflix”<br/>
