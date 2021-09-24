@@ -1,29 +1,42 @@
+*The following is a guest post by Gregor Adams about how he managed to re-create the Netflix logo in CSS. Gregor is kind of the rising star when it comes to CSS, so needless to say it is a great honor to have him here.*
 *这篇博客是[Gregor Adams](https://twitter.com/gregoradams)关于他如何设法如何用CSS重现Netflix商标。Gregor当他涉足CSS方面是star增速冠军。能在这里谈论他也是非常荣誉的。*<p>
+A few months ago I tested Netflix, immediately got hooked and got myself an account. I started watching a lot of series that I usually had to view elsewhere. Each episode or movie starts with the Netflix logo animation.<br/>
 几个月前我尝试Netflix（一家在线影片租赁提供商），立即就把我迷住了。我观看了一些列以前在别处看的节目。每一集电视剧或者电影都已Netflix动画开始。<p>
 ![Original animated Netflix logo](images/1.gif)<p>
+I immediately started thinking about implementing this in CSS. So after watching a few episodes I went over to CodePen and started to work on the logo.<br/>
 我突然开始想用CSS来实现。所以看了几集后就到[CodePen](http://codepen.io/pixelass/)来实现这个logo。<p>
-###第一个概念
+###第一个概念/First concept
+My first implementation was a little dirty since I was trying a few things.<br/>
 我的第一个实施方式是有点不洁的，因为我尝试采用一点新东西。<p>
+For example: I wanted to do this in pure CSS and I also wanted to be able to run the animation again when I click a button, so I had to use some magic. Luckily I always have a few tricks up my sleeve when it comes to CSS.<br/>
 例如：我想使用纯CSS技术来实现它，并且我也想当我点击按钮的时候，这个动画在执行一次，所以我要使用一些不可思议技巧。幸运的是当我写CSS代码的时候，总会有一些窍门跑到我的袖套里面。<p>
+But let’s talk about the actual animation.<br/>
 我们来谈论一下实际的动画。<p>
+I recorded the logo and looped it in Quicktime so I could examine it in detail. I tend to do that a lot because it allows me to stop at certain frames to figure out what is actually going on.<br/>
 我录下这个动画并且在Quicktime中循环播放，这样我可以详细检查。我倾向于这么做，因为它允许我停在某些特定帧弄清楚到底发生了什么。<p>
-这个商标：</br>
+The logo:<br/>
+这个商标：<br/>
+starts with a white screen;<br/>
 1.以一个白屏幕开始。</br>
+pops out as white 3d letters;<br/>
 2.弹出白色的3D字母。</br>
+throws a shadow;</br>
 3.投射阴影。</br>
+fades back;</br>
 4.消失。</br>
+changes the font color to red.</br>
 5.把字体颜色变成红色。</br>
 
 So these were the animation steps I needed to replicate. But there is something else about the logo that I needed to take care of: the letters are tilted to the center of the logo.<br/>
-
 这就是我需要实现的动画步骤。但是这里有另外一些关于这个logo的东西需要解决：**字母在商标中心是倾斜的。**<p>
+People have been asking me how I did that…<br/>
 大家一直问我如何做到这些。<p>
-A trick from up my sleeve ;)<br/>
+A trick from up my sleeve ;)
 *从积累中获取的*<br/>
 I do a lot of 3d experiments, so this wasn’t that much of a difficulty to me.<br/>
-
 我做了许多3D实验，所以这对我来说不是很难。<p>
-###使字母变倾斜
+###使字母变倾斜/Deforming/Tilting the letters
+I started with some basic markup for the word “Netflix”<br/>
 以这个词“Netflix”的一些基本标记开始。<p>
 ```
 <div class="logo">
@@ -36,7 +49,9 @@ I do a lot of 3d experiments, so this wasn’t that much of a difficulty to me.<b
   <span>X</span>
 </div>
 ```
+I made a wrapper with the class logo and wrapped each letter in a span.<br/>
 我用类<code>logo</code>做了一个包装，并且用<code>span</code>标签包裹每一个字母。<p>
+Then I rotated the letters on the y-axis and scaled them on the x-axis to retain its original width. The important part is setting a perspective on the wrapper and defining its perspective-origin.<br/>
 然后我在Y轴上旋转这个字母并且在X轴上缩放这个字母以保持它的原始宽度。重要的部分是在<code> class="logo"</code>包装上设置一个景深<code>perspective </code>，并且定义它的景深原点<code> perspective-origi</code>。
 ```
 // 基础的字母样式
@@ -57,7 +72,9 @@ span {
   transform: scaleX(80) rotateY(89.5deg);
 }
 ```
+There are different way of doing this, like using a different perspective (e.g. 500px), rotation-angle (e.g. 9deg) and scale value (e.g. 0.5) but these values turned out to work the best for my needs.<br/>
 这里还有一些其它的方式来实现这些，例如使用一个不同景深（比如500px），旋转角度（比如9deg）和扭曲值（比如0.5），但是这些值能实现我最需要的效果。<p>
+Here’s a demo on CodePen:<br/>
 下面是在CODEPEN实现的小例子：（原demo是页面中嵌入的iframe实现嵌入CODEPEN，但是markdown没有嵌入iframe的方法，所以采用代码段来展示，并且把原demo的jade和scss写法转换成css方便没有使用过两种技术的读者阅读）<p>
 *jade实现*
 ```
@@ -115,7 +132,9 @@ div(class="fig--1")
 ```
 *实际效果*<p>
 ![all text](images/2.png)<p>
+Next I had to apply this to all the letters respecting that the middle letter is not transformed, the ones to the right are tilted in the opposite direction and the height of the letters changes.<br/>
 接下来我要对所有的字母应用这个样式，中间的字母不要变化。右边的字母朝着相反的方向倾斜，并且字母高度发生变化。<p>
+To do this I needed to add some logic: I use Sass with the SCSS syntax to do this.<br/>
 为了实现这些需要增加一些新逻辑：我使用SASS的标准语法来实现。<p>
 *scss代码*
 ```
@@ -196,6 +215,7 @@ div(class="fig--1")
   transform: scale(65.9, 1) rotatey(-89.5deg);
 }
 ```
+Here’s a demo on CodePen<br/>
 这里是demo代码块（原demo是页面中嵌入的iframe实现嵌入CODEPEN，但是markdown没有嵌入iframe的方法，所以采用代码段来展示，并且把原demo的jade和scss写法转换成css方便没有使用过两种技术的读者阅读）<p>
 *jade*
 ```
@@ -326,10 +346,13 @@ div(class="fig--2")
 *实际效果*<p>
 ![all text](images/3.png)<p>
 
-###一个用于阴影的函数
+###一个用于阴影的函数/A function for the shadow
+Let’s write a function for the 3d-effect and the shadow. I paused on one frame of the video I had made before and looked at it in detail.<br/>
 写一个实现3d效果和阴影的函数。我把视频停在某一帧，并且仔细查看细节。<p>.
 ![Image extracted from the original animated Netflix logo](images/4.png)<p>
+As you can see the 3d effect’s vanishing point is in the center while the shadow drops to the bottom right. Now we know what our function has to be able to do.<br/>
 正如你所看到的，当这个阴影到达右下角，3d效果的消失点在中间。现在知道我们函数需要做什么了。<p>
+We will call this function inside keyframes so we want it to be able to handle a few values like:<br/>
 我们将会在keyframes中调用这个函数，所以我们希望他能处理一些值，例如：<br>
 <ul>
   <li>color</li>
@@ -338,9 +361,11 @@ div(class="fig--2")
   <li>blur</li>
   <li>mix</li>
 </ul>
-我们还需要一个参数来定义阴影的深度。<p>
+We need one more argument to define the depth of the shadow or 3d-effect.<br/>
+我们还需要一个参数来定义阴影的深度或者3d效果。<p>
 ![My CSS implementation of the previously shown image](images/5.png)<p>
-下面就是用来处理这些需求的函数。<p>
+Here’s the function I am using to handle all these requirements:<br/>
+下面就是用来处理这些需求的函数：<p>
 ```
 /// 在特定方向创创建三维阴影
 /// @author Gregor Adams
@@ -365,25 +390,32 @@ div(class="fig--2")
   @return $shadow;
 }
 ```
+This function might be a little hard to understand for Sass-noobs or developers/designers that only use the basic features of the language, so let me explain it in detail.<br/>
 这个函数对于sass菜鸟或者只使用基本语言特性的开发者和设计师来说可能有点难理解，所以让我来详细解释一下.<p>
+I start off with a variable I called $shadow. It is an empty list.<br/>
 我以一个<code>$shadow</code>的变量开始，<code>list</code>是一个空的列表。
 ```
 $shadow: ();
 ```
+I am looping from 1 through the depth. through in Sass means that we iterate including this value.<br/>
 我是从1开始循环到列表的深度。通过Sass意味着我们迭代包括以下的值。
 <ul>
   <li>from 0 to 5 = 0, 1, 2, 3, 4</li>
   <li>from 0 through 5 = 0, 1, 2, 3, 4, 5</li>
 </ul>
+In each iteration I append a text-shadow to the list. So in the end the variable looks something like this:<br/>
 每一次迭代我都添加一个text-shadow到这个列表。所以最后这个列表看起来就是下面这个样子：<br/>
 ```
 $shadow: (0 1px 0 red, 1px 2px 0 red, 2px 3px 0 red, ...);
 ```
+… and I use it like this:<br/>
 使用的时候就像下面这样：<br/>
 ```
 text-shadow: d3(5, red, [$x], [$y], [$blur], [$mix]);
 ```
+$x, $y, $blur and $mix are optional arguments. I already mentioned that I will call this function inside keyframes so I need to be able to optionally change them. $mix will allow to add a second color so the shadow fades from one to the other.<br/>
 $x,$y,$blur和$mix都是可选的参数。我已经提到我将会在keyframes中调用这个函数，所以我需要可选择性的改变他们。 $mix允许添加第二个颜色，实现这个阴影从一种颜色淡出成另外一种颜色。<p>
+Here’s a demo on CodePen:<br/>
 下面是例子：
 *jade*
 ```
@@ -534,9 +566,11 @@ $c_shadow-mix: #6998da;
 ```
 *实际效果*<p>
 ![all text](images/6.png)<p>
-###组装在一起
+###组装在一起/Putting it all together
+Since I have created all the parts I need, I can now create the animation.<br/>
 因为我已经创造了许多我需要的部分，现在可以建立动画里。
-#####弹出（动画进入）
+#####弹出（动画进入）/Popping out (animation-intro)
+I am using two variables $offset and $trans which I have already defined above. The animation has 3 stages, so I can carefully decide when it reaches a certain point.<br/>
 我使用两个上面已经定义的变量$offset和$trans，动画有三个阶段，我需要仔细的决定何时到达某点。<p>
 ```
 @keyframes pop-out {
@@ -566,7 +600,8 @@ $c_shadow-mix: #6998da;
   }
 }
 ```
-#####淡出（动画结尾）
+#####淡出（动画结尾）/Fading back (animation-outro)
+Now let’s do the same thing for fading back.<br/>
 同样的步骤实现淡出的效果。
 ```
 @keyframes fade-back {
@@ -596,7 +631,8 @@ $c_shadow-mix: #6998da;
   }
 }
 ```
-##### 改变字体颜色
+##### 改变字体颜色/Change color
+I also needed to provide an animation to change the color.<br/>
 还需要提供一个动画改变字体颜色。
 ```
 @keyframes change-color {
@@ -608,17 +644,24 @@ $c_shadow-mix: #6998da;
   }
 }
 ```
-##### 触发这个动画
+##### 触发这个动画/Calling the animations
+Now we can chain these animations like so:<br/>
 现在我们可以像下面这样把动画连接在一起。
 ```
 animation-name: pop-out, fade-back, change-color;
 animation-duration: 4s, 2s, 0.1s;
 animation-delay: 0s, 2s, 3.2s
 ```
+The code above is just an approximate example. Each letter has a different delay and duration. You can see the final implementation here Netflix animation in pure CSS<br/>
 上面的代码只是一个近似的实现，每个字母有不同的动画延迟和间隔，可以点击这里查看最终的实现效果[Netflix animation in pure CSS](http://codepen.io/pixelass/pen/MYYReK)。<p>
+Final notice: I added some magic to retrigger the animation in pure CSS but that’s something I might explain in another article.<br/>
 最后通知一下，我使用了一些不可思议的技巧来实现在纯CSS中再次触发动画，我将会在接下来的文章中解释。<p>
+I am never really happy with my experiments and while writing this article I found several ways how I could improve the code and effect.<br/>
 做实验的时候并不是十分高兴，因为写文章的时候我想到了其它几个提高效果的方法。<p>
+I rewrote the entire Sass code prior to writing this article but I still feel that I can improve some parts. That is the main reason why I never stop making experiments. It just makes me smarter and bends my thoughts in directions I never knew existed.<br/>
 为了写这篇文章我重新写了整个Sass代码，但是我仍然觉得我嫩提升一些部分。这就是我不间断做实验的主要原因。让我变得更加聪明，和在一些以前没有涉足过的方向有新的突破。<p>
+I barely make use of techniques like these in real-life projects but I very often use the functions I needed to implement that effect. Anyway, I hope you enjoyed this article.<br/>
 我几乎没有在实际的项目中用到这样的技术，但是我经常使用函数来提升效果。不论如何希望你喜欢这篇文章。<p>
+Gregor Adams is a front-end developer from Hamburg, Germany. He is passionate about CSS and Sass, thus happens to be the author of amazing demos on CodePen featuring his great CSS skills.<br/>
 *[Gregor Adams](https://twitter.com/gregoradams)是一位来自Hamburg的前端开发者，他对CSS和Sass有极大的热情。从他的[codepen](http://codepen.io/pixelass/)中可以看出他强大的CSS技术。*
 ######原文链接：[Netflix Logo In CSS](http://hugogiraudel.com/2015/04/15/netflix-logo-in-css/#first-concept)
