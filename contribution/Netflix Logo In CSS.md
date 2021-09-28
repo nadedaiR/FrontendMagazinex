@@ -1,4 +1,4 @@
-*The following is a guest post by Gregor Adams about how he managed to re-create the Netflix logo in CSS. Gregor is kind of the rising star when it comes to CSS, so needless to say it is a great honor to have him here.*
+*The following is a guest post by Gregor Adams about how he managed to re-create the Netflix logo in CSS. Gregor is kind of the rising star when it comes to CSS, so needless to say it is a great honor to have him here.*<br/>
 *这篇博客是 [Gregor Adams](https://twitter.com/gregoradams) 讲他如何用 CSS 重现 Netflix 商标效果。Gregor 当他涉足 CSS 方面时是 star 增速冠军。能在这里谈论他也是非常荣誉的。*<p>
 A few months ago I tested Netflix, immediately got hooked and got myself an account. I started watching a lot of series that I usually had to view elsewhere. Each episode or movie starts with the Netflix logo animation.<br/>
 我尝试使用 Netflix（译者注：一家在线影片租赁提供商）时，立即就把我迷住了。我观看了一些我已经看过的节目。每一集电视剧或者电影都已 Netflix 动画作为开始。<p>
