@@ -38,7 +38,7 @@ I do a lot of 3d experiments, so this wasn’t that much of a difficulty to me.<b
 ###使字母变倾斜/Deforming/Tilting the letters
 I started with some basic markup for the word “Netflix”<br/>
 以这个词 “Netflix” 的一些基本标记开始。<p>
-```
+```html
 <div class="logo">
   <span>N</span>
   <span>E</span>
@@ -53,7 +53,7 @@ I made a wrapper with the class logo and wrapped each letter in a span.<br/>
 我用类<code>logo</code>做了一个包装，并且用<code>span</code>标签包裹每一个字母。<p>
 Then I rotated the letters on the y-axis and scaled them on the x-axis to retain its original width. The important part is setting a perspective on the wrapper and defining its perspective-origin.<br/>
 然后我在Y轴上旋转这个字母并且在 X 轴上缩放这个字母以保持它的原始宽度。重要的部分是在<code> class="logo"</code>包装上设置一个<code>perspective </code>，并且定义它的<code> perspective-origi</code>。
-```
+```css
 // 基础的字母样式
 span {
   font-size: 8em;
@@ -75,61 +75,10 @@ span {
 There are different way of doing this, like using a different perspective (e.g. 500px), rotation-angle (e.g. 9deg) and scale value (e.g. 0.5) but these values turned out to work the best for my needs.<br/>
 这里还有一些其它的方式来实现这些，例如使用一个不同景深（比如500px），旋转角度（比如9deg）和缩放（比如0.5），但是这些值能实现我最需要的效果。<p>
 Here’s a demo on CodePen:<br/>
-下面是在 CODEPEN 实现的小例子：（原demo是页面中嵌入的iframe实现嵌入CODEPEN，但是markdown没有嵌入iframe的方法，所以采用代码段来展示，并且把原demo的jade和scss写法转换成css方便没有使用过两种技术的读者阅读）<p>
-*jade实现*
-```
-div(class="fig--1")
-  style. 
-    @import 'http://codepen.io/pixelass/pen/raEojV.css';
-  p Original:
-  span N
-  p Transformed:
-  .logo
-    span N
-```
-*html实现*
-```
-<div class="fig--1">
-  <style>@import 'http://codepen.io/pixelass/pen/raEojV.css';</style>
-  <p>Original:</p><span>N</span>
-  <p>Transformed:</p>
-  <div class="logo"><span>N</span></div>
-</div>
-```
-*scss实现*
-```
-.fig--1 {
-  span {
-    font-size: 8em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    display: block;
-  }
-  .logo {
-    perspective: 1000px;
-    perspective-origin: 50% 0;
-    span {
-      transform-origin: 0 0;
-      transform: scaleX(80) rotateY(89.5deg);
-    }
-  }
-}
-```
-*css实现*
-```
-.fig--1 span {
-  font-size: 8em;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  display: block;
-}
-.fig--1 .logo {
-  perspective: 1000px;
-  perspective-origin: 50% 0;
-}
-.fig--1 .logo span {
-  transform-origin: 0 0;
-  transform: scaleX(80) rotateY(89.5deg);
-}
-```
+下面是在 CodePen 实现的小例子：（译者注：原 demo 是页面中嵌入的 iframe 实现嵌入 CodePen ，但是 markdown 没有嵌入 iframe 的方法，所以采用 Codepen 来展示，并且把原 demo 的 jade 和 scss 写法转换成 jade 和 css 方便没有使用过两种技术的读者阅读）<p>
+使用 jade 和 scss 完成的 [demo](http://codepen.io/pixelass/embed/raEojV?height=446&theme-id=0&slug-hash=raEojV&default-tab=result&user=pixelass#0)<br/>
+转换成 html 和 css 完成的 [demo](http://codepen.io/doculecycle/pen/reoaRw)<br/>
+
 *实际效果*<p>
 ![all text](images/2.png)<p>
 Next I had to apply this to all the letters respecting that the middle letter is not transformed, the ones to the right are tilted in the opposite direction and the height of the letters changes.<br/>
@@ -137,7 +86,7 @@ Next I had to apply this to all the letters respecting that the middle letter is
 To do this I needed to add some logic: I use Sass with the SCSS syntax to do this.<br/>
 为了实现这些需要增加一些新逻辑：我使用 Sass 的标准语法来实现。<p>
 *scss代码*
-```
+```css
 .logo {
   perspective: 1000px;
   perspective-origin: 50% 0;
@@ -168,7 +117,7 @@ To do this I needed to add some logic: I use Sass with the SCSS syntax to do thi
 }
 ```
 *为了方便不懂 scss 同学立即，这是我编译后的 css 代码*
-```
+```css
 .logo {
   perspective: 1000px;
   perspective-origin: 50% 0;
@@ -216,133 +165,11 @@ To do this I needed to add some logic: I use Sass with the SCSS syntax to do thi
 }
 ```
 Here’s a demo on CodePen<br/>
-这里是 demo 代码块（译者注：原demo是页面中嵌入的iframe实现嵌入CodePen，但是markdown没有嵌入iframe的方法，所以采用代码段来展示，并且把原demo的jade和scss写法转换成css方便没有使用过两种技术的读者阅读）<p>
-*jade*
-```
-div(class="fig--2")
-  style. 
-    @import 'http://codepen.io/pixelass/pen/yydGPL.css';
-  .logo
-    span N
-    span E
-    span T
-    span F
-    span L
-    span I
-    span X
-```
-*html*
-```
-<div class="fig--2">
-  <style>@import 'http://codepen.io/pixelass/pen/yydGPL.css';</style>
-  <div class="logo">
-    <span>N</span>
-    <span>E</span>
-    <span>T</span>
-    <span>F</span>
-    <span>L</span>
-    <span>I</span>
-    <span>X</span>
-  </div>
-</div>
-```
-*scss*
-```
-.fig--2 .logo {
-  perspective: 1000px;
-  perspective-origin: 50% 0;
-  font-size: 8em;
-  display: inline-flex;
-}
-.fig--2 .logo span {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  display: block;
-}
-.fig--2 .logo span:nth-child(1) {
-  transform-origin: 33.33333333% 200%;
-  font-size: 1.035em;
-  transform: scale(65.9, 1) rotatey(89.5deg);
-}
-.fig--2 .logo span:nth-child(2) {
-  transform-origin: 25% 200%;
-  font-size: 0.96em;
-  transform: scale(75.9, 1) rotatey(89.5deg);
-}
-.fig--2 .logo span:nth-child(3) {
-  transform-origin: 0% 200%;
-  font-size: 0.915em;
-  transform: scale(85.9, 1) rotatey(89.5deg);
-}
-.fig--2 .logo span:nth-child(4) {
-  transform-origin: Infinity% 200%;
-  font-size: 0.85em;
-  transform: scale(1, 1) translatey(0%);
-}
-.fig--2 .logo span:nth-child(5) {
-  transform-origin: 100% 200%;
-  font-size: 0.915em;
-  transform: scale(85.9, 1) rotatey(-89.5deg);
-}
-.fig--2 .logo span:nth-child(6) {
-  transform-origin: 75% 200%;
-  font-size: 0.96em;
-  transform: scale(75.9, 1) rotatey(-89.5deg);
-}
-.fig--2 .logo span:nth-child(7) {
-  transform-origin: 66.66666667% 200%;
-  font-size: 1.035em;
-  transform: scale(65.9, 1) rotatey(-89.5deg);
-}
+下面是在 CodePen 实现的小例子：（译者注：原 demo 是页面中嵌入的 iframe 实现嵌入 CodePen ，但是 markdown 没有嵌入 iframe 的方法，所以采用 Codepen 来展示，并且把原 demo 的 jade 和 scss 写法转换成 jade 和 css 方便没有使用过两种技术的读者阅读）<p>
+使用 jade 和 scss 完成的 [demo](http://codepen.io/pixelass/embed/yydGPL?height=213&theme-id=0&slug-hash=yydGPL&default-tab=result&user=pixelass#0)
+转换成html和css的[demo](http://codepen.io/doculecycle/pen/KzbppN)
 
-```
-*css*
-```
-.fig--2 .logo {
-  perspective: 1000px;
-  perspective-origin: 50% 0;
-  font-size: 8em;
-  display: inline-flex;
-}
-.fig--2 .logo span {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  display: block;
-}
-.fig--2 .logo span:nth-child(1) {
-  transform-origin: 33.33333333% 200%;
-  font-size: 1.035em;
-  transform: scale(65.9, 1) rotatey(89.5deg);
-}
-.fig--2 .logo span:nth-child(2) {
-  transform-origin: 25% 200%;
-  font-size: 0.96em;
-  transform: scale(75.9, 1) rotatey(89.5deg);
-}
-.fig--2 .logo span:nth-child(3) {
-  transform-origin: 0% 200%;
-  font-size: 0.915em;
-  transform: scale(85.9, 1) rotatey(89.5deg);
-}
-.fig--2 .logo span:nth-child(4) {
-  transform-origin: Infinity% 200%;
-  font-size: 0.85em;
-  transform: scale(1, 1) translatey(0%);
-}
-.fig--2 .logo span:nth-child(5) {
-  transform-origin: 100% 200%;
-  font-size: 0.915em;
-  transform: scale(85.9, 1) rotatey(-89.5deg);
-}
-.fig--2 .logo span:nth-child(6) {
-  transform-origin: 75% 200%;
-  font-size: 0.96em;
-  transform: scale(75.9, 1) rotatey(-89.5deg);
-}
-.fig--2 .logo span:nth-child(7) {
-  transform-origin: 66.66666667% 200%;
-  font-size: 1.035em;
-  transform: scale(65.9, 1) rotatey(-89.5deg);
-}
-```
+
 *实际效果*<p>
 ![all text](images/3.png)<p>
 
@@ -366,7 +193,7 @@ We need one more argument to define the depth of the shadow or 3d-effect.<br/>
 ![My CSS implementation of the previously shown image](images/5.png)<p>
 Here’s the function I am using to handle all these requirements:<br/>
 下面就是用来处理这些需求的函数：<p>
-```
+```css
 /// 在特定方向创创建三维阴影
 /// @author Gregor Adams
 /// @param  {Number}        $depth - 阴影长度
@@ -394,7 +221,7 @@ This function might be a little hard to understand for Sass-noobs or developers/
 这个函数对于 Sass 菜鸟或者只使用基本语言特性的开发者和设计师来说可能有点难理解，所以让我来详细解释一下.<p>
 I start off with a variable I called $shadow. It is an empty list.<br/>
 我以一个<code>$shadow</code>的变量开始，<code>list</code> 是一个空的列表。
-```
+```css
 $shadow: ();
 ```
 I am looping from 1 through the depth. through in Sass means that we iterate including this value.<br/>
@@ -405,165 +232,21 @@ I am looping from 1 through the depth. through in Sass means that we iterate inc
 </ul>
 In each iteration I append a text-shadow to the list. So in the end the variable looks something like this:<br/>
 每一次迭代我都添加一个 text-shadow 到这个列表。所以最后这个列表看起来就是下面这个样子：<br/>
-```
+```css
 $shadow: (0 1px 0 red, 1px 2px 0 red, 2px 3px 0 red, ...);
 ```
 … and I use it like this:<br/>
 使用的时候就像下面这样：<br/>
-```
+```css
 text-shadow: d3(5, red, [$x], [$y], [$blur], [$mix]);
 ```
 $x, $y, $blur and $mix are optional arguments. I already mentioned that I will call this function inside keyframes so I need to be able to optionally change them. $mix will allow to add a second color so the shadow fades from one to the other.<br/>
 $x,$y,$blur 和 $mix 都是可选的参数。我已经提到我将会在 keyframes 中调用这个函数，所以我需要可选择性的改变他们。 $mix 允许添加第二个颜色，实现这个阴影从一种颜色淡出成另外一种颜色。<p>
 Here’s a demo on CodePen:<br/>
-下面是例子：
-*jade*
-```
-div(class="fig--3")
-  style. 
-    @import 'http://codepen.io/pixelass/pen/XJLOXg.css';
-  .logo
-    span N
-    span E
-    span T
-    span F
-    span L
-    span I
-    span X
-  p(style="height: 50px")
-```
-*html*
-```
-<div class="fig--3">
-  <style>@import 'http://codepen.io/pixelass/pen/XJLOXg.css';</style>
-  <div class="logo">
-    <span>N</span>
-    <span>E</span>
-    <span>T</span>
-    <span>F</span>
-    <span>L</span>
-    <span>I</span>
-    <span>X</span>
-  </div>
-  <p style="height: 50px"></p>
-</div>
-```
-*scss*
-```
-/// Create a 3d-shadow in a certain direction
-/// @author Gregor Adams
-/// @param  {Number}        $depth - 阴影长度
-/// @param  {Unit}          $color - 阴影颜色
-/// @param  {Unit}          $x     - 在x轴上到下一个阴影的距离
-/// @param  {Unit}          $y     - 在y轴上到下一个阴影的距离
-/// @param  {Unit}          $blur  - text-shadow的模糊距离
-/// @param  {Color|false}   $mix   - 添加一个可选的颜色来混合
-/// @return {List}          - 返回一个text-shadow列表
-@function d3($depth, $color, $x: 1px, $y: 1px, $blur: 0, $mix: false) {
-  $shadow: ();
-  @for $i from 1 through $depth {
-    // append to the existing shadow
-    @if type-of($mix) != 'color' {
-      $shadow: append($shadow, round($i * $x) round($i * $y) $blur $color, comma);
-    } @else {
-      $shadow: append($shadow, round($i * $x) round($i * $y) $blur mix($mix,$color,0.3%*$i), comma);
-    }
-  }
-  @return $shadow;
-}
-$c_fg:         #f00;
-$c_bg:         #fff;
-$c_3d:         #f2f2f2;
-$c_shadow:     #dadada;
-$c_shadow-mix: #6998da;
-.fig--3 {
-  .logo {
-    perspective: 1000px;
-    perspective-origin: 50% 0;
-    font-size: 8em;
-    display: inline-flex;
-    span {
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      display: block;
-      color: $c_bg;
-      $letters: 7;
-      @for $i from 1 through $letters {
-        $offset: $i - ceil($letters / 2);
-        $trans: if($offset > 0, -89.5deg, 89.5deg);
-        &:nth-child(#{$i}) {
-          // trans/de-form the letters
-          transform-origin: 50% + 50%/$offset 200%;
-          font-size: if($offset == 0,
-            0.85em,
-            0.9em + 0.015*pow(abs($offset),2));
-          transform: 
-              if($offset == 0, scale(1, 1), scale(95.9 - abs($offset) * 10, 1)) 
-              if($offset == 0, translatey(0%), rotatey($trans));
-           text-shadow: 
-            d3(15, $c_3d, if($offset == 0, 0, -0.25px * $offset), 0), 
-            d3(30, $c_shadow, 2px, 3px, 3px, $c_shadow-mix);
-        }
-      }
-    }
-  }
-}
-```
-*css*
-```
-.fig--3 .logo {
-  perspective: 1000px;
-  perspective-origin: 50% 0;
-  font-size: 8em;
-  display: inline-flex;
-}
-.fig--3 .logo span {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  display: block;
-  color: #fff;
-}
-.fig--3 .logo span:nth-child(1) {
-  transform-origin: 33.33333% 200%;
-  font-size: 1.035em;
-  transform: scale(65.9, 1) rotatey(89.5deg);
-  text-shadow: 1px 0 0 #f2f2f2, 2px 0 0 #f2f2f2, 2px 0 0 #f2f2f2, 3px 0 0 #f2f2f2, 4px 0 0 #f2f2f2, 5px 0 0 #f2f2f2, 5px 0 0 #f2f2f2, 6px 0 0 #f2f2f2, 7px 0 0 #f2f2f2, 8px 0 0 #f2f2f2, 8px 0 0 #f2f2f2, 9px 0 0 #f2f2f2, 10px 0 0 #f2f2f2, 11px 0 0 #f2f2f2, 11px 0 0 #f2f2f2, 2px 3px 3px #dadada, 4px 6px 3px #d9dada, 6px 9px 3px #d9d9da, 8px 12px 3px #d9d9da, 10px 15px 3px #d8d9da, 12px 18px 3px #d8d9da, 14px 21px 3px #d8d9da, 16px 24px 3px #d7d8da, 18px 27px 3px #d7d8da, 20px 30px 3px #d7d8da, 22px 33px 3px #d6d8da, 24px 36px 3px #d6d8da, 26px 39px 3px #d6d7da, 28px 42px 3px #d5d7da, 30px 45px 3px #d5d7da, 32px 48px 3px #d5d7da, 34px 51px 3px #d4d7da, 36px 54px 3px #d4d6da, 38px 57px 3px #d4d6da, 40px 60px 3px #d3d6da, 42px 63px 3px #d3d6da, 44px 66px 3px #d3d6da, 46px 69px 3px #d2d5da, 48px 72px 3px #d2d5da, 50px 75px 3px #d2d5da, 52px 78px 3px #d1d5da, 54px 81px 3px #d1d5da, 56px 84px 3px #d1d4da, 58px 87px 3px #d0d4da, 60px 90px 3px #d0d4da;
-}
-.fig--3 .logo span:nth-child(2) {
-  transform-origin: 25% 200%;
-  font-size: 0.96em;
-  transform: scale(75.9, 1) rotatey(89.5deg);
-  text-shadow: 1px 0 0 #f2f2f2, 1px 0 0 #f2f2f2, 2px 0 0 #f2f2f2, 2px 0 0 #f2f2f2, 3px 0 0 #f2f2f2, 3px 0 0 #f2f2f2, 4px 0 0 #f2f2f2, 4px 0 0 #f2f2f2, 5px 0 0 #f2f2f2, 5px 0 0 #f2f2f2, 6px 0 0 #f2f2f2, 6px 0 0 #f2f2f2, 7px 0 0 #f2f2f2, 7px 0 0 #f2f2f2, 8px 0 0 #f2f2f2, 2px 3px 3px #dadada, 4px 6px 3px #d9dada, 6px 9px 3px #d9d9da, 8px 12px 3px #d9d9da, 10px 15px 3px #d8d9da, 12px 18px 3px #d8d9da, 14px 21px 3px #d8d9da, 16px 24px 3px #d7d8da, 18px 27px 3px #d7d8da, 20px 30px 3px #d7d8da, 22px 33px 3px #d6d8da, 24px 36px 3px #d6d8da, 26px 39px 3px #d6d7da, 28px 42px 3px #d5d7da, 30px 45px 3px #d5d7da, 32px 48px 3px #d5d7da, 34px 51px 3px #d4d7da, 36px 54px 3px #d4d6da, 38px 57px 3px #d4d6da, 40px 60px 3px #d3d6da, 42px 63px 3px #d3d6da, 44px 66px 3px #d3d6da, 46px 69px 3px #d2d5da, 48px 72px 3px #d2d5da, 50px 75px 3px #d2d5da, 52px 78px 3px #d1d5da, 54px 81px 3px #d1d5da, 56px 84px 3px #d1d4da, 58px 87px 3px #d0d4da, 60px 90px 3px #d0d4da;
-}
-.fig--3 .logo span:nth-child(3) {
-  transform-origin: 0% 200%;
-  font-size: 0.915em;
-  transform: scale(85.9, 1) rotatey(89.5deg);
-  text-shadow: 0px 0 0 #f2f2f2, 1px 0 0 #f2f2f2, 1px 0 0 #f2f2f2, 1px 0 0 #f2f2f2, 1px 0 0 #f2f2f2, 2px 0 0 #f2f2f2, 2px 0 0 #f2f2f2, 2px 0 0 #f2f2f2, 2px 0 0 #f2f2f2, 3px 0 0 #f2f2f2, 3px 0 0 #f2f2f2, 3px 0 0 #f2f2f2, 3px 0 0 #f2f2f2, 4px 0 0 #f2f2f2, 4px 0 0 #f2f2f2, 2px 3px 3px #dadada, 4px 6px 3px #d9dada, 6px 9px 3px #d9d9da, 8px 12px 3px #d9d9da, 10px 15px 3px #d8d9da, 12px 18px 3px #d8d9da, 14px 21px 3px #d8d9da, 16px 24px 3px #d7d8da, 18px 27px 3px #d7d8da, 20px 30px 3px #d7d8da, 22px 33px 3px #d6d8da, 24px 36px 3px #d6d8da, 26px 39px 3px #d6d7da, 28px 42px 3px #d5d7da, 30px 45px 3px #d5d7da, 32px 48px 3px #d5d7da, 34px 51px 3px #d4d7da, 36px 54px 3px #d4d6da, 38px 57px 3px #d4d6da, 40px 60px 3px #d3d6da, 42px 63px 3px #d3d6da, 44px 66px 3px #d3d6da, 46px 69px 3px #d2d5da, 48px 72px 3px #d2d5da, 50px 75px 3px #d2d5da, 52px 78px 3px #d1d5da, 54px 81px 3px #d1d5da, 56px 84px 3px #d1d4da, 58px 87px 3px #d0d4da, 60px 90px 3px #d0d4da;
-}
-.fig--3 .logo span:nth-child(4) {
-  transform-origin: Infinity% 200%;
-  font-size: 0.85em;
-  transform: scale(1, 1) translatey(0%);
-  text-shadow: 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 0 0 0 #f2f2f2, 2px 3px 3px #dadada, 4px 6px 3px #d9dada, 6px 9px 3px #d9d9da, 8px 12px 3px #d9d9da, 10px 15px 3px #d8d9da, 12px 18px 3px #d8d9da, 14px 21px 3px #d8d9da, 16px 24px 3px #d7d8da, 18px 27px 3px #d7d8da, 20px 30px 3px #d7d8da, 22px 33px 3px #d6d8da, 24px 36px 3px #d6d8da, 26px 39px 3px #d6d7da, 28px 42px 3px #d5d7da, 30px 45px 3px #d5d7da, 32px 48px 3px #d5d7da, 34px 51px 3px #d4d7da, 36px 54px 3px #d4d6da, 38px 57px 3px #d4d6da, 40px 60px 3px #d3d6da, 42px 63px 3px #d3d6da, 44px 66px 3px #d3d6da, 46px 69px 3px #d2d5da, 48px 72px 3px #d2d5da, 50px 75px 3px #d2d5da, 52px 78px 3px #d1d5da, 54px 81px 3px #d1d5da, 56px 84px 3px #d1d4da, 58px 87px 3px #d0d4da, 60px 90px 3px #d0d4da;
-}
-.fig--3 .logo span:nth-child(5) {
-  transform-origin: 100% 200%;
-  font-size: 0.915em;
-  transform: scale(85.9, 1) rotatey(-89.5deg);
-  text-shadow: -1px 0 0 #f2f2f2, -1px 0 0 #f2f2f2, -1px 0 0 #f2f2f2, -1px 0 0 #f2f2f2, -2px 0 0 #f2f2f2, -2px 0 0 #f2f2f2, -2px 0 0 #f2f2f2, -2px 0 0 #f2f2f2, -3px 0 0 #f2f2f2, -3px 0 0 #f2f2f2, -3px 0 0 #f2f2f2, -3px 0 0 #f2f2f2, -4px 0 0 #f2f2f2, -4px 0 0 #f2f2f2, -4px 0 0 #f2f2f2, 2px 3px 3px #dadada, 4px 6px 3px #d9dada, 6px 9px 3px #d9d9da, 8px 12px 3px #d9d9da, 10px 15px 3px #d8d9da, 12px 18px 3px #d8d9da, 14px 21px 3px #d8d9da, 16px 24px 3px #d7d8da, 18px 27px 3px #d7d8da, 20px 30px 3px #d7d8da, 22px 33px 3px #d6d8da, 24px 36px 3px #d6d8da, 26px 39px 3px #d6d7da, 28px 42px 3px #d5d7da, 30px 45px 3px #d5d7da, 32px 48px 3px #d5d7da, 34px 51px 3px #d4d7da, 36px 54px 3px #d4d6da, 38px 57px 3px #d4d6da, 40px 60px 3px #d3d6da, 42px 63px 3px #d3d6da, 44px 66px 3px #d3d6da, 46px 69px 3px #d2d5da, 48px 72px 3px #d2d5da, 50px 75px 3px #d2d5da, 52px 78px 3px #d1d5da, 54px 81px 3px #d1d5da, 56px 84px 3px #d1d4da, 58px 87px 3px #d0d4da, 60px 90px 3px #d0d4da;
-}
-.fig--3 .logo span:nth-child(6) {
-  transform-origin: 75% 200%;
-  font-size: 0.96em;
-  transform: scale(75.9, 1) rotatey(-89.5deg);
-  text-shadow: -1px 0 0 #f2f2f2, -1px 0 0 #f2f2f2, -2px 0 0 #f2f2f2, -2px 0 0 #f2f2f2, -3px 0 0 #f2f2f2, -3px 0 0 #f2f2f2, -4px 0 0 #f2f2f2, -4px 0 0 #f2f2f2, -5px 0 0 #f2f2f2, -5px 0 0 #f2f2f2, -6px 0 0 #f2f2f2, -6px 0 0 #f2f2f2, -7px 0 0 #f2f2f2, -7px 0 0 #f2f2f2, -8px 0 0 #f2f2f2, 2px 3px 3px #dadada, 4px 6px 3px #d9dada, 6px 9px 3px #d9d9da, 8px 12px 3px #d9d9da, 10px 15px 3px #d8d9da, 12px 18px 3px #d8d9da, 14px 21px 3px #d8d9da, 16px 24px 3px #d7d8da, 18px 27px 3px #d7d8da, 20px 30px 3px #d7d8da, 22px 33px 3px #d6d8da, 24px 36px 3px #d6d8da, 26px 39px 3px #d6d7da, 28px 42px 3px #d5d7da, 30px 45px 3px #d5d7da, 32px 48px 3px #d5d7da, 34px 51px 3px #d4d7da, 36px 54px 3px #d4d6da, 38px 57px 3px #d4d6da, 40px 60px 3px #d3d6da, 42px 63px 3px #d3d6da, 44px 66px 3px #d3d6da, 46px 69px 3px #d2d5da, 48px 72px 3px #d2d5da, 50px 75px 3px #d2d5da, 52px 78px 3px #d1d5da, 54px 81px 3px #d1d5da, 56px 84px 3px #d1d4da, 58px 87px 3px #d0d4da, 60px 90px 3px #d0d4da;
-}
-.fig--3 .logo span:nth-child(7) {
-  transform-origin: 66.66667% 200%;
-  font-size: 1.035em;
-  transform: scale(65.9, 1) rotatey(-89.5deg);
-  text-shadow: -1px 0 0 #f2f2f2, -2px 0 0 #f2f2f2, -3px 0 0 #f2f2f2, -3px 0 0 #f2f2f2, -4px 0 0 #f2f2f2, -5px 0 0 #f2f2f2, -6px 0 0 #f2f2f2, -6px 0 0 #f2f2f2, -7px 0 0 #f2f2f2, -8px 0 0 #f2f2f2, -9px 0 0 #f2f2f2, -9px 0 0 #f2f2f2, -10px 0 0 #f2f2f2, -11px 0 0 #f2f2f2, -12px 0 0 #f2f2f2, 2px 3px 3px #dadada, 4px 6px 3px #d9dada, 6px 9px 3px #d9d9da, 8px 12px 3px #d9d9da, 10px 15px 3px #d8d9da, 12px 18px 3px #d8d9da, 14px 21px 3px #d8d9da, 16px 24px 3px #d7d8da, 18px 27px 3px #d7d8da, 20px 30px 3px #d7d8da, 22px 33px 3px #d6d8da, 24px 36px 3px #d6d8da, 26px 39px 3px #d6d7da, 28px 42px 3px #d5d7da, 30px 45px 3px #d5d7da, 32px 48px 3px #d5d7da, 34px 51px 3px #d4d7da, 36px 54px 3px #d4d6da, 38px 57px 3px #d4d6da, 40px 60px 3px #d3d6da, 42px 63px 3px #d3d6da, 44px 66px 3px #d3d6da, 46px 69px 3px #d2d5da, 48px 72px 3px #d2d5da, 50px 75px 3px #d2d5da, 52px 78px 3px #d1d5da, 54px 81px 3px #d1d5da, 56px 84px 3px #d1d4da, 58px 87px 3px #d0d4da, 60px 90px 3px #d0d4da;
-}
-```
+下面是在 CodePen 实现的小例子：（译者注：原 demo 是页面中嵌入的 iframe 实现嵌入 CodePen ，但是 markdown 没有嵌入 iframe 的方法，所以采用 Codepen 来展示，并且把原 demo 的 jade 和 scss 写法转换成 jade 和 css 方便没有使用过两种技术的读者阅读）<p>
+使用 jade 和 scss 完成的 [demo](http://codepen.io/pixelass/embed/XJLOXg?height=297&theme-id=0&slug-hash=XJLOXg&default-tab=result&user=pixelass#0)
+转成成 html 和 css 的[demo](http://codepen.io/doculecycle/pen/eZbNpG)
+
 *实际效果*<p>
 ![all text](images/6.png)<p>
 ###组装在一起/Putting it all together
@@ -572,7 +255,7 @@ Since I have created all the parts I need, I can now create the animation.<br/>
 #####弹出（动画进入）/Popping out (animation-intro)
 I am using two variables $offset and $trans which I have already defined above. The animation has 3 stages, so I can carefully decide when it reaches a certain point.<br/>
 我使用两个上面已经定义的变量$offset和$trans，动画有三个阶段，我需要仔细的决定何时到达某点。<p>
-```
+```css
 @keyframes pop-out {
   0% {
     transform:
@@ -603,7 +286,7 @@ I am using two variables $offset and $trans which I have already defined above. 
 #####淡出（动画结尾）/Fading back (animation-outro)
 Now let’s do the same thing for fading back.<br/>
 同样的步骤实现淡出的效果。
-```
+```css
 @keyframes fade-back {
   0% {
     transform:
@@ -634,7 +317,7 @@ Now let’s do the same thing for fading back.<br/>
 ##### 改变字体颜色/Change color
 I also needed to provide an animation to change the color.<br/>
 还需要提供一个动画改变字体颜色。
-```
+```css
 @keyframes change-color {
   0% {
     color: $c_bg;
@@ -647,7 +330,7 @@ I also needed to provide an animation to change the color.<br/>
 ##### 触发这个动画/Calling the animations
 Now we can chain these animations like so:<br/>
 现在我们可以像下面这样把动画连接在一起。
-```
+```css
 animation-name: pop-out, fade-back, change-color;
 animation-duration: 4s, 2s, 0.1s;
 animation-delay: 0s, 2s, 3.2s
