@@ -76,8 +76,8 @@ There are different way of doing this, like using a different perspective (e.g. 
 这里还有一些其它的方式来实现这些，例如使用一个不同景深（比如500px），旋转角度（比如9deg）和缩放（比如0.5），但是这些值能实现我最需要的效果。<p>
 Here’s a demo on CodePen:<br/>
 下面是在 CodePen 实现的小例子：（译者注：原 demo 是页面中嵌入的 iframe 实现嵌入 CodePen ，但是 markdown 没有嵌入 iframe 的方法，所以采用 Codepen 来展示，并且把原 demo 的 jade 和 scss 写法转换成 jade 和 css 方便没有使用过两种技术的读者阅读）<p>
-*使用 jade 和 scss 完成的 [demo](http://codepen.io/pixelass/embed/raEojV?height=446&theme-id=0&slug-hash=raEojV&default-tab=result&user=pixelass#0)<br/>
-*转换成 html 和 css 完成的 [demo](http://codepen.io/doculecycle/pen/reoaRw)<br/>
+使用 jade 和 scss 完成的 [demo](http://codepen.io/pixelass/embed/raEojV?height=446&theme-id=0&slug-hash=raEojV&default-tab=result&user=pixelass#0)<br/>
+转换成 html 和 css 完成的 [demo](http://codepen.io/doculecycle/pen/reoaRw)<br/>
 
 *实际效果*<p>
 ![all text](images/2.png)<p>
@@ -166,8 +166,8 @@ To do this I needed to add some logic: I use Sass with the SCSS syntax to do thi
 ```
 Here’s a demo on CodePen<br/>
 下面是在 CodePen 实现的小例子：（译者注：原 demo 是页面中嵌入的 iframe 实现嵌入 CodePen ，但是 markdown 没有嵌入 iframe 的方法，所以采用 Codepen 来展示，并且把原 demo 的 jade 和 scss 写法转换成 jade 和 css 方便没有使用过两种技术的读者阅读）<p>
-*使用 jade 和 scss 完成的 [demo](http://codepen.io/pixelass/embed/yydGPL?height=213&theme-id=0&slug-hash=yydGPL&default-tab=result&user=pixelass#0)<br/>
-*转换成 html 和 css 的[demo](http://codepen.io/doculecycle/pen/KzbppN)<br/>
+使用 jade 和 scss 完成的 [demo](http://codepen.io/pixelass/embed/yydGPL?height=213&theme-id=0&slug-hash=yydGPL&default-tab=result&user=pixelass#0)<br/>
+转换成 html 和 css 的[demo](http://codepen.io/doculecycle/pen/KzbppN)<br/>
 
 *实际效果*<p>
 ![all text](images/3.png)<p>
@@ -243,8 +243,8 @@ $x, $y, $blur and $mix are optional arguments. I already mentioned that I will c
 $x,$y,$blur 和 $mix 都是可选的参数。我已经提到我将会在 keyframes 中调用这个函数，所以我需要可选择性的改变他们。 $mix 允许添加第二个颜色，实现这个阴影从一种颜色淡出成另外一种颜色。<p>
 Here’s a demo on CodePen:<br/>
 下面是在 CodePen 实现的小例子：（译者注：原 demo 是页面中嵌入的 iframe 实现嵌入 CodePen ，但是 markdown 没有嵌入 iframe 的方法，所以采用 Codepen 来展示，并且把原 demo 的 jade 和 scss 写法转换成 jade 和 css 方便没有使用过两种技术的读者阅读）<p>
-*使用 jade 和 scss 完成的 [demo](http://codepen.io/pixelass/embed/XJLOXg?height=297&theme-id=0&slug-hash=XJLOXg&default-tab=result&user=pixelass#0)<br/>
-*转成成 html 和 css 的[demo](http://codepen.io/doculecycle/pen/eZbNpG)<br/>
+使用 jade 和 scss 完成的 [demo](http://codepen.io/pixelass/embed/XJLOXg?height=297&theme-id=0&slug-hash=XJLOXg&default-tab=result&user=pixelass#0)<br/>
+转成成 html 和 css 的[demo](http://codepen.io/doculecycle/pen/eZbNpG)<br/>
 
 *实际效果*<p>
 ![all text](images/6.png)<p>
