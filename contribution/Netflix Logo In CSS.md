@@ -1,19 +1,19 @@
 *The following is a guest post by Gregor Adams about how he managed to re-create the Netflix logo in CSS. Gregor is kind of the rising star when it comes to CSS, so needless to say it is a great honor to have him here.*<br/>
-*这篇博客是 [Gregor Adams](https://twitter.com/gregoradams) 讲他如何用 CSS 重现 Netflix 商标效果。Gregor 当他涉足 CSS 方面时是 star 增速冠军。能在这里谈论他也是非常荣誉的。*<p>
+*这篇博客是 [Gregor Adams](https://twitter.com/gregoradams) 讲他如何用 CSS 重现 Netflix 商标效果。Gregor 是 CSS 方面冉冉升起的新星。能在这里谈论他也是非常荣幸的。*<p>
 A few months ago I tested Netflix, immediately got hooked and got myself an account. I started watching a lot of series that I usually had to view elsewhere. Each episode or movie starts with the Netflix logo animation.<br/>
-我尝试使用 Netflix（译者注：一家在线影片租赁提供商）时，立即就把我迷住了。我观看了一些我已经看过的节目。每一集电视剧或者电影都已 Netflix 动画作为开始。<p>
+我尝试使用 Netflix（译者注：一家在线影片租赁提供商）时，立即就把我吸引住了。我观看了一些我已经看过的节目。每一集电视剧或者电影都已 Netflix 动画作为开始。<p>
 ![Original animated Netflix logo](images/1.gif)<p>
 I immediately started thinking about implementing this in CSS. So after watching a few episodes I went over to CodePen and started to work on the logo.<br/>
-在观看了几集电视剧之后，我忽然想到可以用 CSS 来实现 Netflix 的 logo 动画，于是我来到了 [CodePen](http://codepen.io/pixelass/)。<p>
+在观看了几集电视剧之后，我想到可以用 CSS 来实现 Netflix 的 logo 动画，于是我使用 [CodePen](http://codepen.io/pixelass/)来完成这个 logo。<p>
 ###第一个概念/First concept
 My first implementation was a little dirty since I was trying a few things.<br/>
-我的第一个实施方式是有点累赘的，因为我尝试采用新技术。<p>
+我的第一个实施方式是有点累赘的，因此我尝试采用新技术。<p>
 For example: I wanted to do this in pure CSS and I also wanted to be able to run the animation again when I click a button, so I had to use some magic. Luckily I always have a few tricks up my sleeve when it comes to CSS.<br/>
-例如：我想使用纯 CSS 技术来实现它，并且我也想当我点击按钮的时候，这个动画在执行一次，所以我要使用一些不可思议技巧。幸运的是当我写 CSS 代码的时候，总会有一些窍门出现在我的大脑里。<p>
+例如：我想使用纯 CSS 技术来实现它，并且我也想当我点击按钮的时候，这个动画再执行一次，所以我要使用一些不可思议技巧。幸运的是当我写 CSS 代码的时候，总会有一些小技巧出现在我的大脑里。<p>
 But let’s talk about the actual animation.<br/>
 我们来谈论一下实际的动画。<p>
 I recorded the logo and looped it in Quicktime so I could examine it in detail. I tend to do that a lot because it allows me to stop at certain frames to figure out what is actually going on.<br/>
-我录下这个动画并且在 Quicktime 中循环播放，这样我可以详细检查。我倾向于这么做，因为它允许我停在某些特定帧弄清楚到底发生了什么。<p>
+我录下这个动画并且在 Quicktime 中循环播放，这样可以详细检查。我倾向于这么做，能让我停在某些特定帧弄清楚到底发生了什么。<p>
 The logo:<br/>
 这个商标：<br/>
 starts with a white screen;<br/>
@@ -28,13 +28,13 @@ changes the font color to red.</br>
 5.把字体颜色变成红色。</br>
 
 So these were the animation steps I needed to replicate. But there is something else about the logo that I needed to take care of: the letters are tilted to the center of the logo.<br/>
-这就是我需要实现的动画步骤。但是这里有另外一些关于这个 logo 的东西需要解决：**字母在商标中心是倾斜的。**<p>
+这就是我需要重现的动画步骤。但是这里有另外一些关于这个 logo 的东西需要解决：**字母在商标中心是倾斜的。**<p>
 People have been asking me how I did that…<br/>
 大家一直问我如何做到这些。<p>
 A trick from up my sleeve ;)<br/>
 *从积累中获取的*<br/>
 I do a lot of 3d experiments, so this wasn’t that much of a difficulty to me.<br/>
-我做了许多 3D 实验，所以这对我来说不是很难。<p>
+我做过许多 3D 案例，所以这对我来说不是很难。<p>
 ###使字母变倾斜/Deforming/Tilting the letters
 I started with some basic markup for the word “Netflix”<br/>
 以这个词 “Netflix” 的一些基本标记开始。<p>
@@ -50,7 +50,7 @@ I started with some basic markup for the word “Netflix”<br/>
 </div>
 ```
 I made a wrapper with the class logo and wrapped each letter in a span.<br/>
-我用类<code>logo</code>做了一个包装，并且用<code>span</code>标签包裹每一个字母。<p>
+我用类<code>logo</code>做了一个包裹，并且用<code>span</code>标签包裹每一个字母。<p>
 Then I rotated the letters on the y-axis and scaled them on the x-axis to retain its original width. The important part is setting a perspective on the wrapper and defining its perspective-origin.<br/>
 然后我在Y轴上旋转这个字母并且在 X 轴上缩放这个字母以保持它的原始宽度。重要的部分是在<code> class="logo"</code>包装上设置一个<code>perspective </code>，并且定义它的<code> perspective-origi</code>。
 ```css
@@ -73,7 +73,7 @@ span {
 }
 ```
 There are different way of doing this, like using a different perspective (e.g. 500px), rotation-angle (e.g. 9deg) and scale value (e.g. 0.5) but these values turned out to work the best for my needs.<br/>
-这里还有一些其它的方式来实现这些，例如使用一个不同景深（比如500px），旋转角度（比如9deg）和缩放（比如0.5），但是这些值能实现我最需要的效果。<p>
+这里还有一些其它的方式来实现这些技巧，例如使用一个不同 perspective（比如500px），旋转角度（比如9deg）和缩放（比如0.5），但是这些值能最大满足我的需求。<p>
 Here’s a demo on CodePen:<br/>
 下面是在 CodePen 实现的小例子：（译者注：原 demo 是页面中嵌入的 iframe 实现嵌入 CodePen ，但是 markdown 没有嵌入 iframe 的方法，所以采用 Codepen 来展示，并且把原 demo 的 jade 和 scss 写法转换成 jade 和 css 方便没有使用过两种技术的读者阅读）<p>
 使用 jade 和 scss 完成的 [demo](http://codepen.io/pixelass/embed/raEojV?height=446&theme-id=0&slug-hash=raEojV&default-tab=result&user=pixelass#0)<br/>
@@ -253,7 +253,7 @@ Since I have created all the parts I need, I can now create the animation.<br/>
 因为我已经创造了许多我需要的部分，现在可以建立动画里。
 #####弹出（动画进入）/Popping out (animation-intro)
 I am using two variables $offset and $trans which I have already defined above. The animation has 3 stages, so I can carefully decide when it reaches a certain point.<br/>
-我使用两个上面已经定义的变量$offset和$trans，动画有三个阶段，我需要仔细的决定何时到达某点。<p>
+我使用两个上面已经定义的变量 $offset 和 $trans ，动画有三个阶段，我需要仔细的决定何时到达某帧。<p>
 ```css
 @keyframes pop-out {
   0% {
@@ -337,13 +337,13 @@ animation-delay: 0s, 2s, 3.2s
 The code above is just an approximate example. Each letter has a different delay and duration. You can see the final implementation here Netflix animation in pure CSS<br/>
 上面的代码只是一个近似的实现，每个字母有不同的动画延迟和间隔，可以点击这里查看最终的实现效果[Netflix animation in pure CSS](http://codepen.io/pixelass/pen/MYYReK)。<p>
 Final notice: I added some magic to retrigger the animation in pure CSS but that’s something I might explain in another article.<br/>
-最后通知一下，我使用了一些不可思议的技巧来实现在纯CSS中再次触发动画，我将会在接下来的文章中解释。<p>
+最后注意一下，我使用了一些不可思议的技巧来实现在纯 CSS 中再次触发动画，我将会在接下来的文章中解释。<p>
 I am never really happy with my experiments and while writing this article I found several ways how I could improve the code and effect.<br/>
-做实验的时候并不是十分高兴，因为写文章的时候我想到了其它几个提高效果的方法。<p>
+写案例的时候并不是十分满意，因为写文章的时候我又想到了其它几个提高效果的方法。<p>
 I rewrote the entire Sass code prior to writing this article but I still feel that I can improve some parts. That is the main reason why I never stop making experiments. It just makes me smarter and bends my thoughts in directions I never knew existed.<br/>
-为了写这篇文章我重新写了整个Sass代码，但是我仍然觉得我嫩提升一些部分。这就是我不间断做实验的主要原因。让我变得更加聪明，和在一些以前没有涉足过的方向有新的突破。<p>
+为了写这篇文章我重新写了整个 Sass 代码，但是我仍然觉得我嫩提升一些部分。这就是我不间断做案例的主要原因。让我变得更加聪明，和在一些以前没有涉足过的方向有新的突破。<p>
 I barely make use of techniques like these in real-life projects but I very often use the functions I needed to implement that effect. Anyway, I hope you enjoyed this article.<br/>
 我几乎没有在实际的项目中用到这样的技术，但是我经常使用函数来提升效果。不论如何希望你喜欢这篇文章。<p>
 Gregor Adams is a front-end developer from Hamburg, Germany. He is passionate about CSS and Sass, thus happens to be the author of amazing demos on CodePen featuring his great CSS skills.<br/>
-*[Gregor Adams](https://twitter.com/gregoradams)是一位来自Hamburg的前端开发者，他对 CSS 和 Sass 有极大的热情。从他的[codepen](http://codepen.io/pixelass/)中可以看出他强大的 CSS 技术。*
+*[Gregor Adams](https://twitter.com/gregoradams)是一位来自Hamburg的前端开发者，他对 CSS 和 Sass 有极大的热情。从他的 [Codepen](http://codepen.io/pixelass/) 中可以看出他强大的 CSS 技术。*
 ######原文链接：[Netflix Logo In CSS](http://hugogiraudel.com/2015/04/15/netflix-logo-in-css/#first-concept)
