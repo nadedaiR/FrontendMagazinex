@@ -1,15 +1,15 @@
 *The following is a guest post by Gregor Adams about how he managed to re-create the Netflix logo in CSS. Gregor is kind of the rising star when it comes to CSS, so needless to say it is a great honor to have him here.*<br/>
 *这篇博客是 [Gregor Adams](https://twitter.com/gregoradams) 讲他如何用 CSS 重现 Netflix 商标效果。Gregor 是 CSS 方面冉冉升起的新星。能在这里分析他的案例也是非常荣幸的。*<p>
 A few months ago I tested Netflix, immediately got hooked and got myself an account. I started watching a lot of series that I usually had to view elsewhere. Each episode or movie starts with the Netflix logo animation.<br/>
-我尝试使用 Netflix（译者注：一家在线影片租赁提供商）时，立即就把我吸引住了。我观看了一些不得已在它处才能观看的节目。每一集电视剧或者电影都以 Netflix 动画作为开始。<p>
+我尝试使用 Netflix（译者注：一家在线影片租赁提供商）时，立即就把我吸引住了。我观看了一些不得不在它处才能观看的节目。每一集电视剧或者电影都以 Netflix 动画作为开始。<p>
 ![Original animated Netflix logo](images/1.gif)<p>
 I immediately started thinking about implementing this in CSS. So after watching a few episodes I went over to CodePen and started to work on the logo.<br/>
-在观看了几集电视剧之后，我想到可以用 CSS 来实现 Netflix 的 logo 动画，于是我使用 [CodePen](http://codepen.io/pixelass/) 来完成这个 logo。<p>
+在观看了几集电视剧之后，我想到可以用 CSS 来实现 Netflix 的 logo 动画，于是我看了几部作品之后，就用 [CodePen](http://codepen.io/pixelass/) 来重现这个 logo。<p>
 ###第一个概念/First concept
 My first implementation was a little dirty since I was trying a few things.<br/>
-我的第一个实施方式是有点累赘的，因此我尝试采用新技术。<p>
+我的第一个实现方式是有点累赘的，因此我尝试采用新技术。<p>
 For example: I wanted to do this in pure CSS and I also wanted to be able to run the animation again when I click a button, so I had to use some magic. Luckily I always have a few tricks up my sleeve when it comes to CSS.<br/>
-例如：我想使用纯 CSS 技术来实现它，并且我也想当我点击按钮的时候，这个动画再执行一次，所以我要使用一些不可思议技巧。幸运的是当我写 CSS 代码的时候，总会有一些小技巧出现在我的大脑里。<p>
+例如：我想使用纯 CSS 技术来实现它，并且我也想当我点击按钮的时候，这个动画再执行一次，所以我要使用一些不可思议技巧。幸运的是当我写 CSS 代码的时候，总会有一些小技巧会在我的脑海里涌现。<p>
 But let’s talk about the actual animation.<br/>
 我们来谈论一下实际的动画。<p>
 I recorded the logo and looped it in Quicktime so I could examine it in detail. I tend to do that a lot because it allows me to stop at certain frames to figure out what is actually going on.<br/>
@@ -174,7 +174,7 @@ Here’s a demo on CodePen<br/>
 
 ###一个用于阴影的函数/A function for the shadow
 Let’s write a function for the 3d-effect and the shadow. I paused on one frame of the video I had made before and looked at it in detail.<br/>
-写一个实现 3d 效果和阴影的函数。我把视频停在某一帧，并且仔细查看细节。<p>.
+写一个实现 3d 效果和阴影的函数。我把视频停在某一帧，并仔细查看细节。<p>.
 ![Image extracted from the original animated Netflix logo](images/4.png)<p>
 As you can see the 3d effect’s vanishing point is in the center while the shadow drops to the bottom right. Now we know what our function has to be able to do.<br/>
 正如你所看到的，当这个阴影到达右下角，3d 效果的消失点在中间。现在知道我们函数需要做什么了。<p>
@@ -230,7 +230,7 @@ I am looping from 1 through the depth. through in Sass means that we iterate inc
   <li>from 0 through 5 = 0, 1, 2, 3, 4, 5</li>
 </ul>
 In each iteration I append a text-shadow to the list. So in the end the variable looks something like this:<br/>
-每一次迭代我都添加一个 text-shadow 到这个列表。所以最后这个列表看起来就是下面这个样子：<br/>
+每一次迭代我都添加一个 <code>text-shadow</code> 到这个列表。所以最后这个列表看起来就是下面这个样子：<br/>
 ```css
 $shadow: (0 1px 0 red, 1px 2px 0 red, 2px 3px 0 red, ...);
 ```
@@ -250,7 +250,7 @@ Here’s a demo on CodePen:<br/>
 ![all text](images/6.png)<p>
 ###组装在一起/Putting it all together
 Since I have created all the parts I need, I can now create the animation.<br/>
-因为我已经创造了许多我需要的部分，现在可以建立动画里。
+因为我已经创造了许多我需要的部分，现在可以建立动画了。
 #####弹出（动画进入）/Popping out (animation-intro)
 I am using two variables $offset and $trans which I have already defined above. The animation has 3 stages, so I can carefully decide when it reaches a certain point.<br/>
 我使用两个上面已经定义的变量 $offset 和 $trans ，动画有三个阶段，我需要仔细地决定何时到达某帧。<p>
