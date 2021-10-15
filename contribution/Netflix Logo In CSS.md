@@ -341,7 +341,7 @@ Final notice: I added some magic to retrigger the animation in pure CSS but that
 I am never really happy with my experiments and while writing this article I found several ways how I could improve the code and effect.<br/>
 写案例的时候并不是十分满意，因为写文章的时候我又想到了其它几个提高效果的方法。<p>
 I rewrote the entire Sass code prior to writing this article but I still feel that I can improve some parts. That is the main reason why I never stop making experiments. It just makes me smarter and bends my thoughts in directions I never knew existed.<br/>
-为了写这篇文章我重新写了整个 Sass 代码，但是我仍然觉得我能提升一些部分。这就是我不间断做案例的主要原因。让我变得更加聪明，和在一些以前没有涉足过的方向有新的突破。<p>
+为了写这篇文章我重新写了整个 Sass 代码，但是我仍然觉得我能提升一些。这就是我不间断做案例的主要原因。让我变得更加聪明，和在一些以前没有涉足过的方向有新的突破。<p>
 I barely make use of techniques like these in real-life projects but I very often use the functions I needed to implement that effect. Anyway, I hope you enjoyed this article.<br/>
 我几乎没有在实际的项目中用到这样的技术，但是我经常使用函数来提升效果。不论如何希望你喜欢这篇文章。<p>
 Gregor Adams is a front-end developer from Hamburg, Germany. He is passionate about CSS and Sass, thus happens to be the author of amazing demos on CodePen featuring his great CSS skills.<br/>
